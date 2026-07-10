@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git remote *)",
+      "Bash(git branch *)",
+      "Bash(gh auth *)",
+      "Bash(git push *)",
+      "Bash(git fetch *)",
+      "Bash(git merge *)",
+      "Bash(pkill -f \"next-server.*3001\")",
+      "Bash(npx --yes playwright install chromium --with-deps)",
+      "Bash(npm init *)",
+      "Bash(npm install *)",
+      "Bash(npx playwright *)",
+      "Bash(ls ~/Library/Caches/ms-playwright/ 2>&1)",
+      "Read(//Users/sal/Library/Caches/ms-playwright/**)",
+      "Bash(node test.js)",
+      "Bash(pkill -f \"next-server\")",
+      "Bash(find '/Users/sal/Documents/KKN/web proklim/next.js web' -iname *waste-sorting-station* -not -path */node_modules/* -not -path */.next/*)",
+      "Bash(node compare.js)"
+    ]
+  }
+}

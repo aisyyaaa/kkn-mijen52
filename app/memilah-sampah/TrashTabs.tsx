@@ -1,182 +1,163 @@
 "use client";
 
 import { useState } from "react";
+import type { ReactNode } from "react";
 
-export default function TrashTabs() {
-  const [activeTab, setActiveTab] = useState<"organik" | "anorganik">("organik");
+type TrashType = "organik" | "anorganik";
+
+const tabs: Record<TrashType, {
+  label: string;
+  headline: string;
+  badge: string;
+  description: string;
+  examples: string[];
+  suggestionTitle: string;
+  suggestion: ReactNode;
+  tone: "emerald" | "sky";
+}> = {
+  organik: {
+    label: "Organik",
+    headline: "Sampah Organik",
+    badge: "Dapat membusuk & terurai",
+    description:
+      "Sampah yang berasal dari sisa makhluk hidup, seperti hewan dan tumbuhan. Sampah ini mudah membusuk dan dapat diurai secara alami oleh mikroorganisme tanah.",
+    examples: ["Sisa makanan", "Daun & ranting", "Kulit buah", "Cangkang telur"],
+    suggestionTitle: "Saran Pengolahan",
+    suggestion: "Olah menjadi pupuk kompos di pekarangan rumah atau salurkan ke lubang biopori untuk konservasi air tanah.",
+    tone: "emerald",
+  },
+  anorganik: {
+    label: "Anorganik",
+    headline: "Sampah Anorganik",
+    badge: "Sulit terurai alami",
+    description:
+      "Sampah dari bahan non-hayati atau buatan manusia. Sampah ini sulit hancur secara alami, tetapi sebagian masih dapat digunakan ulang atau didaur ulang.",
+    examples: ["Botol plastik", "Kantong & saset", "Kaleng/logam", "Kaca"],
+    suggestionTitle: "Saran Pengolahan",
+    suggestion: (
+      <>
+        Bersihkan, keringkan, lalu kumpulkan untuk disetorkan ke <strong>Bank Sampah Mijen</strong> agar dapat didaur ulang
+        secara ekonomis.
+      </>
+    ),
+    tone: "sky",
+  },
+};
+
+function MiniIllustration({ type }: { type: TrashType }) {
+  if (type === "organik") {
+    return (
+      <svg className="h-28 w-28 drop-shadow-lg" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="70" cy="70" r="62" fill="#ECFDF5" />
+        <path d="M39 92h62l-6 22H45l-6-22Z" fill="#047857" />
+        <path d="M34 45h72l-6 50H40L34 45Z" fill="#10B981" />
+        <path d="M31 45h78" stroke="#065F46" strokeWidth="8" strokeLinecap="round" />
+        <path d="M47 45V34h46v11" stroke="#065F46" strokeWidth="6" strokeLinecap="round" />
+        <path d="M56 74c10-18 30-21 42-15-4 21-24 33-42 15Z" fill="#BBF7D0" />
+        <path d="M56 74c13-4 26-8 42-15" stroke="#047857" strokeWidth="4" strokeLinecap="round" />
+        <circle cx="52" cy="58" r="7" fill="#F8D089" />
+        <path d="M48 57c-3-7 3-14 10-13" stroke="#84CC16" strokeWidth="4" strokeLinecap="round" />
+        <path d="M80 54c6 7 7 15 0 23-8-5-10-15 0-23Z" fill="#84CC16" />
+      </svg>
+    );
+  }
 
   return (
-    <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm flex flex-col gap-4">
+    <svg className="h-28 w-28 drop-shadow-lg" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="70" cy="70" r="62" fill="#EFF6FF" />
+      <path d="M39 92h62l-6 22H45l-6-22Z" fill="#334155" />
+      <path d="M34 45h72l-6 50H40L34 45Z" fill="#64748B" />
+      <path d="M31 45h78" stroke="#334155" strokeWidth="8" strokeLinecap="round" />
+      <path d="M47 45V34h46v11" stroke="#334155" strokeWidth="6" strokeLinecap="round" />
+      <rect x="53" y="58" width="18" height="34" rx="5" fill="#93C5FD" />
+      <rect x="57" y="51" width="10" height="9" rx="2" fill="#2563EB" />
+      <path d="M79 66h18l-4 24H75l4-24Z" fill="#CBD5E1" />
+      <ellipse cx="88" cy="66" rx="9" ry="4" fill="#F8FAFC" stroke="#64748B" strokeWidth="2" />
+      <path d="M56 78c6 3 11 3 18 0" stroke="#DBEAFE" strokeWidth="3" strokeLinecap="round" />
+      <path d="M45 94h50" stroke="#E2E8F0" strokeWidth="4" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export default function TrashTabs() {
+  const [activeTab, setActiveTab] = useState<TrashType>("organik");
+  const active = tabs[activeTab];
+  const isOrganik = active.tone === "emerald";
+
+  return (
+    <section className="h-full rounded-[1.75rem] border border-white/80 bg-white/72 p-5 shadow-[0_20px_60px_rgba(15,23,42,0.07)] backdrop-blur-xl sm:p-6">
       <div>
-        <h2 className="text-base font-extrabold text-gray-900 leading-snug">Mari Mengenal Jenis Sampah</h2>
-        <p className="text-xs text-gray-500 mt-1">Pilih tab di bawah untuk melihat perbedaan jenis sampah dan ilustrasinya.</p>
+        <span className="rounded-full bg-emerald-50 px-3 py-1 text-[11px] font-black uppercase tracking-[0.16em] text-emerald-700 ring-1 ring-emerald-100">
+          Materi Edukasi
+        </span>
+        <h2 className="mt-4 text-2xl font-black tracking-[-0.04em] text-slate-950">Mari Mengenal Jenis Sampah</h2>
+        <p className="mt-2 text-sm leading-7 text-slate-500">Pilih jenis sampah untuk melihat contoh dan cara pengolahannya.</p>
       </div>
 
-      <div className="flex p-1 bg-gray-100 rounded-xl">
-        <button
-          type="button"
-          onClick={() => setActiveTab("organik")}
-          className={`flex-1 py-2.5 text-xs font-bold rounded-lg text-center transition-all duration-200 cursor-pointer ${
-            activeTab === "organik" ? "bg-white text-green-600 shadow-sm" : "text-gray-500 hover:text-gray-900"
-          }`}
-        >
-          🟢 Sampah Organik
-        </button>
-        <button
-          type="button"
-          onClick={() => setActiveTab("anorganik")}
-          className={`flex-1 py-2.5 text-xs font-bold rounded-lg text-center transition-all duration-200 cursor-pointer ${
-            activeTab === "anorganik" ? "bg-white text-blue-600 shadow-sm" : "text-gray-500 hover:text-gray-900"
-          }`}
-        >
-          🔵 Sampah Anorganik
-        </button>
+      <div className="mt-5 grid grid-cols-2 gap-2 rounded-full border border-slate-100 bg-slate-50 p-1">
+        {(Object.keys(tabs) as TrashType[]).map((key) => {
+          const isActive = activeTab === key;
+          return (
+            <button
+              key={key}
+              type="button"
+              onClick={() => setActiveTab(key)}
+              className={`rounded-full px-4 py-2.5 text-xs font-black transition ${isActive
+                  ? key === "organik"
+                    ? "bg-white text-emerald-700 shadow-sm ring-1 ring-emerald-100"
+                    : "bg-white text-sky-700 shadow-sm ring-1 ring-sky-100"
+                  : "text-slate-500 hover:text-slate-800"
+                }`}
+            >
+              {tabs[key].label}
+            </button>
+          );
+        })}
       </div>
 
-      {activeTab === "organik" ? (
-        <div className="transition-all duration-300">
-          <div className="flex flex-col sm:flex-row items-center gap-4 bg-green-50/50 p-4 rounded-xl border border-green-100">
-            <div className="flex-shrink-0 flex items-center justify-center">
-              <svg className="w-24 h-24 drop-shadow-md animate-bounce-slow" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="46" fill="#f0fdf4" />
-                <circle cx="50" cy="50" r="38" fill="#dcfce7" />
-                <defs>
-                  <linearGradient id="leafGrad" x1="20" y1="20" x2="80" y2="80" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stopColor="#4ade80" />
-                    <stop offset="50%" stopColor="#22c55e" />
-                    <stop offset="100%" stopColor="#15803d" />
-                  </linearGradient>
-                </defs>
-                <path d="M30 70 C 35 65, 45 55, 55 45" stroke="#166534" strokeWidth="4" strokeLinecap="round" />
-                <path d="M15 85 C 20 80, 25 75, 30 70" stroke="#15803d" strokeWidth="5" strokeLinecap="round" />
-                <path
-                  d="M30 70 C 20 50, 25 25, 55 15 C 65 10, 85 15, 85 15 C 85 15, 90 35, 85 45 C 75 75, 50 80, 30 70 Z"
-                  fill="url(#leafGrad)"
-                />
-                <path d="M30 70 C 45 60, 65 40, 85 15" stroke="#bbf7d0" strokeWidth="3" strokeLinecap="round" fill="none" opacity="0.9" />
-                <path d="M48 55 C 40 45, 38 42, 38 42" stroke="#bbf7d0" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.8" />
-                <path d="M58 45 C 50 35, 48 32, 48 32" stroke="#bbf7d0" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.8" />
-                <path d="M52 51 C 62 48, 68 48, 68 48" stroke="#bbf7d0" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.8" />
-                <path d="M62 41 C 72 38, 78 38, 78 38" stroke="#bbf7d0" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.8" />
-              </svg>
-            </div>
-            <div className="flex-1">
-              <span className="inline-block px-2 py-0.5 bg-green-100 text-green-700 text-[10px] font-bold rounded mb-1">
-                Dapat Membusuk &amp; Terurai
-              </span>
-              <h3 className="text-sm font-bold text-gray-900">Sampah Organik</h3>
-              <p className="text-xs text-gray-600 mt-1 leading-relaxed">
-                Sampah yang berasal dari sisa makhluk hidup (hewan dan tumbuhan). Sampah ini mudah membusuk dan
-                terurai secara alami oleh mikroorganisme tanah.
-              </p>
+      <div
+        className={`mt-5 rounded-[1.5rem] border p-4 sm:p-5 ${isOrganik ? "border-emerald-100 bg-emerald-50/60" : "border-sky-100 bg-sky-50/65"
+          }`}
+      >
+        <div className="grid gap-5 sm:grid-cols-[auto_1fr] sm:items-center">
+          <div className="flex justify-center">
+            <MiniIllustration type={activeTab} />
+          </div>
 
-              <div className="mt-3 flex flex-col gap-1.5 border-t border-green-200/50 pt-2.5">
-                <p className="text-[11px] font-bold text-green-800">Contoh Sampah Organik:</p>
-                <div className="flex flex-wrap gap-1.5 mt-1">
-                  <span className="text-[10px] px-2 py-0.5 bg-white border border-green-200 text-green-700 rounded-md font-semibold">
-                    Sisa makanan/lauk pauk
-                  </span>
-                  <span className="text-[10px] px-2 py-0.5 bg-white border border-green-200 text-green-700 rounded-md font-semibold">
-                    Daun &amp; ranting kering
-                  </span>
-                  <span className="text-[10px] px-2 py-0.5 bg-white border border-green-200 text-green-700 rounded-md font-semibold">
-                    Kulit buah &amp; sayur sisa
-                  </span>
-                  <span className="text-[10px] px-2 py-0.5 bg-white border border-green-200 text-green-700 rounded-md font-semibold">
-                    Cangkang telur
-                  </span>
-                </div>
-              </div>
-
-              <div className="mt-3 p-2.5 bg-white rounded-lg border border-green-200/50 flex items-start gap-2">
-                <span className="text-xs">💡</span>
-                <div>
-                  <p className="text-[10px] font-bold text-green-800">Saran Pengolahan:</p>
-                  <p className="text-[10px] text-gray-500 leading-normal">
-                    Olah menjadi pupuk kompos di pekarangan rumah atau salurkan ke lubang biopori untuk konservasi
-                    air tanah.
-                  </p>
-                </div>
-              </div>
-            </div>
+          <div>
+            <span
+              className={`inline-flex rounded-full px-3 py-1 text-[11px] font-black uppercase tracking-[0.12em] ${isOrganik ? "bg-white text-emerald-700 ring-1 ring-emerald-100" : "bg-white text-sky-700 ring-1 ring-sky-100"
+                }`}
+            >
+              {active.badge}
+            </span>
+            <h3 className="mt-3 text-xl font-black tracking-[-0.03em] text-slate-950">{active.headline}</h3>
+            <p className="mt-2 text-sm leading-7 text-slate-600">{active.description}</p>
           </div>
         </div>
-      ) : (
-        <div className="transition-all duration-300">
-          <div className="flex flex-col sm:flex-row items-center gap-4 bg-blue-50/50 p-4 rounded-xl border border-blue-100">
-            <div className="flex-shrink-0 flex items-center justify-center">
-              <svg className="w-24 h-24 drop-shadow-md animate-bounce-slow" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="46" fill="#eff6ff" />
-                <circle cx="50" cy="50" r="38" fill="#dbeafe" />
-                <defs>
-                  <linearGradient id="bottleGrad" x1="38" y1="20" x2="62" y2="85" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stopColor="#93c5fd" />
-                    <stop offset="40%" stopColor="#60a5fa" />
-                    <stop offset="100%" stopColor="#2563eb" />
-                  </linearGradient>
-                  <linearGradient id="capGrad" x1="42" y1="12" x2="58" y2="20" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stopColor="#2563eb" />
-                    <stop offset="100%" stopColor="#1d4ed8" />
-                  </linearGradient>
-                </defs>
-                <rect x="44" y="12" width="12" height="7" rx="1.5" fill="url(#capGrad)" />
-                <path d="M45 19 H55 V25 H45 Z" fill="#60a5fa" opacity="0.9" />
-                <path d="M43 25 H57 L58 30 H42 Z" fill="#93c5fd" />
-                <path
-                  d="M42 30 C 42 30, 40 40, 40 45 C 40 48, 43 49, 43 51 C 43 53, 40 54, 40 57 C 40 60, 43 61, 43 63 C 43 65, 40 66, 40 75 C 40 82, 45 84, 50 84 C 55 84, 60 82, 60 75 C 60 66, 57 65, 57 63 C 57 61, 60 60, 60 57 C 60 54, 57 53, 57 51 C 57 48, 60 47, 60 45 C 60 40, 58 30, 58 30 Z"
-                  fill="url(#bottleGrad)"
-                />
-                <path d="M41 42 C 45 44, 55 40, 59 42" stroke="#dbeafe" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.6" />
-                <path d="M41 54 C 45 56, 55 52, 59 54" stroke="#dbeafe" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.6" />
-                <path d="M41 66 C 45 68, 55 64, 59 66" stroke="#dbeafe" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.6" />
-                <path d="M45 32 V 78" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" fill="none" opacity="0.4" />
-                <rect x="42.5" y="47" width="15" height="11" fill="#ffffff" opacity="0.85" rx="1" />
-                <path d="M48 51.5 L 50 49 L 52 51.5 Z" fill="#22c55e" />
-                <circle cx="50" cy="54" r="1" fill="#22c55e" />
-              </svg>
-            </div>
-            <div className="flex-1">
-              <span className="inline-block px-2 py-0.5 bg-blue-100 text-blue-700 text-[10px] font-bold rounded mb-1">
-                Sulit Terurai Alami
+
+        <div className="mt-5 border-t border-white/80 pt-5">
+          <p className={`text-xs font-black uppercase tracking-[0.14em] ${isOrganik ? "text-emerald-700" : "text-sky-700"}`}>
+            Contoh Sampah
+          </p>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {active.examples.map((example) => (
+              <span
+                key={example}
+                className={`rounded-full border bg-white px-3 py-1.5 text-xs font-bold ${isOrganik ? "border-emerald-100 text-emerald-700" : "border-sky-100 text-sky-700"
+                  }`}
+              >
+                {example}
               </span>
-              <h3 className="text-sm font-bold text-gray-900">Sampah Anorganik</h3>
-              <p className="text-xs text-gray-600 mt-1 leading-relaxed">
-                Sampah yang dihasilkan dari bahan-bahan non-hayati (buatan manusia/sintetis). Sampah ini sangat
-                sulit atau bahkan tidak bisa hancur secara alami oleh mikroorganisme tanah.
-              </p>
-
-              <div className="mt-3 flex flex-col gap-1.5 border-t border-blue-200/50 pt-2.5">
-                <p className="text-[11px] font-bold text-blue-800">Contoh Sampah Anorganik:</p>
-                <div className="flex flex-wrap gap-1.5 mt-1">
-                  <span className="text-[10px] px-2 py-0.5 bg-white border border-blue-200 text-blue-700 rounded-md font-semibold">
-                    Botol &amp; gelas plastik
-                  </span>
-                  <span className="text-[10px] px-2 py-0.5 bg-white border border-blue-200 text-blue-700 rounded-md font-semibold">
-                    Kantong plastik &amp; saset
-                  </span>
-                  <span className="text-[10px] px-2 py-0.5 bg-white border border-blue-200 text-blue-700 rounded-md font-semibold">
-                    Kaleng soda &amp; logam
-                  </span>
-                  <span className="text-[10px] px-2 py-0.5 bg-white border border-blue-200 text-blue-700 rounded-md font-semibold">
-                    Kaca &amp; gelas beling
-                  </span>
-                </div>
-              </div>
-
-              <div className="mt-3 p-2.5 bg-white rounded-lg border border-blue-200/50 flex items-start gap-2">
-                <span className="text-xs">💡</span>
-                <div>
-                  <p className="text-[10px] font-bold text-blue-800">Saran Pengolahan:</p>
-                  <p className="text-[10px] text-gray-500 leading-normal">
-                    Bersihkan, keringkan, lalu kumpulkan untuk disetorkan ke <strong>Bank Sampah Mijen</strong> untuk
-                    didaur ulang secara ekonomis.
-                  </p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
-      )}
-    </div>
+
+        <div className="mt-4 rounded-2xl border border-white/80 bg-white/78 p-4 shadow-sm">
+          <p className={`text-xs font-black ${isOrganik ? "text-emerald-700" : "text-sky-700"}`}>{active.suggestionTitle}</p>
+          <p className="mt-1 text-xs leading-6 text-slate-600">{active.suggestion}</p>
+        </div>
+      </div>
+    </section>
   );
 }
