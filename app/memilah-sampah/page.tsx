@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import LegalBasisSection from "@/components/LegalBasisSection";
 import TrashTabs from "./TrashTabs";
 import StepTimeline from "./StepTimeline";
 
@@ -80,7 +81,7 @@ export default function MemilahSampahPage() {
               <span className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-emerald-700">Program Edukasi</span>
             </div>
 
-            <h1 className="mt-5 max-w-3xl text-[2.55rem] font-black leading-[0.98] tracking-[-0.06em] text-slate-950 sm:text-5xl md:text-6xl lg:text-7xl">
+            <h1 className="mt-5 max-w-3xl text-[2.55rem] font-extrabold leading-[1.08] tracking-[-0.02em] text-slate-950 sm:text-5xl md:text-6xl lg:text-7xl">
               Pemilahan Sampah
               <span className="mt-2 block bg-gradient-to-r from-emerald-600 via-teal-500 to-sky-500 bg-clip-text text-transparent">
                 Organik &amp; Anorganik
@@ -135,7 +136,7 @@ export default function MemilahSampahPage() {
             </div>
           </div>
 
-          <div className="order-1 lg:order-2">
+          <div className="order-2 lg:order-1">
             <div className="relative mx-auto flex max-w-[640px] items-center justify-center py-6">
               {/* soft glow shadow beneath the floating illustration */}
               <div className="animate-float-glow absolute bottom-4 left-1/2 h-16 w-2/3 -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(16,185,129,0.30),rgba(14,165,233,0.16)_60%,transparent_75%)] blur-2xl" />
@@ -161,7 +162,7 @@ export default function MemilahSampahPage() {
                   className="relative z-10 h-auto w-full object-contain drop-shadow-[0_30px_34px_rgba(15,23,42,0.20)]"
                 />
 
-                <div className="absolute -bottom-3 -right-2 flex h-28 w-28 flex-col items-center justify-center rounded-full border border-white/90 bg-white/90 text-center shadow-[0_20px_54px_rgba(15,23,42,0.16)] backdrop-blur sm:h-32 sm:w-32">
+                <div className="absolute -bottom-3 -right-2 z-20 flex h-28 w-28 flex-col items-center justify-center rounded-full border border-white/90 bg-white/90 text-center shadow-[0_20px_54px_rgba(15,23,42,0.16)] backdrop-blur sm:h-32 sm:w-32">
                   <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-sky-500 text-white shadow-sm">
                     <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
@@ -286,6 +287,34 @@ export default function MemilahSampahPage() {
             <StepTimeline />
           </div>
         </div>
+
+        <SectionLabel>Dasar Hukum</SectionLabel>
+
+        <LegalBasisSection
+          intro="Memilah sampah bukan sekadar imbauan — kewajiban ini punya dasar hukum yang jelas di tingkat undang-undang."
+          references={[
+            {
+              ref: "UU No. 18/2008 — Pasal 12 ayat (1)",
+              note: "Setiap orang dalam mengelola sampah rumah tangga wajib dilakukan dengan cara yang berwawasan lingkungan — dasar filosofis pemilahan sampah dari sumbernya.",
+            },
+            {
+              ref: "UU No. 32/2009 (PPLH) — Pasal 53 jo. Pasal 54",
+              note: "Setiap orang yang melakukan pencemaran dan/atau kerusakan lingkungan wajib melakukan penanggulangan dan memulihkan fungsi lingkungan hidup.",
+            },
+          ]}
+          rights={[
+            "Mendapatkan pelayanan dalam pengelolaan sampah secara baik dan berwawasan lingkungan dari Pemerintah Daerah.",
+            "Berpartisipasi dalam proses pengambilan keputusan, penyelenggaraan, dan pengawasan di bidang pengelolaan sampah.",
+            "Memperoleh informasi yang benar, akurat, dan tepat waktu mengenai penyelenggaraan pengelolaan sampah.",
+            "Mendapatkan perlindungan dan kompensasi karena dampak negatif akibat kegiatan tempat pemrosesan akhir sampah.",
+            "Mengajukan usul, pertimbangan, dan/atau keberatan terhadap kebijakan pengelolaan sampah yang berdampak pada masyarakat.",
+          ]}
+          obligations={[
+            "Mengelola sampah rumah tangga dengan cara yang berwawasan lingkungan (Pasal 12 ayat (1) UU No. 18 Tahun 2008), antara lain melalui pemilahan sampah organik, anorganik, dan bahan berbahaya.",
+            "Berperan aktif dalam kegiatan pengurangan dan penanganan sampah, termasuk melalui bank sampah, komposting, dan daur ulang.",
+          ]}
+          moreHref="/dasar-hukum"
+        />
 
         <Link
           href="/"

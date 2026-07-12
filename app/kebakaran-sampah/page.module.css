@@ -20,7 +20,7 @@
   --gutter: 18px;
   --nav-h: 64px;
 
-  font-family: Inter, Manrope, Poppins, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   color: var(--text);
   background:
     radial-gradient(circle at 16% 4%, rgba(58, 166, 85, 0.12), transparent 26%),
@@ -156,9 +156,9 @@
 .hero h1 {
   margin-top: 22px;
   font-size: clamp(2.9rem, 15vw, 4.7rem);
-  line-height: 0.94;
-  letter-spacing: -0.078em;
-  font-weight: 950;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  font-weight: 800;
   max-width: 760px;
 }
 
@@ -168,7 +168,6 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  letter-spacing: -0.08em;
 }
 
 .heroDesc {
@@ -373,68 +372,12 @@
   font-size: clamp(1.04rem, 5.2vw, 1.34rem);
   line-height: 1.48;
   letter-spacing: -0.045em;
-  font-weight: 650;
+  font-weight: 400;
 }
 
 .aboutText strong {
   color: var(--text);
-  font-weight: 900;
-}
-
-.aboutSide {
-  display: grid;
-  justify-items: start;
-  gap: 22px;
-}
-
-.avatarStack {
-  display: flex;
-  align-items: center;
-}
-
-.avatar {
-  width: 50px;
-  height: 50px;
-  margin-left: -13px;
-  border-radius: 999px;
-  border: 4px solid #FFFFFF;
-  display: grid;
-  place-items: center;
-  font-weight: 900;
-  color: #FFFFFF;
-  box-shadow: 0 12px 20px rgba(20, 24, 26, 0.09);
-}
-
-.avatar:first-child {
-  margin-left: 0;
-  background: linear-gradient(135deg, #B8E2C2, #3AA655);
-}
-
-.avatar:nth-child(2) {
-  background: linear-gradient(135deg, #F3D99C, #B8832D);
-}
-
-.avatar:nth-child(3) {
-  background: linear-gradient(135deg, #CFE7E5, #49908A);
-}
-
-.avatar:nth-child(4) {
-  background: #14181A;
-  font-size: 0.78rem;
-}
-
-.bigStat strong {
-  display: block;
-  font-size: clamp(2.35rem, 12vw, 3.8rem);
-  line-height: 0.92;
-  letter-spacing: -0.08em;
-}
-
-.bigStat span {
-  display: block;
-  margin-top: 8px;
-  color: var(--muted);
-  font-weight: 750;
+  font-weight: 800;
 }
 
 .sectionBlock {
@@ -455,9 +398,9 @@
 .sectionTitle {
   margin-top: 14px;
   font-size: clamp(2.05rem, 11vw, 3.25rem);
-  line-height: 1.02;
-  letter-spacing: -0.065em;
-  font-weight: 950;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 800;
 }
 
 .cardsGrid,
@@ -596,9 +539,9 @@
   z-index: 1;
   display: block;
   font-size: clamp(3.05rem, 15vw, 4.9rem);
-  line-height: 0.9;
-  letter-spacing: -0.09em;
-  font-weight: 950;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  font-weight: 800;
   color: var(--green);
   background: linear-gradient(90deg, var(--green), var(--orange));
   -webkit-background-clip: text;
@@ -875,13 +818,7 @@
   }
 
   .aboutCard {
-    grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
-    gap: 30px;
     padding: 46px;
-  }
-
-  .aboutSide {
-    padding-left: 24px;
   }
 
   .cardsGrid {

@@ -17,7 +17,17 @@
       "Bash(node test.js)",
       "Bash(pkill -f \"next-server\")",
       "Bash(find '/Users/sal/Documents/KKN/web proklim/next.js web' -iname *waste-sorting-station* -not -path */node_modules/* -not -path */.next/*)",
-      "Bash(node compare.js)"
+      "Bash(node compare.js)",
+      "Bash(find /tmp /private/tmp /private/var/folders -maxdepth 4 -iname \"*.png\" -mmin -15 2>/dev/null | grep -v node_modules | head -30 *)",
+      "Read(//private/var/folders/**)",
+      "Read(//Users/sal/Downloads/**)",
+      "Bash(node -e ' *)",
+      "Bash(node check-tabs.js)",
+      "Bash(rm -f /private/tmp/claude-502/-Users-sal-Documents-KKN-web-proklim-next-js-web/6c3bf9a7-8586-47c3-ba74-c7e88c6737a1/scratchpad/remove-bg.js /private/tmp/claude-502/-Users-sal-Documents-KKN-web-proklim-next-js-web/6c3bf9a7-8586-47c3-ba74-c7e88c6737a1/scratchpad/preview-composite.js /private/tmp/claude-502/-Users-sal-Documents-KKN-web-proklim-next-js-web/6c3bf9a7-8586-47c3-ba74-c7e88c6737a1/scratchpad/check-tabs.js /private/tmp/claude-502/-Users-sal-Documents-KKN-web-proklim-next-js-web/6c3bf9a7-8586-47c3-ba74-c7e88c6737a1/scratchpad/preview-*.png)",
+      "Bash(node check-studi-kasus.js)",
+      "Bash(node regression.js)",
+      "Bash(find \"/Users/sal/Documents/KKN/web proklim\" -maxdepth 3 -newer \"/Users/sal/Documents/KKN/web proklim/next.js web/app/memilah-sampah/page.tsx\" -type f 2>/dev/null | grep -v node_modules | grep -v \"/.git/\" *)",
+      "Bash(ls -la \"/Users/sal/Downloads/Materi Regulasi Mitigasi Bencana.docx\" \"/Users/sal/Downloads/~\\\\$teri Regulasi Mitigasi Bencana.docx\")"
     ]
   }
 }

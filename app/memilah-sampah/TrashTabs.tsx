@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import type { ReactNode } from "react";
 
@@ -14,6 +15,7 @@ const tabs: Record<TrashType, {
   suggestionTitle: string;
   suggestion: ReactNode;
   tone: "emerald" | "sky";
+  image: string;
 }> = {
   organik: {
     label: "Organik",
@@ -25,6 +27,7 @@ const tabs: Record<TrashType, {
     suggestionTitle: "Saran Pengolahan",
     suggestion: "Olah menjadi pupuk kompos di pekarangan rumah atau salurkan ke lubang biopori untuk konservasi air tanah.",
     tone: "emerald",
+    image: "/images/icon-organik.png",
   },
   anorganik: {
     label: "Anorganik",
@@ -41,43 +44,9 @@ const tabs: Record<TrashType, {
       </>
     ),
     tone: "sky",
+    image: "/images/icon-anorganik.png",
   },
 };
-
-function MiniIllustration({ type }: { type: TrashType }) {
-  if (type === "organik") {
-    return (
-      <svg className="h-28 w-28 drop-shadow-lg" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="70" cy="70" r="62" fill="#ECFDF5" />
-        <path d="M39 92h62l-6 22H45l-6-22Z" fill="#047857" />
-        <path d="M34 45h72l-6 50H40L34 45Z" fill="#10B981" />
-        <path d="M31 45h78" stroke="#065F46" strokeWidth="8" strokeLinecap="round" />
-        <path d="M47 45V34h46v11" stroke="#065F46" strokeWidth="6" strokeLinecap="round" />
-        <path d="M56 74c10-18 30-21 42-15-4 21-24 33-42 15Z" fill="#BBF7D0" />
-        <path d="M56 74c13-4 26-8 42-15" stroke="#047857" strokeWidth="4" strokeLinecap="round" />
-        <circle cx="52" cy="58" r="7" fill="#F8D089" />
-        <path d="M48 57c-3-7 3-14 10-13" stroke="#84CC16" strokeWidth="4" strokeLinecap="round" />
-        <path d="M80 54c6 7 7 15 0 23-8-5-10-15 0-23Z" fill="#84CC16" />
-      </svg>
-    );
-  }
-
-  return (
-    <svg className="h-28 w-28 drop-shadow-lg" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="70" cy="70" r="62" fill="#EFF6FF" />
-      <path d="M39 92h62l-6 22H45l-6-22Z" fill="#334155" />
-      <path d="M34 45h72l-6 50H40L34 45Z" fill="#64748B" />
-      <path d="M31 45h78" stroke="#334155" strokeWidth="8" strokeLinecap="round" />
-      <path d="M47 45V34h46v11" stroke="#334155" strokeWidth="6" strokeLinecap="round" />
-      <rect x="53" y="58" width="18" height="34" rx="5" fill="#93C5FD" />
-      <rect x="57" y="51" width="10" height="9" rx="2" fill="#2563EB" />
-      <path d="M79 66h18l-4 24H75l4-24Z" fill="#CBD5E1" />
-      <ellipse cx="88" cy="66" rx="9" ry="4" fill="#F8FAFC" stroke="#64748B" strokeWidth="2" />
-      <path d="M56 78c6 3 11 3 18 0" stroke="#DBEAFE" strokeWidth="3" strokeLinecap="round" />
-      <path d="M45 94h50" stroke="#E2E8F0" strokeWidth="4" strokeLinecap="round" />
-    </svg>
-  );
-}
 
 export default function TrashTabs() {
   const [activeTab, setActiveTab] = useState<TrashType>("organik");
@@ -121,7 +90,13 @@ export default function TrashTabs() {
       >
         <div className="grid gap-5 sm:grid-cols-[auto_1fr] sm:items-center">
           <div className="flex justify-center">
-            <MiniIllustration type={activeTab} />
+            <Image
+              src={active.image}
+              alt={active.headline}
+              width={280}
+              height={280}
+              className="h-28 w-28 object-contain drop-shadow-lg"
+            />
           </div>
 
           <div>
