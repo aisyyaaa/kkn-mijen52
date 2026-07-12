@@ -8,10 +8,6 @@ export default function Home() {
       <section className="mx-auto w-full max-w-7xl px-4 pb-10 pt-5 sm:px-6 md:pt-8 lg:px-8 lg:pb-16">
         <div className="grid items-center gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-12">
           <div className="order-2 lg:order-1">
-            <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-white/75 px-3 py-1.5 shadow-sm backdrop-blur">
-              <span className="h-2 w-2 rounded-full bg-emerald-500 shadow-[0_0_0_5px_rgba(16,185,129,0.12)]" />
-              <span className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-emerald-700">KKN-IDBU 52 UNDIP</span>
-            </div>
 
             <h1 className="mt-5 max-w-2xl text-[2.55rem] font-extrabold leading-[1.08] tracking-[-0.02em] text-slate-950 sm:text-5xl md:text-6xl lg:text-7xl">
               <span className="block">Inovasi untuk</span>
@@ -22,29 +18,25 @@ export default function Home() {
             </h1>
 
             <p className="mt-5 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
-              Program kerja nyata tim KKN-IDBU 52 Universitas Diponegoro dalam mendukung adaptasi dan mitigasi
+              Program kerja nyata tim KKN-T IDBU 52 Universitas Diponegoro dalam mendukung adaptasi dan mitigasi
               perubahan iklim yang berkelanjutan di Kelurahan Mijen.
             </p>
 
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <a
-                href="#program"
+                href="/peta-wilayah"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-emerald-600 to-sky-500 px-6 py-3 text-sm font-extrabold text-white shadow-[0_18px_42px_rgba(16,185,129,0.24)] transition hover:-translate-y-0.5 hover:shadow-[0_22px_48px_rgba(14,165,233,0.26)]"
               >
-                Lihat Program Kerja
-                <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
-                  />
+                Lihat Peta Wilayah
+                <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.752a1.125 1.125 0 00-1.006 0L3.622 6.19C3.24 6.38 3 6.77 3 7.197v14.25c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.875 2.437c.317.158.69.158 1.006 0z" />
                 </svg>
               </a>
-              <a
+              {/* <a
                 href="#kegiatan"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-emerald-200 bg-white/75 px-6 py-3 text-sm font-extrabold text-slate-700 shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:border-sky-200 hover:text-sky-700"
               >
-                Dokumentasi KKN
+                Dokumentasi KKN-T
                 <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
                   <path
                     fillRule="evenodd"
@@ -52,7 +44,7 @@ export default function Home() {
                     d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
                   />
                 </svg>
-              </a>
+              </a> */}
             </div>
 
             <div className="mt-8 flex flex-col gap-3">
@@ -92,8 +84,8 @@ export default function Home() {
 
               <div className="animate-float-card relative w-full">
                 <Image
-                  src="/images/dummy.jpeg"
-                  alt="Kegiatan KKN IDBU 52 Mijen"
+                  src="/images/heading.jpeg"
+                  alt="Kegiatan KK-TN IDBU 52 Mijen"
                   width={1600}
                   height={900}
                   priority

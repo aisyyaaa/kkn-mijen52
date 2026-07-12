@@ -85,6 +85,7 @@ const NAV_LINKS = [
       />
     ),
   },
+  /*
   {
     href: "/profil-kkn",
     label: "Profil KKN Kami",
@@ -97,6 +98,7 @@ const NAV_LINKS = [
       />
     ),
   },
+  */
 ];
 
 export default function Navbar() {
@@ -175,7 +177,7 @@ export default function Navbar() {
           <div className="px-6 pt-6 pb-5 border-b border-gray-100 flex items-center justify-between">
             <div>
               <p className="text-xs font-semibold text-green-500 tracking-widest uppercase mb-0.5">
-                KKN-IDBU 52 UNDIP
+                KKN-T IDBU 52 UNDIP
               </p>
               <p className="text-lg font-extrabold text-gray-900">Menu</p>
             </div>
