@@ -54,18 +54,18 @@ export default function PetaWilayahPage() {
         </div>
 
         <div className="mt-6 rounded-3xl border border-white/80 bg-white/70 p-6 shadow-sm backdrop-blur-xl sm:p-8">
-          <h2 className="text-lg font-bold text-slate-900 sm:text-xl">Tentang Peta</h2>
+          <h2 className="text-lg font-bold text-slate-900 sm:text-xl">Peta Fasilitas Pendukung Program ProKlim RW 05 Kelurahan Mijen</h2>
           <div className="mt-4 flex flex-col gap-4 text-sm leading-7 text-slate-600 sm:text-base">
             <p>
-              Peta ini disusun sebagai salah satu upaya mitigasi kebakaran lahan di RW 05 Kelurahan Mijen.
-              Pemetaan dilakukan menggunakan citra satelit Sentinel-2A dengan analisis Normalized Burn
-              Ratio (NBR) dan Differenced Normalized Burn Ratio (dNBR) untuk mengidentifikasi tingkat potensi
-              kerawanan kebakaran berdasarkan kondisi vegetasi dan tutupan lahan.
+              Peta ini menunjukkan sebaran fasilitas yang mendukung pelaksanaan Program Kampung Iklim (ProKlim)
+              di RW 05 Kelurahan Mijen. Fasilitas yang ditampilkan meliputi sendang, komposter, bank sampah,
+              Taman Kanak-Kanak (TK), dan puskesmas.
             </p>
             <p>
-              Pada peta, warna biru menunjukkan potensi kerawanan rendah, kuning menunjukkan potensi sedang,
-              sedangkan merah menunjukkan potensi tinggi. Selain itu, peta juga menampilkan lokasi fasilitas
-              penting seperti sendang, bank sampah, komposter, puskesmas, dan taman kanak-kanak.
+              Dari peta terlihat bahwa sebagian besar fasilitas berada di bagian utara RW 05, sedangkan dua
+              sendang berada di sisi timur kawasan. Informasi ini membantu masyarakat mengetahui lokasi
+              fasilitas lingkungan yang dapat dimanfaatkan dalam kegiatan konservasi air, pengelolaan sampah,
+              serta edukasi lingkungan.
             </p>
             <p>
               Hasil pemetaan menunjukkan bahwa sebagian besar wilayah RW 05 memiliki potensi kerawanan rendah
@@ -73,9 +73,9 @@ export default function PetaWilayahPage() {
               terutama saat musim kemarau dan pada area yang masih terdapat kebiasaan membakar sampah.
             </p>
             <p>
-              Peta ini diharapkan dapat menjadi acuan dalam menentukan lokasi prioritas untuk kegiatan edukasi,
-              pemasangan papan imbauan, serta penyusunan langkah-langkah mitigasi kebakaran sehingga masyarakat
-              dapat lebih waspada dan berperan aktif dalam mencegah terjadinya kebakaran lahan.
+              Peta ini juga menjadi dasar dalam penyusunan program kerja KKN, seperti revitalisasi sendang, pembuatan
+              komposter, edukasi pengelolaan sampah organik, serta penyusunan rute kegiatan dan penyebaran media edukasi
+              agar pelaksanaannya lebih tepat sasaran dan mudah dijangkau oleh masyarakat.
             </p>
           </div>
         </div>

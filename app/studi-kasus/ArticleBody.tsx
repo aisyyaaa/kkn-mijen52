@@ -42,6 +42,10 @@ export default function ArticleBody() {
           benar-benar efektif seharusnya dilakukan secara preventif, jauh sebelum musim kemarau tiba, agar
           kejadian serupa tidak terus berulang di lokasi-lokasi lain yang memiliki karakteristik risiko yang sama.
         </p>
+
+        <p className={`${styles.lessonPara} ${expanded ? "" : "hidden md:block"}`}>
+          Penulis: Rafif Naufal Aryasatya
+        </p>
       </div>
 
       <button type="button" onClick={() => setExpanded((v) => !v)} className={styles.readMore}>

@@ -67,7 +67,7 @@ export default function StudiKasusPage() {
           </h2>
 
           <p className={styles.byline} style={{ fontFamily: "var(--font-special-elite), monospace" }}>
-            MINGGU, 20 AGUSTUS 2023 · 18.00 WIB · PESISIR PANTAI BARUNA MAS, BANDARHARJO, SEMARANG UTARA
+            SABTU, 11 JULI 2026
           </p>
 
           <div className={styles.divider} aria-hidden="true" />
