@@ -97,18 +97,6 @@ const NAV_LINKS = [
       />
     ),
   },
-  {
-    href: "/teba",
-    label: "Teba",
-    icon: (
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M12 19V9m0 0a5 5 0 0 1 5-5m-5 5a5 5 0 0 0-5-5m5 5v10m-5 0h10"
-      />
-    ),
-  },
   /*
   {
     href: "/profil-kkn",
