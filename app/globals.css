@@ -1,8 +1,6 @@
 @import "tailwindcss";
 
-html {
-  scroll-behavior: smooth;
-}
+
 
 body {
   font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;

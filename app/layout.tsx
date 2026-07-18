@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id">
+    <html lang="id" data-scroll-behavior="smooth">
       <body className="bg-[#f4f7f9] font-sans antialiased" suppressHydrationWarning>
         <Navbar />
         {children}
