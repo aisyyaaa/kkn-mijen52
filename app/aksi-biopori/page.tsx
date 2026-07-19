@@ -212,7 +212,7 @@ export default function AksiBioporiPage() {
               Apakah saat musim hujan di sekitar rumah sering ada genangan air? Atau sampah dapur seperti kulit buah dan sisa sayur biasanya langsung dibuang begitu saja? Padahal, air hujan sayang kalau langsung mengalir ke selokan dan sampah organik masih bisa dimanfaatkan.
             </p>
             <p className="mt-4 text-base leading-8 text-stone-700 sm:text-lg">
-              <strong>Lubang Biopori</strong> adalah solusinya &mdash; lubang sederhana yang membantu air hujan meresap ke tanah sekaligus mengubah sampah organik menjadi kompos alami. Tidak butuh listrik, tidak pakai mesin, cukup manfaatkan sampah organik yang setiap hari pasti ada di rumah.
+              <strong>Lubang Biopori</strong>  adalah solusinya &mdash; lubang sederhana yang membantu air hujan meresap ke tanah sekaligus mengubah sampah organik menjadi kompos alami. Tidak butuh listrik, tidak pakai mesin, cukup manfaatkan sampah organik yang setiap hari pasti ada di rumah.
             </p>
           </div>
 
@@ -289,7 +289,7 @@ export default function AksiBioporiPage() {
             <span className="text-4xl">✨</span>
             <h2 className="mt-3 text-2xl font-black tracking-[-0.03em] text-stone-900 sm:text-3xl">Kenapa Program Ini Menarik?</h2>
             <p className="mx-auto mt-4 max-w-2xl text-base leading-8 text-stone-700 sm:text-lg">
-              &ldquo;Biopori ini sebenarnya <strong>sederhana</strong>. Tidak membutuhkan listrik, tidak memakai mesin, dan cukup memanfaatkan <strong>sampah organik</strong> yang setiap hari pasti ada di rumah.&rdquo;
+              &ldquo;Biopori ini sebenarnya <strong>sederhana</strong>. Tidak membutuhkan listrik, tidak memakai mesin, dan cukup memanfaatkan <strong>sampah organik </strong> yang setiap hari pasti ada di rumah.&rdquo;
             </p>
             <div className="mx-auto mt-6 flex flex-wrap justify-center gap-3">
               {["Tanpa Listrik", "Tanpa Mesin", "Sampah Jadi Kompos", "Mudah Diterapkan"].map((tag) => (
