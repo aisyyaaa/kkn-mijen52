@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import AudienceBenefits from "./AudienceBenefits";
 
 
 export const metadata: Metadata = {
@@ -164,7 +165,7 @@ const tips = [
 const envImpacts = [
   "Mengurangi genangan dan risiko banjir lokal di lingkungan RW 7 Kelurahan Mijen.",
   "Meningkatkan cadangan air tanah untuk kebutuhan sumur dan vegetasi sekitar.",
-  "Menekan volume sampah organik yang dibuang ke TPA hingga 30-50%.",
+  "Membantu menekan volume sampah organik yang dibuang ke TPA dari sumbernya.",
   "Mendukung penerapan konsep zero-waste dan ekonomi sirkular tingkat rumah tangga.",
   "Mewujudkan lingkungan RW yang lebih bersih, hijau, dan berkelanjutan.",
 ];
@@ -201,17 +202,17 @@ export default function AksiBioporiPage() {
             </div>
 
             <h1 className="mt-4 text-4xl font-extrabold leading-[1.15] tracking-[-0.03em] text-stone-900 sm:text-5xl lg:text-6xl">
-              Lubang Biopori
+              Genangan Air? Sampah Menumpuk?
               <span className="mt-2 block bg-gradient-to-r from-[#0D7C66] via-[#1B9C85] to-[#1B6B93] bg-clip-text text-transparent">
-                Resapkan Air, Olah Sampah
+                Biopori Solusinya
               </span>
             </h1>
 
             <p className="mt-5 text-base leading-8 text-stone-700 sm:text-lg">
-              <strong>Lubang Biopori</strong> adalah lubang silindris berdiameter 10–30 cm dan kedalaman 50–100 cm yang diisi sampah organik. Lubang ini membantu air hujan meresap ke dalam tanah sekaligus mengubah sampah organik menjadi kompos alami.
+              Apakah saat musim hujan di sekitar rumah sering ada genangan air? Atau sampah dapur seperti kulit buah dan sisa sayur biasanya langsung dibuang begitu saja? Padahal, air hujan sayang kalau langsung mengalir ke selokan dan sampah organik masih bisa dimanfaatkan.
             </p>
             <p className="mt-4 text-base leading-8 text-stone-700 sm:text-lg">
-              Biopori merupakan solusi sederhana, murah, dan ramah lingkungan yang bisa diterapkan di setiap pekarangan rumah warga.
+              <strong>Lubang Biopori</strong> adalah solusinya &mdash; lubang sederhana yang membantu air hujan meresap ke tanah sekaligus mengubah sampah organik menjadi kompos alami. Tidak butuh listrik, tidak pakai mesin, cukup manfaatkan sampah organik yang setiap hari pasti ada di rumah.
             </p>
           </div>
 
@@ -281,6 +282,27 @@ export default function AksiBioporiPage() {
             </p>
           </div>
         </section>
+
+        {/* ─── KENAPA MENARIK ─── */}
+        <section className="mt-12">
+          <div className="rounded-[2rem] border border-[#0D7C66]/15 bg-gradient-to-r from-[#0D7C66]/5 via-white to-[#1B6B93]/5 p-8 text-center shadow-sm backdrop-blur-sm sm:p-10">
+            <span className="text-4xl">✨</span>
+            <h2 className="mt-3 text-2xl font-black tracking-[-0.03em] text-stone-900 sm:text-3xl">Kenapa Program Ini Menarik?</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-base leading-8 text-stone-700 sm:text-lg">
+              &ldquo;Biopori ini sebenarnya <strong>sederhana</strong>. Tidak membutuhkan listrik, tidak memakai mesin, dan cukup memanfaatkan <strong>sampah organik</strong> yang setiap hari pasti ada di rumah.&rdquo;
+            </p>
+            <div className="mx-auto mt-6 flex flex-wrap justify-center gap-3">
+              {["Tanpa Listrik", "Tanpa Mesin", "Sampah Jadi Kompos", "Mudah Diterapkan"].map((tag) => (
+                <span key={tag} className="rounded-full border border-[#0D7C66]/20 bg-white/80 px-4 py-2 text-xs font-bold text-[#0D7C66] shadow-sm">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ─── MANFAAT PER KELOMPOK WARGA ─── */}
+        <AudienceBenefits />
 
         {/* ─── CARA PEMBUATAN BIOPORI ─── */}
         <section className="mt-12">
@@ -534,7 +556,23 @@ export default function AksiBioporiPage() {
           </div>
         </section>
 
-
+        {/* ─── HARAPAN & PENUTUP ─── */}
+        <section className="mt-12 mb-4 overflow-hidden rounded-[2rem] border border-[#0D7C66]/20 bg-gradient-to-br from-[#0D7C66] to-[#1B6B93] p-8 text-center text-white shadow-xl sm:p-12">
+          <span className="rounded-full bg-white/20 px-4 py-1.5 text-[11px] font-black uppercase tracking-[0.2em] backdrop-blur-sm">
+            Harapan Kami
+          </span>
+          <h2 className="mt-5 text-2xl font-black tracking-[-0.03em] sm:text-3xl lg:text-4xl">
+            Langkah Kecil, Manfaat Besar
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-white/90 sm:text-base sm:leading-8">
+            Harapan kami, setelah melihat contoh ini, Bapak/Ibu bisa mengetahui bahwa biopori ternyata mudah diterapkan dan manfaatnya bisa dirasakan langsung di rumah masing-masing.
+          </p>
+          <div className="mx-auto mt-6 max-w-3xl rounded-2xl border border-white/20 bg-white/10 p-6 backdrop-blur-sm">
+            <p className="text-sm leading-7 text-white/95 italic sm:text-base sm:leading-8">
+              &ldquo;Program ini bukan sekadar membuat lubang di tanah. Yang ingin kami bangun adalah <strong>kebiasaan sederhana</strong> yang manfaatnya bisa dirasakan setiap hari. Sampah dapur tidak terbuang sia-sia, tanaman mendapat pupuk alami, air hujan lebih banyak meresap ke tanah, dan lingkungan RT menjadi lebih nyaman. Semoga nanti biopori ini bisa menjadi <strong>langkah kecil yang memberi manfaat besar</strong> bagi kita semua.&rdquo;
+            </p>
+          </div>
+        </section>
 
       </div>
     </main>
