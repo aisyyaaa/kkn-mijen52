@@ -288,6 +288,38 @@ export default function MemilahSampahPage() {
           </div>
         </div>
 
+        <article className="mt-8 overflow-hidden rounded-[2rem] border border-amber-200/70 bg-gradient-to-br from-amber-50 via-white to-lime-50 p-6 shadow-[0_24px_70px_rgba(146,64,14,0.10)] sm:p-8">
+          <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
+            <div>
+              <span className="rounded-full bg-amber-100 px-3 py-1 text-[10px] font-black uppercase tracking-[0.18em] text-amber-800 ring-1 ring-amber-200">
+                Langkah Selanjutnya
+              </span>
+              <h2 className="mt-4 text-2xl font-black tracking-[-0.04em] text-slate-950 sm:text-3xl">
+                Sampah sudah dipilah, sekarang olah yang organik
+              </h2>
+              <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600">
+                Pilih sisa buah dan sayuran yang sesuai, lalu pelajari komposisi dan proses fermentasinya melalui pelatihan eco-enzyme.
+              </p>
+              <div className="mt-4 flex flex-wrap items-center gap-2 text-[11px] font-black uppercase tracking-[0.12em] text-slate-500">
+                <span className="rounded-full bg-white px-3 py-1.5 shadow-sm">Pilah sampah</span>
+                <span aria-hidden>→</span>
+                <span className="rounded-full bg-white px-3 py-1.5 shadow-sm">Ambil bahan organik</span>
+                <span aria-hidden>→</span>
+                <span className="rounded-full bg-white px-3 py-1.5 shadow-sm">Buat eco-enzyme</span>
+              </div>
+            </div>
+            <Link
+              href="/eco-enzim"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-amber-600 to-lime-600 px-6 py-3.5 text-sm font-extrabold text-white shadow-[0_18px_42px_rgba(217,119,6,0.22)] transition hover:-translate-y-0.5"
+            >
+              Mulai Pelatihan Eco-Enzyme
+              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+        </article>
+
         <SectionLabel>Dasar Hukum</SectionLabel>
 
         <LegalBasisSection

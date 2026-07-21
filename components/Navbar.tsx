@@ -62,6 +62,21 @@ const NAV_LINKS = [
     ),
   },
   {
+    href: "/eco-enzim",
+    label: "Eco-Enzyme",
+    icon: (
+      <>
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M12 3.75c-2.8 3.27-5.25 6.13-5.25 9.25a5.25 5.25 0 1010.5 0C17.25 9.88 14.8 7.02 12 3.75z"
+        />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 13.5c.35 1.15 1.15 1.95 2.4 2.35" />
+      </>
+    ),
+  },
+  {
     href: "/studi-kasus",
     label: "Studi Kasus",
     icon: (
