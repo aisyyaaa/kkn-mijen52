@@ -31,114 +31,76 @@ const NAV_LINKS = [
     ),
   },
   {
-    href: "/kebakaran-sampah",
-    label: "Kebakaran Sampah",
+    label: "Program Kerja",
     icon: (
-      <>
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"
-        />
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"
-        />
-      </>
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
     ),
+    subLinks: [
+      {
+        href: "/kebakaran-sampah",
+        label: "Kebakaran Sampah",
+        icon: (
+          <>
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
+          </>
+        )
+      },
+      {
+        href: "/memilah-sampah",
+        label: "Memilah Sampah",
+        icon: (
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+        )
+      },
+      {
+        href: "/eco-enzim",
+        label: "Eco-Enzyme",
+        icon: (
+          <>
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3.75c-2.8 3.27-5.25 6.13-5.25 9.25a5.25 5.25 0 1010.5 0C17.25 9.88 14.8 7.02 12 3.75z" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 13.5c.35 1.15 1.15 1.95 2.4 2.35" />
+          </>
+        )
+      },
+      {
+        href: "/aksi-biopori",
+        label: "Aksi Biopori",
+        icon: (
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+        )
+      },
+      {
+        href: "/teba",
+        label: "Edukasi TEBA",
+        icon: (
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        )
+      }
+    ]
   },
   {
-    href: "/memilah-sampah",
-    label: "Memilah Sampah",
+    label: "Informasi",
     icon: (
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
-      />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
     ),
-  },
-  {
-    href: "/eco-enzim",
-    label: "Eco-Enzyme",
-    icon: (
-      <>
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M12 3.75c-2.8 3.27-5.25 6.13-5.25 9.25a5.25 5.25 0 1010.5 0C17.25 9.88 14.8 7.02 12 3.75z"
-        />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 13.5c.35 1.15 1.15 1.95 2.4 2.35" />
-      </>
-    ),
-  },
-  {
-    href: "/studi-kasus",
-    label: "Studi Kasus",
-    icon: (
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M20 7H4a1 1 0 00-1 1v2a1 1 0 001 1h16a1 1 0 001-1V8a1 1 0 00-1-1zM5 11v7a2 2 0 002 2h10a2 2 0 002-2v-7M10 15h4"
-      />
-    ),
-  },
-  {
-    href: "/dasar-hukum",
-    label: "Dasar Hukum",
-    icon: (
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52-2.62 10.726c-.122.499.106 1.028.589 1.202a5.988 5.988 0 002.031.352 5.988 5.988 0 002.031-.352c.483-.174.711-.703.59-1.202L18.75 4.97zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.97zM12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75"
-      />
-    ),
-  },
-  {
-    href: "/aksi-biopori",
-    label: "Aksi Biopori",
-    icon: (
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-      />
-    ),
-  },
-  {
-    href: "/teba",
-    label: "Edukasi TEBA",
-    icon: (
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-      />
-    ),
-  },
-  /*
-  {
-    href: "/profil-kkn",
-    label: "Profil KKN Kami",
-    icon: (
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={2}
-        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"
-      />
-    ),
-  },
-  */
+    subLinks: [
+      {
+        href: "/studi-kasus",
+        label: "Studi Kasus",
+        icon: (
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7H4a1 1 0 00-1 1v2a1 1 0 001 1h16a1 1 0 001-1V8a1 1 0 00-1-1zM5 11v7a2 2 0 002 2h10a2 2 0 002-2v-7M10 15h4" />
+        )
+      },
+      {
+        href: "/dasar-hukum",
+        label: "Dasar Hukum",
+        icon: (
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52-2.62 10.726c-.122.499.106 1.028.589 1.202a5.988 5.988 0 002.031.352 5.988 5.988 0 002.031-.352c.483-.174.711-.703.59-1.202L18.75 4.97zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.97zM12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75" />
+        )
+      }
+    ]
+  }
 ];
 
 export default function Navbar() {
@@ -180,11 +142,83 @@ export default function Navbar() {
           {/* Navigasi Desktop */}
           <div className="hidden lg:flex items-center gap-1 pr-1.5">
             {NAV_LINKS.map((link) => {
+              if (link.subLinks) {
+                const isActive = link.subLinks.some((sub) => pathname === sub.href);
+                return (
+                  <div key={link.label} className="group relative">
+                    <button
+                      className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 ${
+                        isActive
+                          ? "bg-emerald-50 text-emerald-600 shadow-sm"
+                          : "text-slate-600 hover:bg-white hover:text-emerald-600 hover:shadow-sm"
+                      }`}
+                    >
+                      <svg
+                        className={`w-4 h-4 transition-colors duration-300 ${
+                          isActive ? "text-emerald-500" : "text-slate-400 group-hover:text-emerald-500"
+                        }`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        {link.icon}
+                      </svg>
+                      {link.label}
+                      <svg
+                        className={`w-3.5 h-3.5 ml-1 transition-transform duration-300 group-hover:rotate-180 ${
+                          isActive ? "text-emerald-500" : "text-slate-400 group-hover:text-emerald-500"
+                        }`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+
+                    {/* Dropdown Box */}
+                    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                      <div className="w-56 bg-white border border-gray-100 shadow-[0_20px_40px_-5px_rgba(0,0,0,0.1)] rounded-2xl p-2 flex flex-col gap-1 relative">
+                        {/* Segitiga panah ke atas */}
+                        <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-white border-t border-l border-gray-100 rotate-45" />
+                        
+                        {link.subLinks.map((sub) => {
+                          const isSubActive = pathname === sub.href;
+                          return (
+                            <Link
+                              key={sub.href}
+                              href={sub.href}
+                              className={`group/sub relative z-10 flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-bold transition-all duration-200 ${
+                                isSubActive
+                                  ? "bg-emerald-50 text-emerald-600"
+                                  : "text-slate-600 hover:bg-emerald-50/50 hover:text-emerald-600"
+                              }`}
+                            >
+                              <svg
+                                className={`w-4 h-4 transition-colors ${
+                                  isSubActive ? "text-emerald-500" : "text-slate-400 group-hover/sub:text-emerald-500"
+                                }`}
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                {sub.icon}
+                              </svg>
+                              {sub.label}
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.href}
-                  href={link.href}
+                  href={link.href!}
                   className={`group flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 ${
                     isActive
                       ? "bg-emerald-50 text-emerald-600 shadow-sm"
@@ -269,11 +303,48 @@ export default function Navbar() {
 
           <nav className="flex flex-col px-4 pt-3 pb-6 gap-1 flex-1">
             {NAV_LINKS.map((link) => {
+              if (link.subLinks) {
+                return (
+                  <div key={link.label} className="flex flex-col gap-1 mb-2">
+                    <p className="px-4 py-2 text-[10px] font-black uppercase tracking-widest text-slate-400 mt-2">
+                      {link.label}
+                    </p>
+                    {link.subLinks.map((sub) => {
+                      const isSubActive = pathname === sub.href;
+                      return (
+                        <Link
+                          key={sub.href}
+                          href={sub.href}
+                          onClick={() => setIsOpen(false)}
+                          className={`group flex items-center gap-4 px-4 py-3.5 rounded-2xl transition-all duration-200 ${
+                            isSubActive
+                              ? "bg-emerald-50 text-emerald-600"
+                              : "text-gray-700 hover:bg-emerald-50 hover:text-emerald-600"
+                          }`}
+                        >
+                          <svg
+                            className={`w-5 h-5 flex-shrink-0 transition-colors ${
+                              isSubActive ? "text-emerald-500" : "text-emerald-500/70 group-hover:text-emerald-500"
+                            }`}
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            {sub.icon}
+                          </svg>
+                          <span className="font-semibold text-sm">{sub.label}</span>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                );
+              }
+
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.href}
-                  href={link.href}
+                  href={link.href!}
                   onClick={() => setIsOpen(false)}
                   className={`group flex items-center gap-4 px-4 py-3.5 rounded-2xl transition-all duration-200 ${
                     isActive
@@ -297,7 +368,7 @@ export default function Navbar() {
             })}
           </nav>
 
-          <div className="px-6 py-5 border-t border-gray-100">
+          <div className="px-6 py-5 border-t border-gray-100 mt-auto">
             <div className="flex items-center gap-3 p-3 bg-green-50 rounded-2xl">
               <svg className="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path

@@ -11,17 +11,7 @@ export default function PetaWilayahPage() {
   return (
     <main>
       <section className="mx-auto w-full max-w-5xl px-4 pb-16 pt-5 sm:px-6 md:pt-8 lg:px-8">
-        <div className="mb-6 flex items-center justify-between gap-4 rounded-full border border-white/80 bg-white/70 px-4 py-3 shadow-[0_18px_55px_rgba(15,23,42,0.08)] backdrop-blur-xl">
-          <Link href="/" className="inline-flex items-center gap-2 text-xs font-semibold text-slate-500 transition hover:text-emerald-600">
-            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-            </svg>
-            Beranda
-          </Link>
-          <span className="rounded-full bg-emerald-50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-emerald-700 ring-1 ring-emerald-100">
-            ProKlim Mijen
-          </span>
-        </div>
+        
 
         <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-white/75 px-3 py-1.5 shadow-sm backdrop-blur">
           <span className="h-2 w-2 rounded-full bg-emerald-500 shadow-[0_0_0_5px_rgba(16,185,129,0.12)]" />
