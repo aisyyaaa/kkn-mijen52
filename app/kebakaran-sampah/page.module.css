@@ -22,41 +22,9 @@
 
   font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   color: var(--text);
-  background:
-    radial-gradient(circle at 16% 4%, rgba(58, 166, 85, 0.12), transparent 26%),
-    radial-gradient(circle at 92% 10%, rgba(245, 158, 11, 0.16), transparent 22%),
-    linear-gradient(145deg, #FFFFFF 0%, #FBFCF7 44%, #F1F8EF 100%);
-  min-height: 100vh;
-  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   position: relative;
-}
-
-.wrapper::before,
-.wrapper::after {
-  content: "";
-  position: fixed;
-  pointer-events: none;
-  border-radius: 999px;
-  z-index: -1;
-  filter: blur(5px);
-}
-
-.wrapper::before {
-  width: 260px;
-  height: 260px;
-  right: -120px;
-  top: 130px;
-  background: linear-gradient(135deg, rgba(58, 166, 85, 0.08), rgba(245, 158, 11, 0.12));
-}
-
-.wrapper::after {
-  width: 320px;
-  height: 320px;
-  left: -170px;
-  bottom: 40px;
-  background: linear-gradient(135deg, rgba(225, 241, 220, 0.70), rgba(255, 244, 222, 0.80));
 }
 
 .wrapper a {

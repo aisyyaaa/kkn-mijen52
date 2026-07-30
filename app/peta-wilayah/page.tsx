@@ -9,9 +9,7 @@ export const metadata: Metadata = {
 
 export default function PetaWilayahPage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#F5FAF8] text-slate-950">
-      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_12%_8%,rgba(16,185,129,0.18),transparent_34%),radial-gradient(circle_at_88%_10%,rgba(14,165,233,0.18),transparent_30%),linear-gradient(180deg,#F8FCFA_0%,#EFF8F4_48%,#F6FAF8_100%)]" />
-
+    <main>
       <section className="mx-auto w-full max-w-5xl px-4 pb-16 pt-5 sm:px-6 md:pt-8 lg:px-8">
         <div className="mb-6 flex items-center justify-between gap-4 rounded-full border border-white/80 bg-white/70 px-4 py-3 shadow-[0_18px_55px_rgba(15,23,42,0.08)] backdrop-blur-xl">
           <Link href="/" className="inline-flex items-center gap-2 text-xs font-semibold text-slate-500 transition hover:text-emerald-600">

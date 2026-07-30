@@ -2,8 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#F5FAF8] text-slate-950" id="beranda">
-      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_12%_8%,rgba(16,185,129,0.18),transparent_34%),radial-gradient(circle_at_88%_10%,rgba(14,165,233,0.18),transparent_30%),linear-gradient(180deg,#F8FCFA_0%,#EFF8F4_48%,#F6FAF8_100%)]" />
+    <main id="beranda">
 
       <section className="mx-auto w-full max-w-7xl px-4 pb-10 pt-5 sm:px-6 md:pt-8 lg:px-8 lg:pb-16">
         <div className="grid items-center gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-12">

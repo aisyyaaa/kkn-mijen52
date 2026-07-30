@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 const NAV_LINKS = [
   {
@@ -141,6 +142,7 @@ const NAV_LINKS = [
 ];
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -160,46 +162,79 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="w-full flex items-center justify-between px-5 py-4 bg-[#f4f7f9]/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100">
-        <a href="#beranda" className="flex items-center gap-2">
-          <Image
-            src="/images/logo.png"
-            alt="Logo KKN-T IDBU 52"
-            width={32}
-            height={32}
-            className="w-8 h-8 object-contain"
-          />
-          <span className="font-bold text-gray-900 text-base tracking-tight">
-            KKN-T <span className="text-green-500">IDBU 52</span>
-          </span>
-        </a>
+      <div className="sticky top-4 z-50 flex justify-center px-4 w-full">
+        <nav className="flex items-center justify-between w-full max-w-fit lg:gap-6 px-2 py-1.5 bg-white/70 backdrop-blur-lg border border-white/80 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] rounded-full">
+          <a href="#beranda" className="flex items-center gap-2 pl-2">
+            <Image
+              src="/images/logo.png"
+              alt="Logo KKN-T IDBU 52"
+              width={32}
+              height={32}
+              className="w-8 h-8 object-contain"
+            />
+            <span className="font-bold text-gray-900 text-base tracking-tight pr-2">
+              KKN-T <span className="text-emerald-500">IDBU 52</span>
+            </span>
+          </a>
 
-        <button
-          type="button"
-          aria-label="Buka menu navigasi"
-          aria-expanded={isOpen}
-          aria-controls="mobile-menu"
-          onClick={() => setIsOpen((v) => !v)}
-          className="w-10 h-10 bg-white rounded-xl shadow-sm border border-gray-200 flex items-center justify-center text-gray-600 hover:text-green-500 hover:border-green-300 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-1 transition-all duration-200 relative z-[60]"
-        >
-          {isOpen ? (
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          ) : (
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          )}
-        </button>
-      </nav>
+          {/* Navigasi Desktop */}
+          <div className="hidden lg:flex items-center gap-1 pr-1.5">
+            {NAV_LINKS.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`group flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold transition-all duration-300 ${
+                    isActive
+                      ? "bg-emerald-50 text-emerald-600 shadow-sm"
+                      : "text-slate-600 hover:bg-white hover:text-emerald-600 hover:shadow-sm"
+                  }`}
+                >
+                  <svg
+                    className={`w-4 h-4 transition-colors duration-300 ${
+                      isActive ? "text-emerald-500" : "text-slate-400 group-hover:text-emerald-500"
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    {link.icon}
+                  </svg>
+                  {link.label}
+                </Link>
+              );
+            })}
+          </div>
+
+          {/* Tombol Hamburger Mobile */}
+          <button
+            type="button"
+            aria-label="Buka menu navigasi"
+            aria-expanded={isOpen}
+            aria-controls="mobile-menu"
+            onClick={() => setIsOpen((v) => !v)}
+            className="lg:hidden w-10 h-10 mr-1 bg-white rounded-full shadow-sm border border-gray-200 flex items-center justify-center text-gray-600 hover:text-emerald-500 hover:border-emerald-300 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-1 transition-all duration-200 relative z-[60]"
+          >
+            {isOpen ? (
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
+        </nav>
+      </div>
 
       <div
         id="mobile-menu"
         role="dialog"
         aria-modal="true"
         aria-label="Menu navigasi"
-        className={`fixed inset-0 z-[60] ${isOpen ? "" : "pointer-events-none"}`}
+        className={`lg:hidden fixed inset-0 z-[60] ${isOpen ? "" : "pointer-events-none"}`}
       >
         <div
           onClick={() => setIsOpen(false)}
@@ -233,19 +268,33 @@ export default function Navbar() {
           </div>
 
           <nav className="flex flex-col px-4 pt-3 pb-6 gap-1 flex-1">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-                className="group flex items-center gap-4 px-4 py-3.5 rounded-2xl text-gray-700 hover:bg-green-50 hover:text-green-600 transition-all duration-200"
-              >
-                <svg className="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  {link.icon}
-                </svg>
-                <span className="font-semibold text-sm">{link.label}</span>
-              </Link>
-            ))}
+            {NAV_LINKS.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className={`group flex items-center gap-4 px-4 py-3.5 rounded-2xl transition-all duration-200 ${
+                    isActive
+                      ? "bg-emerald-50 text-emerald-600"
+                      : "text-gray-700 hover:bg-emerald-50 hover:text-emerald-600"
+                  }`}
+                >
+                  <svg
+                    className={`w-5 h-5 flex-shrink-0 transition-colors ${
+                      isActive ? "text-emerald-500" : "text-emerald-500/70 group-hover:text-emerald-500"
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    {link.icon}
+                  </svg>
+                  <span className="font-semibold text-sm">{link.label}</span>
+                </Link>
+              );
+            })}
           </nav>
 
           <div className="px-6 py-5 border-t border-gray-100">

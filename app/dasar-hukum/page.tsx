@@ -125,7 +125,7 @@ const obligations = [
 
 export default function DasarHukumPage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#f4f4f2] font-sans selection:bg-amber-200 selection:text-stone-900">
+    <main className="selection:bg-amber-200 selection:text-stone-900">
       <div className="mx-auto w-full max-w-5xl px-4 pb-20 pt-8 sm:px-6 lg:px-8">
         
         {/* breadcrumb - Gaya minimalis */}
