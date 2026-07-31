@@ -1,10 +1,10 @@
 .board {
-  padding: 28px 16px 64px;
+  padding: 48px 16px 64px;
 }
 
 @media (min-width: 768px) {
   .board {
-    padding: 40px 32px 80px;
+    padding: 80px 32px 96px;
   }
 }
 

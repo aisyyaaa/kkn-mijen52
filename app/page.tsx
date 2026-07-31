@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main id="beranda">
 
-      <section className="mx-auto w-full max-w-7xl px-4 pb-10 pt-5 sm:px-6 md:pt-8 lg:px-8 lg:pb-16">
+      <section className="mx-auto w-full max-w-7xl px-4 pb-10 pt-12 sm:px-6 sm:pt-16 md:pt-20 lg:px-8 lg:pb-16">
         <div className="grid items-center gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-12">
           <div className="order-2 lg:order-1">
 
@@ -99,7 +99,7 @@ export default function Home() {
       </section>
 
       {/* Menu Navigasi Cepat (Grid Tombol) */}
-      <section className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+      <section className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 sm:pb-20 md:pb-24 lg:px-8">
         <div className="mb-6 flex items-center gap-3">
           <div className="h-px flex-1 bg-gradient-to-r from-transparent via-emerald-200 to-transparent" />
           <h2 className="text-sm font-black uppercase tracking-[0.16em] text-slate-400">Jelajahi Program &amp; Informasi</h2>

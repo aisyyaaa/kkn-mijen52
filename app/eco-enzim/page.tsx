@@ -99,18 +99,7 @@ export default function EcoEnzimPage() {
     <main className="min-h-screen overflow-x-hidden bg-[#FFFCF4] text-stone-900">
       <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_10%_8%,rgba(217,119,6,0.10),transparent_32%),radial-gradient(circle_at_90%_12%,rgba(77,124,15,0.12),transparent_30%),linear-gradient(180deg,#FFFCF4_0%,#F7F7E9_48%,#FFFDF7_100%)]" />
 
-      <div className="mx-auto w-full max-w-7xl px-4 pb-14 pt-4 sm:px-6 md:pt-6 lg:px-8">
-        <div className="mb-6 flex items-center justify-between gap-4 rounded-full border border-amber-100 bg-white/75 px-4 py-3 shadow-[0_18px_55px_rgba(120,53,15,0.06)] backdrop-blur-xl">
-          <Link href="/" className="inline-flex items-center gap-2 text-xs font-semibold text-stone-500 transition hover:text-amber-700">
-            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-            </svg>
-            Kembali ke Beranda
-          </Link>
-          <span className="rounded-full bg-lime-100 px-3 py-1 text-[10px] font-black uppercase tracking-[0.16em] text-lime-800 ring-1 ring-lime-200">
-            ProKlim Mijen
-          </span>
-        </div>
+      <div className="mx-auto w-full max-w-7xl px-4 pt-12 pb-16 sm:px-6 sm:pt-16 sm:pb-20 md:pt-20 md:pb-24 lg:px-8">
 
         <section className="grid items-center gap-8 overflow-hidden rounded-[2rem] border border-amber-100 bg-white/72 p-6 shadow-[0_24px_70px_rgba(120,53,15,0.06)] backdrop-blur sm:p-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
           <div>

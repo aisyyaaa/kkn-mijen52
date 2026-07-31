@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function PetaWilayahPage() {
   return (
     <main>
-      <section className="mx-auto w-full max-w-5xl px-4 pb-16 pt-5 sm:px-6 md:pt-8 lg:px-8">
+      <section className="mx-auto w-full max-w-5xl px-4 pt-12 pb-16 sm:px-6 sm:pt-16 sm:pb-20 md:pt-20 md:pb-24 lg:px-8">
         
 
         <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-white/75 px-3 py-1.5 shadow-sm backdrop-blur">
@@ -104,15 +104,6 @@ export default function PetaWilayahPage() {
             </p>
           </div>
         </div>
-        <Link
-          href="/"
-          className="mx-auto mt-8 flex w-full items-center justify-center gap-2 rounded-full border border-emerald-200 bg-white/80 px-6 py-3.5 text-sm font-extrabold text-slate-600 shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:border-sky-200 hover:text-sky-700 sm:w-auto"
-        >
-          <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-          </svg>
-          Kembali ke Beranda
-        </Link>
       </section>
     </main>
   );

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import AudienceBenefits from "./AudienceBenefits";
 
 
@@ -178,20 +177,7 @@ export default function AksiBioporiPage() {
       {/* Background Decor */}
       <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_12%_8%,rgba(13,124,102,0.06),transparent_34%),radial-gradient(circle_at_88%_10%,rgba(27,107,147,0.06),transparent_30%)]" />
 
-      <div className="mx-auto w-full max-w-7xl px-4 pb-12 pt-4 sm:px-6 md:pt-6 lg:px-8">
-
-        {/* Breadcrumb Navigation */}
-        <div className="mb-6 flex items-center justify-between gap-4 rounded-full border border-stone-200/60 bg-white/70 px-4 py-3 shadow-[0_18px_55px_rgba(15,23,42,0.04)] backdrop-blur-xl">
-          <Link href="/" className="inline-flex items-center gap-2 text-xs font-semibold text-stone-500 transition hover:text-[#0D7C66]">
-            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-            </svg>
-            Kembali ke Beranda
-          </Link>
-          <span className="rounded-full bg-[#0D7C66]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-[#0D7C66] ring-1 ring-[#0D7C66]/20">
-            ProKlim Mijen
-          </span>
-        </div>
+      <div className="mx-auto w-full max-w-7xl px-4 pt-12 pb-16 sm:px-6 sm:pt-16 sm:pb-20 md:pt-20 md:pb-24 lg:px-8">
 
         {/* ─── HERO SECTION ─── */}
         <section className="grid items-center gap-8 rounded-[2rem] border border-stone-200/50 bg-white/60 p-6 shadow-[0_20px_50px_rgba(15,23,42,0.02)] backdrop-blur-md sm:p-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
@@ -357,6 +343,51 @@ export default function AksiBioporiPage() {
                 <p className="text-xs font-bold uppercase tracking-widest text-[#0D7C66]">Catatan Poin Penting</p>
                 <p className="mt-3 text-xs leading-6 text-stone-700">
                   Satu rumah dapat memiliki <strong>beberapa lubang biopori</strong> tergantung luas pekarangan. Idealnya, 1 lubang biopori untuk setiap 50 m² area kedap air. Jarak antar lubang minimal 50–100 cm.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ─── VIDEO TUTORIAL ─── */}
+        <section className="mt-12">
+          <div className="text-center">
+            <span className="rounded-full bg-[#1B6B93]/10 px-3 py-1 text-[11px] font-black uppercase tracking-[0.16em] text-[#1B6B93] ring-1 ring-[#1B6B93]/20">
+              Tonton Praktiknya
+            </span>
+            <h2 className="mt-3 text-3xl font-black tracking-[-0.04em] text-stone-900 sm:text-4xl">Video Tutorial Biopori</h2>
+            <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-stone-500">
+              Lihat langsung praktik pembuatan lubang biopori agar lebih mudah dipahami dan dipraktikkan di rumah.
+            </p>
+          </div>
+
+          {/*
+            PLACEHOLDER — ganti div di bawah ini dengan embed YouTube asli, contoh:
+
+            <div className="mt-8 overflow-hidden rounded-[2rem] border border-stone-200 shadow-sm">
+              <div className="relative aspect-video w-full">
+                <iframe
+                  src="https://www.youtube.com/embed/VIDEO_ID"
+                  title="Video Tutorial Biopori"
+                  className="absolute inset-0 h-full w-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          */}
+          <div className="mx-auto mt-8 max-w-3xl overflow-hidden rounded-[2rem] border border-stone-200 bg-white/60 shadow-sm backdrop-blur-md">
+            <div className="relative flex aspect-video w-full items-center justify-center bg-gradient-to-br from-[#0D7C66] to-[#1B6B93]">
+              <div className="absolute inset-0 opacity-10 [background-image:radial-gradient(circle,white_1px,transparent_1px)] [background-size:18px_18px]" />
+              <div className="relative flex flex-col items-center gap-3 px-6 text-center">
+                <span className="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm ring-1 ring-white/30">
+                  <svg className="ml-1 h-7 w-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </span>
+                <p className="text-sm font-bold text-white">Video Tutorial Segera Hadir</p>
+                <p className="max-w-xs text-xs leading-5 text-white/80">
+                  Placeholder — akan diganti dengan video praktik pembuatan biopori.
                 </p>
               </div>
             </div>

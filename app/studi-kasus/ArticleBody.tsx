@@ -46,6 +46,7 @@ export default function ArticleBody() {
         <p className={`${styles.lessonPara} ${expanded ? "" : "hidden md:block"}`}>
           Penulis: Rafif Naufal Aryasatya
         </p>
+        
       </div>
 
       <button type="button" onClick={() => setExpanded((v) => !v)} className={styles.readMore}>

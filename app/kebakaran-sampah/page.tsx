@@ -274,38 +274,6 @@ export default function KebakaranSampahPage() {
                 </li>
               </ul>
             </div>
-            <div className={styles.solutionVisual} aria-hidden="true">
-              <svg viewBox="0 0 420 290" fill="none">
-                <path d="M92 196 206 130l118 66-116 67L92 196Z" fill="#5CB96A" />
-                <path d="M92 196v34l116 66v-33L92 196Z" fill="#3B8E4C" />
-                <path d="M324 196v34l-116 66v-33l116-67Z" fill="#2E7A41" />
-                <path d="M138 186l37-21 38 22-37 21-38-22Z" fill="#E9F6EB" />
-                <path d="M225 185l38-22 42 24-39 23-41-25Z" fill="#D7E0D9" />
-                <path d="M156 169v-54h41v72" stroke="#2D8C48" strokeWidth="9" strokeLinecap="round" />
-                <path d="M244 168v-49h43v71" stroke="#5D6360" strokeWidth="9" strokeLinecap="round" />
-                <path
-                  d="M114 147c28-40 80-62 130-46 29 9 48 30 59 60"
-                  stroke="#3AA655"
-                  strokeWidth="8"
-                  strokeLinecap="round"
-                  opacity=".45"
-                />
-                <path
-                  d="M80 98c20-26 56-34 87-19"
-                  stroke="#3AA655"
-                  strokeWidth="8"
-                  strokeLinecap="round"
-                  opacity=".34"
-                />
-                <path
-                  d="M303 92c22-10 47-7 66 10"
-                  stroke="#3AA655"
-                  strokeWidth="8"
-                  strokeLinecap="round"
-                  opacity=".34"
-                />
-              </svg>
-            </div>
           </div>
         </section>
 
@@ -321,38 +289,6 @@ export default function KebakaranSampahPage() {
                 ref: "UU No. 32/2009 jo. UU No. 6/2023 (PPLH) — Pasal 69, 98 & 99",
                 note: "Larangan pembukaan lahan dengan cara membakar, dengan ancaman pidana bagi perbuatan yang mengakibatkan dilampauinya baku mutu udara, air, atau tanah, baik disengaja maupun karena kelalaian.",
               },
-            ]}
-            sanctions={[
-              {
-                basis: "Perda Kota Semarang No. 6/2012, Pasal 52",
-                violation: "Membakar sampah yang tidak sesuai persyaratan teknis pengelolaan sampah",
-                penalty: "Pidana kurungan maks. 3 bulan dan/atau denda maks. Rp50.000.000,00",
-              },
-              {
-                basis: "UU No. 18/2008, Pasal 41 ayat (1)",
-                violation: "Pengelolaan sampah yang melanggar hukum yang mengakibatkan gangguan kesehatan, keamanan, atau pencemaran ringan",
-                penalty: "Pidana kurungan maks. 3 tahun dan denda maks. Rp100.000.000,00",
-              },
-              {
-                basis: "UU No. 18/2008, Pasal 40",
-                violation: "Pengelolaan sampah yang melanggar hukum yang menimbulkan korban jiwa/luka berat",
-                penalty: "Pidana penjara 4–10 tahun dan denda Rp100.000.000,00 – Rp5.000.000.000,00",
-              },
-              {
-                basis: "UU No. 32/2009 (PPLH), Pasal 98–99",
-                violation: "Perbuatan yang mengakibatkan dilampauinya baku mutu udara/lingkungan akibat pembakaran",
-                penalty: "Pidana penjara dan denda sesuai tingkat kesengajaan/kelalaian, sebagaimana diatur dalam UU PPLH",
-              },
-              {
-                basis: "Sanksi Administratif (Pasal 76 UU PPLH jo. peraturan pelaksana)",
-                violation: "Pelanggaran izin lingkungan/ketentuan teknis pengelolaan sampah",
-                penalty: "Teguran tertulis, paksaan pemerintah, pembekuan, hingga pencabutan izin",
-              },
-            ]}
-            obligations={[
-              "Tidak melakukan pembuangan dan/atau pembakaran sampah secara terbuka yang tidak sesuai dengan persyaratan teknis pengelolaan sampah.",
-              "Melaporkan kepada RT/RW, Kelurahan, atau instansi terkait (Dinas Lingkungan Hidup) apabila mengetahui adanya praktik pembakaran atau pembuangan sampah yang berpotensi mencemari lingkungan atau membahayakan warga sekitar.",
-              "Turut menanggulangi dan memulihkan fungsi lingkungan apabila terjadi pencemaran akibat aktivitas pengelolaan sampah yang salah (Pasal 53 jo. Pasal 54 UU PPLH).",
             ]}
             moreHref="/dasar-hukum"
           />

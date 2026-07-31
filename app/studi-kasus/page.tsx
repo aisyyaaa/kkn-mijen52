@@ -19,16 +19,6 @@ export default function StudiKasusPage() {
           <span className={`${styles.tape} ${styles.tapeTopLeft}`} aria-hidden="true" />
           <span className={`${styles.tape} ${styles.tapeTopRight}`} aria-hidden="true" />
 
-          <div className={styles.breadcrumb}>
-            <Link href="/" className={styles.breadcrumbLink}>
-              Beranda
-            </Link>
-            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-            <span className={styles.breadcrumbCurrent}>Studi Kasus</span>
-          </div>
-
           <div className={styles.introBadge}>
             <span>Papan Mading Kampung</span>
           </div>
@@ -60,7 +50,7 @@ export default function StudiKasusPage() {
               priority
             />
           </div>
-          <p className={styles.caption}>Ilustrasi kejadian kebakaran lahan akibat pembakaran sampah terbuka.</p>
+          <p className={styles.caption}>Ilustrasi kejadian kebakaran lahan akibat pembakaran sampah terbuka (Sumber Gambar: https://www.euronews.com)</p>
 
           <h2 className={styles.headline} style={{ fontFamily: "var(--font-playfair), serif" }}>
             Studi Kasus: Kebakaran yang Disebabkan Pengelolaan Sampah Tidak Terkontrol
@@ -76,13 +66,6 @@ export default function StudiKasusPage() {
 
           <p className={styles.source}>Sumber: BPBD Provinsi Jawa Tengah (2023)</p>
         </article>
-
-        <Link href="/" className={styles.backLink}>
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-          </svg>
-          Kembali ke Beranda
-        </Link>
       </div>
     </main>
   );

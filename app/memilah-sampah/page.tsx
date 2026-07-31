@@ -59,18 +59,7 @@ function SectionLabel({ children }: { children: ReactNode }) {
 export default function MemilahSampahPage() {
   return (
     <main>
-      <section className="mx-auto w-full max-w-7xl px-4 pb-10 pt-5 sm:px-6 md:pt-8 lg:px-8 lg:pb-16">
-        <div className="mb-6 flex items-center justify-between gap-4 rounded-full border border-white/80 bg-white/70 px-4 py-3 shadow-[0_18px_55px_rgba(15,23,42,0.08)] backdrop-blur-xl">
-          <Link href="/" className="inline-flex items-center gap-2 text-xs font-semibold text-slate-500 transition hover:text-emerald-600">
-            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-            </svg>
-            Beranda
-          </Link>
-          <span className="rounded-full bg-emerald-50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-emerald-700 ring-1 ring-emerald-100">
-            ProKlim Mijen
-          </span>
-        </div>
+      <section className="mx-auto w-full max-w-7xl px-4 pb-10 pt-12 sm:px-6 sm:pt-16 md:pt-20 lg:px-8 lg:pb-16">
 
         <div className="grid items-center gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-12">
           <div className="order-2 lg:order-1">
@@ -180,7 +169,7 @@ export default function MemilahSampahPage() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-7xl px-4 pb-14 sm:px-6 lg:px-8">
+      <section className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 sm:pb-20 md:pb-24 lg:px-8">
         <div className="grid gap-4 md:grid-cols-2">
           {infoCards.map((card) => {
             const isEmerald = card.tone === "emerald";
@@ -345,16 +334,6 @@ export default function MemilahSampahPage() {
           ]}
           moreHref="/dasar-hukum"
         />
-
-        <Link
-          href="/"
-          className="mx-auto mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full border border-emerald-200 bg-white/80 px-6 py-3.5 text-sm font-extrabold text-slate-600 shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:border-sky-200 hover:text-sky-700 sm:w-auto"
-        >
-          <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-          </svg>
-          Kembali ke Beranda
-        </Link>
       </section>
     </main>
   );

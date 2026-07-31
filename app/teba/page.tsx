@@ -167,20 +167,7 @@ export default function TebaPage() {
       {/* Background Decor in green/brown earthy colors */}
       <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_12%_8%,rgba(44,94,67,0.10),transparent_34%),radial-gradient(circle_at_88%_10%,rgba(139,90,43,0.10),transparent_30%),linear-gradient(180deg,#FAF9F5_0%,#F3EFE9_48%,#FAF9F5_100%)]" />
 
-      <div className="mx-auto w-full max-w-7xl px-4 pb-12 pt-4 sm:px-6 md:pt-6 lg:px-8">
-        
-        {/* Breadcrumb Navigation - Styled with Green/Brown theme */}
-        <div className="mb-6 flex items-center justify-between gap-4 rounded-full border border-stone-200/60 bg-white/70 px-4 py-3 shadow-[0_18px_55px_rgba(15,23,42,0.04)] backdrop-blur-xl">
-          <Link href="/" className="inline-flex items-center gap-2 text-xs font-semibold text-stone-500 transition hover:text-[#2C5E43]">
-            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-            </svg>
-            Kembali ke Beranda
-          </Link>
-          <span className="rounded-full bg-[#2C5E43]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-[#2C5E43] ring-1 ring-[#2C5E43]/20">
-            ProKlim Mijen
-          </span>
-        </div>
+      <div className="mx-auto w-full max-w-7xl px-4 pt-12 pb-16 sm:px-6 sm:pt-16 sm:pb-20 md:pt-20 md:pb-24 lg:px-8">
 
         {/* Hero Section */}
         <section className="grid items-center gap-8 rounded-[2rem] border border-stone-200/50 bg-white/60 p-6 shadow-[0_20px_50px_rgba(15,23,42,0.02)] backdrop-blur-md sm:p-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
@@ -250,8 +237,8 @@ export default function TebaPage() {
 
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {problems.map((problem, i) => (
-              <div 
-                key={i} 
+              <div
+                key={i}
                 className="group relative rounded-3xl border border-stone-200 bg-white/60 p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#2C5E43]/30 hover:bg-white hover:shadow-md"
               >
                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#2C5E43]/10 text-[#2C5E43] transition-colors group-hover:bg-[#2C5E43] group-hover:text-white">
@@ -293,11 +280,10 @@ export default function TebaPage() {
               {makeSteps.map((step, idx) => {
                 const isEven = idx % 2 === 1;
                 return (
-                  <div 
-                    key={idx} 
-                    className={`flex gap-6 rounded-3xl border border-stone-200 bg-white/60 p-6 shadow-sm backdrop-blur-sm transition hover:shadow-md lg:p-8 ${
-                      isEven ? "lg:translate-y-8" : ""
-                    }`}
+                  <div
+                    key={idx}
+                    className={`flex gap-6 rounded-3xl border border-stone-200 bg-white/60 p-6 shadow-sm backdrop-blur-sm transition hover:shadow-md lg:p-8 ${isEven ? "lg:translate-y-8" : ""
+                      }`}
                   >
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#2C5E43] to-[#8B5A2B] text-lg font-extrabold text-white shadow-sm">
                       {step.num}

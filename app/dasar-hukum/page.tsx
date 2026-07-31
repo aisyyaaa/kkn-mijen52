@@ -126,20 +126,7 @@ const obligations = [
 export default function DasarHukumPage() {
   return (
     <main className="selection:bg-amber-200 selection:text-stone-900">
-      <div className="mx-auto w-full max-w-5xl px-4 pb-20 pt-8 sm:px-6 lg:px-8">
-        
-        {/* breadcrumb - Gaya minimalis */}
-        <div className="mb-8 flex items-center justify-between">
-          <Link href="/" className="inline-flex items-center gap-2 text-sm font-medium text-stone-500 transition hover:text-stone-900">
-            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-            </svg>
-            Kembali ke Beranda
-          </Link>
-          <span className="border-b-2 border-amber-700 pb-0.5 text-xs font-bold uppercase tracking-widest text-stone-900">
-            Lembaran Informasi
-          </span>
-        </div>
+      <div className="mx-auto w-full max-w-5xl px-4 pt-12 pb-16 sm:px-6 sm:pt-16 sm:pb-20 md:pt-20 md:pb-24 lg:px-8">
 
         {/* hero - Gaya Dokumen/Dossier */}
         <section className="relative overflow-hidden rounded-md border border-stone-200 bg-white p-6 shadow-sm sm:p-10">
