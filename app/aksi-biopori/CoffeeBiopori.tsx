@@ -100,7 +100,7 @@ export default function CoffeeBiopori() {
   const [activeTab, setActiveTab] = useState<"manfaat" | "formula" | "komparasi">("manfaat");
 
   return (
-    <section className="mt-12 overflow-hidden rounded-[2.5rem] border border-[#0D7C66]/20 bg-gradient-to-b from-emerald-950/5 via-white to-stone-50/80 p-6 shadow-md backdrop-blur-sm sm:p-10 lg:p-12">
+    <section className="mt-12 overflow-hidden rounded-[2.5rem] border border-[#0D7C66]/20 bg-white/80 p-6 shadow-sm backdrop-blur-md sm:p-10 lg:p-12">
       {/* Section Header */}
       <div className="text-center">
         <div className="inline-flex items-center gap-2 rounded-full border border-[#0D7C66]/25 bg-emerald-50 px-4 py-1.5 shadow-sm">
@@ -110,10 +110,10 @@ export default function CoffeeBiopori() {
           </span>
         </div>
 
-        <h2 className="mt-4 text-3xl font-black tracking-[-0.04em] text-stone-900 sm:text-4xl lg:text-5xl">
+        <h2 className="mt-4 text-3xl font-black tracking-[-0.04em] text-slate-900 sm:text-4xl lg:text-5xl">
           Pemanfaatan Biopori untuk Pohon Kopi
         </h2>
-        <p className="mx-auto mt-4 max-w-3xl text-sm leading-relaxed text-stone-600 sm:text-base">
+        <p className="mx-auto mt-4 max-w-3xl text-sm leading-relaxed text-slate-600 sm:text-base">
           Lubang biopori (*rorak biopori*) di sekeliling pohon kopi berfungsi sebagai reservoir air perakaran, pengolah limbah kulit kopi (*pulp*), dan penyedia pupuk organik tanpa biaya tambahan.
         </p>
       </div>
@@ -125,7 +125,7 @@ export default function CoffeeBiopori() {
           className={`flex items-center gap-2 rounded-full px-5 py-2.5 text-xs font-extrabold transition-all duration-300 sm:text-sm ${
             activeTab === "manfaat"
               ? "bg-[#0D7C66] text-white shadow-lg shadow-[#0D7C66]/30 scale-105"
-              : "border border-stone-200 bg-white/80 text-stone-700 hover:bg-stone-100"
+              : "border border-slate-200 bg-white/80 text-slate-700 hover:bg-slate-100"
           }`}
         >
           <span>🌿</span> Manfaat Utama Kopi
@@ -135,7 +135,7 @@ export default function CoffeeBiopori() {
           className={`flex items-center gap-2 rounded-full px-5 py-2.5 text-xs font-extrabold transition-all duration-300 sm:text-sm ${
             activeTab === "formula"
               ? "bg-[#0D7C66] text-white shadow-lg shadow-[#0D7C66]/30 scale-105"
-              : "border border-stone-200 bg-white/80 text-stone-700 hover:bg-stone-100"
+              : "border border-slate-200 bg-white/80 text-slate-700 hover:bg-slate-100"
           }`}
         >
           <span>🧪</span> Posisi &amp; Formula Kompos
@@ -145,7 +145,7 @@ export default function CoffeeBiopori() {
           className={`flex items-center gap-2 rounded-full px-5 py-2.5 text-xs font-extrabold transition-all duration-300 sm:text-sm ${
             activeTab === "komparasi"
               ? "bg-[#0D7C66] text-white shadow-lg shadow-[#0D7C66]/30 scale-105"
-              : "border border-stone-200 bg-white/80 text-stone-700 hover:bg-stone-100"
+              : "border border-slate-200 bg-white/80 text-slate-700 hover:bg-slate-100"
           }`}
         >
           <span>⚖️</span> Dengan vs Tanpa Biopori
@@ -158,21 +158,21 @@ export default function CoffeeBiopori() {
           {coffeeBenefits.map((item, idx) => (
             <div
               key={idx}
-              className="group flex flex-col justify-between rounded-3xl border border-stone-200/80 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#0D7C66]/40 hover:shadow-xl"
+              className="group flex flex-col justify-between rounded-3xl border border-slate-200/80 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#0D7C66]/40 hover:shadow-xl"
             >
               <div>
                 <div className="flex items-center justify-between">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-stone-100 text-stone-800 transition-colors group-hover:bg-[#0D7C66] group-hover:text-white">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-100 text-slate-800 transition-colors group-hover:bg-[#0D7C66] group-hover:text-white">
                     {item.icon}
                   </div>
                   <span className={`rounded-full border px-2.5 py-0.5 text-[10px] font-extrabold ${item.color}`}>
                     {item.tag}
                   </span>
                 </div>
-                <h3 className="mt-5 text-base font-bold text-stone-900">{item.title}</h3>
-                <p className="mt-2 text-xs leading-6 text-stone-600">{item.desc}</p>
+                <h3 className="mt-5 text-base font-bold text-slate-900">{item.title}</h3>
+                <p className="mt-2 text-xs leading-6 text-slate-600">{item.desc}</p>
               </div>
-              <div className="mt-5 pt-3 border-t border-stone-100 flex items-center gap-1.5 text-[11px] font-bold text-[#0D7C66]">
+              <div className="mt-5 pt-3 border-t border-slate-100 flex items-center gap-1.5 text-[11px] font-bold text-[#0D7C66]">
                 <span>✓ Rekomendasi Tanaman Kopi</span>
               </div>
             </div>
@@ -184,40 +184,40 @@ export default function CoffeeBiopori() {
       {activeTab === "formula" && (
         <div className="mt-8 grid gap-8 lg:grid-cols-12 items-stretch">
           {/* Left Column: Aturan Penempatan di Perkebunan Kopi */}
-          <div className="lg:col-span-6 flex flex-col justify-between rounded-3xl border border-stone-200/80 bg-white p-6 shadow-sm sm:p-8">
+          <div className="lg:col-span-6 flex flex-col justify-between rounded-3xl border border-slate-200/80 bg-white p-6 shadow-sm sm:p-8">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full bg-[#0D7C66]/10 px-3 py-1 text-[10px] font-black uppercase tracking-wider text-[#0D7C66]">
                 <span>📍</span> Aturan Penempatan Kebun
               </div>
-              <h3 className="mt-3 text-xl font-black text-stone-900 sm:text-2xl">
+              <h3 className="mt-3 text-xl font-black text-slate-900 sm:text-2xl">
                 Lokasi Galian Biopori Kopi
               </h3>
-              <p className="mt-2 text-xs leading-6 text-stone-600 sm:text-sm">
+              <p className="mt-2 text-xs leading-6 text-slate-600 sm:text-sm">
                 Pemasangan biopori pada pohon kopi dibuat tepat pada lingkaran perakaran aktif (*canopy dripline*):
               </p>
 
               <div className="mt-6 space-y-3.5">
-                <div className="flex items-start gap-3 rounded-2xl bg-stone-50 p-4 border border-stone-200/60 transition hover:bg-emerald-50/40">
+                <div className="flex items-start gap-3 rounded-2xl bg-slate-50 p-4 border border-slate-200/60 transition hover:bg-emerald-50/40">
                   <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#0D7C66] text-xs font-bold text-white">1</span>
                   <div>
-                    <h4 className="text-xs font-bold text-stone-900 sm:text-sm">Jarak Pemasangan (50–100 cm)</h4>
-                    <p className="mt-0.5 text-[11px] leading-5 text-stone-600">Gali tepat di bawah lingkaran tajuk daun luar tempat akar serabut penyerap hara berkumpul.</p>
+                    <h4 className="text-xs font-bold text-slate-900 sm:text-sm">Jarak Pemasangan (50–100 cm)</h4>
+                    <p className="mt-0.5 text-[11px] leading-5 text-slate-600">Gali tepat di bawah lingkaran tajuk daun luar tempat akar serabut penyerap hara berkumpul.</p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 rounded-2xl bg-stone-50 p-4 border border-stone-200/60 transition hover:bg-emerald-50/40">
+                <div className="flex items-start gap-3 rounded-2xl bg-slate-50 p-4 border border-slate-200/60 transition hover:bg-emerald-50/40">
                   <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#0D7C66] text-xs font-bold text-white">2</span>
                   <div>
-                    <h4 className="text-xs font-bold text-stone-900 sm:text-sm">Jumlah Lubang (2–4 Lubang)</h4>
-                    <p className="mt-0.5 text-[11px] leading-5 text-stone-600">Buat 2 sampai 4 lubang mengelilingi pohon secara simetris untuk distribusi pasokan hara merata.</p>
+                    <h4 className="text-xs font-bold text-slate-900 sm:text-sm">Jumlah Lubang (2–4 Lubang)</h4>
+                    <p className="mt-0.5 text-[11px] leading-5 text-slate-600">Buat 2 sampai 4 lubang mengelilingi pohon secara simetris untuk distribusi pasokan hara merata.</p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 rounded-2xl bg-stone-50 p-4 border border-stone-200/60 transition hover:bg-emerald-50/40">
+                <div className="flex items-start gap-3 rounded-2xl bg-slate-50 p-4 border border-slate-200/60 transition hover:bg-emerald-50/40">
                   <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#0D7C66] text-xs font-bold text-white">3</span>
                   <div>
-                    <h4 className="text-xs font-bold text-stone-900 sm:text-sm">Dimensi Lubang (Kedalaman 50–80 cm)</h4>
-                    <p className="mt-0.5 text-[11px] leading-5 text-stone-600">Diameter 10–12 cm. Dipasang pipa PVC berlubang atau biarkan dinding tanah alami solid.</p>
+                    <h4 className="text-xs font-bold text-slate-900 sm:text-sm">Dimensi Lubang (Kedalaman 50–80 cm)</h4>
+                    <p className="mt-0.5 text-[11px] leading-5 text-slate-600">Diameter 10–12 cm. Dipasang pipa PVC berlubang atau biarkan dinding tanah alami solid.</p>
                   </div>
                 </div>
               </div>
@@ -264,25 +264,25 @@ export default function CoffeeBiopori() {
 
       {/* TAB CONTENT 3: KOMPARASI */}
       {activeTab === "komparasi" && (
-        <div className="mt-8 overflow-hidden rounded-3xl border border-stone-200 bg-white shadow-md">
+        <div className="mt-8 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-md">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs sm:text-sm">
-              <thead className="border-b border-stone-200 bg-stone-100/80 text-stone-900 font-extrabold">
+              <thead className="border-b border-slate-200 bg-slate-100/80 text-slate-900 font-extrabold">
                 <tr>
                   <th className="p-4 sm:p-5 w-1/4">Aspek Perkebunan</th>
                   <th className="p-4 sm:p-5 w-3/8 text-rose-700 bg-rose-50/70">Tanpa Biopori</th>
                   <th className="p-4 sm:p-5 w-3/8 text-[#0D7C66] bg-emerald-50/70">Dengan Biopori (Rorak Biopori)</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-stone-100 text-stone-700">
+              <tbody className="divide-y divide-slate-100 text-slate-700">
                 {comparisonData.map((row, idx) => (
-                  <tr key={idx} className="hover:bg-stone-50/80 transition-colors">
-                    <td className="p-4 sm:p-5 font-bold text-stone-900">{row.aspect}</td>
-                    <td className="p-4 sm:p-5 text-stone-600 bg-rose-50/30">
+                  <tr key={idx} className="hover:bg-slate-50/80 transition-colors">
+                    <td className="p-4 sm:p-5 font-bold text-slate-900">{row.aspect}</td>
+                    <td className="p-4 sm:p-5 text-slate-600 bg-rose-50/30">
                       <span className="inline-flex items-center justify-center h-5 w-5 rounded-full bg-rose-100 text-rose-700 font-extrabold text-xs mr-2">✕</span>
                       {row.without}
                     </td>
-                    <td className="p-4 sm:p-5 text-stone-800 font-semibold bg-emerald-50/30">
+                    <td className="p-4 sm:p-5 text-slate-800 font-semibold bg-emerald-50/30">
                       <span className="inline-flex items-center justify-center h-5 w-5 rounded-full bg-emerald-100 text-[#0D7C66] font-extrabold text-xs mr-2">✓</span>
                       {row.withBiopori}
                     </td>

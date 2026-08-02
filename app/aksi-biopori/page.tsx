@@ -122,14 +122,11 @@ const envImpacts = [
 
 export default function AksiBioporiPage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#FAFCFB] text-stone-900">
-      {/* Dynamic Background Decor */}
-      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_12%_8%,rgba(13,124,102,0.07),transparent_38%),radial-gradient(circle_at_88%_14%,rgba(27,107,147,0.07),transparent_35%)]" />
-
+    <main className="min-h-screen overflow-x-hidden text-slate-900">
       <div className="mx-auto w-full max-w-7xl px-4 pt-8 pb-16 sm:px-6 sm:pt-12 sm:pb-20 md:pt-16 md:pb-24 lg:px-8">
 
         {/* ─── 1. HERO SECTION ─── */}
-        <section className="relative overflow-hidden rounded-[2.5rem] border border-stone-200/70 bg-white/80 p-6 shadow-[0_20px_60px_rgba(13,124,102,0.06)] backdrop-blur-md sm:p-8 md:p-10 lg:grid lg:grid-cols-[1.1fr_0.9fr] lg:gap-12 lg:items-center">
+        <section className="relative overflow-hidden rounded-[2.5rem] border border-emerald-200/60 bg-white/80 p-6 shadow-[0_20px_60px_rgba(16,185,129,0.06)] backdrop-blur-md sm:p-8 md:p-10 lg:grid lg:grid-cols-[1.1fr_0.9fr] lg:gap-12 lg:items-center">
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-[#0D7C66]/20 bg-[#0D7C66]/5 px-3.5 py-1.5 shadow-sm backdrop-blur">
               <span className="h-2 w-2 rounded-full bg-[#0D7C66] shadow-[0_0_0_5px_rgba(13,124,102,0.15)]" />
@@ -138,17 +135,17 @@ export default function AksiBioporiPage() {
               </span>
             </div>
 
-            <h1 className="mt-4 text-3xl font-extrabold leading-[1.15] tracking-[-0.03em] text-stone-900 sm:text-4xl md:text-5xl lg:text-6xl">
+            <h1 className="mt-4 text-3xl font-extrabold leading-[1.15] tracking-[-0.03em] text-slate-950 sm:text-4xl md:text-5xl lg:text-6xl">
               Genangan Air &amp; Sampah Organik?
               <span className="mt-2 block bg-gradient-to-r from-[#0D7C66] via-[#1B9C85] to-[#1B6B93] bg-clip-text text-transparent">
                 Biopori Solusinya
               </span>
             </h1>
 
-            <p className="mt-4 text-sm leading-7 text-stone-700 sm:text-base sm:leading-8 md:text-lg">
+            <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8 md:text-lg">
               Saat musim hujan, air sering kali menggenang karena kurangnya resapan. Di sisi lain, sampah dapur dan sisa kulit kopi terbuang begitu saja tanpa dimanfaatkan.
             </p>
-            <p className="mt-3 text-sm leading-7 text-stone-700 sm:text-base sm:leading-8 md:text-lg">
+            <p className="mt-3 text-sm leading-7 text-slate-600 sm:text-base sm:leading-8 md:text-lg">
               <strong>Lubang Biopori</strong> hadir sebagai solusi sederhana yang mempercepat air hujan meresap ke dalam tanah sekaligus mengolah sampah organik menjadi pupuk kompos alami bagi pekarangan dan <strong>pohon kopi</strong>.
             </p>
 
@@ -173,7 +170,7 @@ export default function AksiBioporiPage() {
               {/* Sparkle Floating Badges */}
               <div className="absolute -top-2 -left-2 z-20 hidden sm:flex items-center gap-1.5 rounded-2xl border border-white/80 bg-white/90 px-3.5 py-2 shadow-lg backdrop-blur-md">
                 <span className="text-base">🌱</span>
-                <span className="text-xs font-extrabold text-stone-800">100% Organik</span>
+                <span className="text-xs font-extrabold text-slate-800">100% Organik</span>
               </div>
 
               <div className="absolute -bottom-2 -right-2 z-20 hidden sm:flex items-center gap-1.5 rounded-2xl border border-white/80 bg-white/90 px-3.5 py-2 shadow-lg backdrop-blur-md">
@@ -181,7 +178,7 @@ export default function AksiBioporiPage() {
                 <span className="text-xs font-extrabold text-[#0D7C66]">Resapan Subsoil</span>
               </div>
 
-              <div className="animate-float-card relative flex w-full justify-center rounded-3xl bg-white p-3 shadow-md border border-stone-100">
+              <div className="animate-float-card relative flex w-full justify-center rounded-3xl bg-white p-3 shadow-md border border-slate-100">
                 <Image
                   src="/images/biopori-hero.png"
                   alt="Lubang Biopori"
@@ -201,10 +198,10 @@ export default function AksiBioporiPage() {
             <span className="rounded-full bg-[#0D7C66]/10 px-3.5 py-1.5 text-[10px] font-black uppercase tracking-[0.16em] text-[#0D7C66] ring-1 ring-[#0D7C66]/20 sm:text-[11px]">
               Tujuan &amp; Urgensi
             </span>
-            <h2 className="mt-3 text-2xl font-black tracking-[-0.04em] text-stone-900 sm:text-3xl md:text-4xl">
+            <h2 className="mt-3 text-2xl font-black tracking-[-0.04em] text-slate-900 sm:text-3xl md:text-4xl">
               Mengapa Kita Perlu Biopori?
             </h2>
-            <p className="mx-auto mt-3 max-w-2xl text-xs leading-relaxed text-stone-500 sm:text-sm">
+            <p className="mx-auto mt-3 max-w-2xl text-xs leading-relaxed text-slate-500 sm:text-sm">
               Satu langkah sederhana dengan empat dampak positif utama bagi lingkungan, tanah, dan kebun.
             </p>
           </div>
@@ -213,24 +210,24 @@ export default function AksiBioporiPage() {
             {urgencies.map((item, i) => (
               <div
                 key={i}
-                className="group relative overflow-hidden rounded-3xl border border-stone-200/80 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#0D7C66]/40 hover:shadow-xl"
+                className="group relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white/80 p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#0D7C66]/40 hover:shadow-xl"
               >
                 {/* Top colored accent line */}
                 <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0D7C66] to-[#1B6B93]" />
 
                 <div className="flex items-center justify-between">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-stone-100 text-[#0D7C66] transition-colors group-hover:bg-[#0D7C66] group-hover:text-white">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-100 text-[#0D7C66] transition-colors group-hover:bg-[#0D7C66] group-hover:text-white">
                     <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       {item.icon}
                     </svg>
                   </div>
-                  <span className="text-xs font-black text-stone-300 group-hover:text-[#0D7C66]/40 transition-colors">
+                  <span className="text-xs font-black text-slate-300 group-hover:text-[#0D7C66]/40 transition-colors">
                     {item.num}
                   </span>
                 </div>
 
-                <h3 className="mt-5 text-base font-bold text-stone-900 sm:text-lg">{item.title}</h3>
-                <p className="mt-2 text-xs leading-6 text-stone-600">{item.desc}</p>
+                <h3 className="mt-5 text-base font-bold text-slate-900 sm:text-lg">{item.title}</h3>
+                <p className="mt-2 text-xs leading-6 text-slate-600">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -245,10 +242,10 @@ export default function AksiBioporiPage() {
             <span className="rounded-full bg-[#1B6B93]/10 px-3.5 py-1.5 text-[10px] font-black uppercase tracking-[0.16em] text-[#1B6B93] ring-1 ring-[#1B6B93]/20 sm:text-[11px]">
               Panduan Praktis
             </span>
-            <h2 className="mt-3 text-2xl font-black tracking-[-0.04em] text-stone-900 sm:text-3xl md:text-4xl">
+            <h2 className="mt-3 text-2xl font-black tracking-[-0.04em] text-slate-900 sm:text-3xl md:text-4xl">
               Alur Pembuatan &amp; Penggunaan Biopori
             </h2>
-            <p className="mx-auto mt-3 max-w-2xl text-xs leading-relaxed text-stone-500 sm:text-sm">
+            <p className="mx-auto mt-3 max-w-2xl text-xs leading-relaxed text-slate-500 sm:text-sm">
               5 tahapan lengkap mulai dari pembuatan lubang hingga pemanenan kompos secara berkelanjutan.
             </p>
           </div>
@@ -258,19 +255,19 @@ export default function AksiBioporiPage() {
               {bioporiSteps.map((step, idx) => (
                 <div
                   key={idx}
-                  className="flex flex-col justify-between gap-4 rounded-3xl border border-stone-200/80 bg-white p-6 shadow-sm transition hover:shadow-md lg:p-8"
+                  className="flex flex-col justify-between gap-4 rounded-3xl border border-slate-200/80 bg-white/80 p-6 shadow-sm transition hover:shadow-md lg:p-8"
                 >
                   <div className="flex gap-4 sm:gap-6">
                     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#0D7C66] to-[#1B6B93] text-base font-extrabold text-white shadow-md sm:h-12 sm:w-12 sm:text-lg">
                       {step.num}
                     </div>
                     <div>
-                      <h3 className="text-base font-black text-stone-900 sm:text-lg">{step.title}</h3>
-                      <p className="mt-2 text-xs leading-6 text-stone-600 sm:text-sm">{step.desc}</p>
+                      <h3 className="text-base font-black text-slate-900 sm:text-lg">{step.title}</h3>
+                      <p className="mt-2 text-xs leading-6 text-slate-600 sm:text-sm">{step.desc}</p>
                     </div>
                   </div>
                   {step.image && (
-                    <div className="overflow-hidden rounded-2xl border border-stone-100 mt-2">
+                    <div className="overflow-hidden rounded-2xl border border-slate-100 mt-2">
                       <Image
                         src={step.image}
                         alt={step.title}
@@ -283,11 +280,11 @@ export default function AksiBioporiPage() {
                 </div>
               ))}
 
-              <div className="flex flex-col justify-center rounded-3xl border border-[#0D7C66]/20 bg-gradient-to-br from-[#0D7C66]/10 to-[#1B6B93]/10 p-6 text-stone-900 lg:p-8">
+              <div className="flex flex-col justify-center rounded-3xl border border-[#0D7C66]/20 bg-gradient-to-br from-[#0D7C66]/10 to-[#1B6B93]/10 p-6 text-slate-900 lg:p-8">
                 <div className="inline-flex items-center gap-2 rounded-full bg-white/80 px-3 py-1 text-xs font-extrabold text-[#0D7C66] w-fit shadow-sm">
                   <span>📌</span> Rekomendasi Jumlah Lubang
                 </div>
-                <p className="mt-4 text-xs leading-6 text-stone-700 sm:text-sm">
+                <p className="mt-4 text-xs leading-6 text-slate-700 sm:text-sm">
                   • <strong>Pekarangan Rumah:</strong> 1 lubang biopori per 50 m² area kedap air.<br />
                   • <strong>Pohon Kopi:</strong> 2–4 lubang biopori melingkar di bawah tajuk luar daun (50–100 cm dari batang).
                 </p>
@@ -297,14 +294,14 @@ export default function AksiBioporiPage() {
 
           {/* ─── 4B. RUTINITAS PENGISIAN, PANEN & PENGGUNAAN KOMPOS ─── */}
           <div className="mt-10 overflow-hidden rounded-[2.5rem] border border-[#0D7C66]/20 bg-gradient-to-br from-emerald-50/60 via-white to-sky-50/60 p-6 shadow-md backdrop-blur-md sm:p-8 md:p-10">
-            <div className="flex flex-col border-b border-stone-200/70 pb-6">
+            <div className="flex flex-col border-b border-slate-200/70 pb-6">
               <span className="rounded-full bg-[#0D7C66]/10 px-3.5 py-1.5 text-[10px] font-black uppercase tracking-[0.16em] text-[#0D7C66] ring-1 ring-[#0D7C66]/20 w-fit">
                 Panduan Operasional Rutin
               </span>
-              <h3 className="mt-3 text-xl font-black text-stone-900 sm:text-2xl md:text-3xl">
+              <h3 className="mt-3 text-xl font-black text-slate-900 sm:text-2xl md:text-3xl">
                 Pengisian, Panen &amp; Penggunaan Kompos
               </h3>
-              <p className="mt-1.5 text-xs text-stone-600 sm:text-sm">
+              <p className="mt-1.5 text-xs text-slate-600 sm:text-sm">
                 Tata cara pengisian berkala, waktu pengerukan kompos, dan cara pengaplikasian pupuk bagi tanaman &amp; pohon kopi.
               </p>
             </div>
@@ -316,11 +313,11 @@ export default function AksiBioporiPage() {
                   <div className="flex items-center gap-3">
                     <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-emerald-100 text-xl">📅</span>
                     <div>
-                      <h4 className="text-base font-extrabold text-stone-900">Diisi Setiap Kapan?</h4>
+                      <h4 className="text-base font-extrabold text-slate-900">Diisi Setiap Kapan?</h4>
                       <span className="text-[10px] font-bold uppercase tracking-wider text-[#0D7C66]">Frekuensi Pengisian</span>
                     </div>
                   </div>
-                  <ul className="mt-5 space-y-3 text-xs leading-6 text-stone-600">
+                  <ul className="mt-5 space-y-3 text-xs leading-6 text-slate-600">
                     <li className="flex items-start gap-2.5">
                       <span className="text-[#0D7C66] font-bold text-sm">•</span>
                       <span><strong>Rutin Harian:</strong> Isikan sampah dapur/kulit kopi <strong>setiap hari atau 2-3 hari sekali</strong> saat ada sampah baru.</span>
@@ -342,11 +339,11 @@ export default function AksiBioporiPage() {
                   <div className="flex items-center gap-3">
                     <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-amber-100 text-xl">🌾</span>
                     <div>
-                      <h4 className="text-base font-extrabold text-stone-900">Cara Mengambil Pupuk</h4>
+                      <h4 className="text-base font-extrabold text-slate-900">Cara Mengambil Pupuk</h4>
                       <span className="text-[10px] font-bold uppercase tracking-wider text-amber-800">Panen Kompos Matang</span>
                     </div>
                   </div>
-                  <ul className="mt-5 space-y-3 text-xs leading-6 text-stone-600">
+                  <ul className="mt-5 space-y-3 text-xs leading-6 text-slate-600">
                     <li className="flex items-start gap-2.5">
                       <span className="text-amber-800 font-bold text-sm">•</span>
                       <span><strong>Waktu Panen:</strong> Setelah <strong>2–3 bulan</strong>, sampah bagian bawah berubah menjadi kompos hitam remah.</span>
@@ -372,11 +369,11 @@ export default function AksiBioporiPage() {
                   <div className="flex items-center gap-3">
                     <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-sky-100 text-xl">🪴</span>
                     <div>
-                      <h4 className="text-base font-extrabold text-stone-900">Cara Menggunakannya</h4>
+                      <h4 className="text-base font-extrabold text-slate-900">Cara Menggunakannya</h4>
                       <span className="text-[10px] font-bold uppercase tracking-wider text-[#1B6B93]">Aplikasi Pada Tanaman</span>
                     </div>
                   </div>
-                  <ul className="mt-5 space-y-3 text-xs leading-6 text-stone-600">
+                  <ul className="mt-5 space-y-3 text-xs leading-6 text-slate-600">
                     <li className="flex items-start gap-2.5">
                       <span className="text-[#1B6B93] font-bold text-sm">•</span>
                       <span><strong>Pohon Kopi:</strong> Taburkan 1–2 kg kompos matang mengelilingi tajuk luar pohon kopi atau biarkan terurai alami di lubang.</span>
@@ -401,10 +398,10 @@ export default function AksiBioporiPage() {
             <span className="rounded-full bg-[#0D7C66]/10 px-3.5 py-1.5 text-[10px] font-black uppercase tracking-[0.16em] text-[#0D7C66] ring-1 ring-[#0D7C66]/20 sm:text-[11px]">
               Kriteria &amp; Tips
             </span>
-            <h2 className="mt-3 text-2xl font-black tracking-[-0.04em] text-stone-900 sm:text-3xl md:text-4xl">
+            <h2 className="mt-3 text-2xl font-black tracking-[-0.04em] text-slate-900 sm:text-3xl md:text-4xl">
               Panduan Pilah Sampah Biopori
             </h2>
-            <p className="mx-auto mt-3 max-w-2xl text-xs leading-relaxed text-stone-500 sm:text-sm">
+            <p className="mx-auto mt-3 max-w-2xl text-xs leading-relaxed text-slate-500 sm:text-sm">
               Pastikan hanya memasukkan sampah organik yang aman agar proses penguraian lancar dan bebas bau.
             </p>
           </div>
@@ -418,7 +415,7 @@ export default function AksiBioporiPage() {
                 </span>
                 <div>
                   <h3 className="text-base font-black text-[#0D7C66] sm:text-lg">Bahan yang Boleh Masuk</h3>
-                  <p className="text-[11px] text-stone-500">Mudah terurai secara alami oleh mikroorganisme</p>
+                  <p className="text-[11px] text-slate-500">Mudah terurai secara alami oleh mikroorganisme</p>
                 </div>
               </div>
 
@@ -440,7 +437,7 @@ export default function AksiBioporiPage() {
                 </span>
                 <div>
                   <h3 className="text-base font-black text-rose-700 sm:text-lg">Bahan Dilarang Masuk</h3>
-                  <p className="text-[11px] text-stone-500">Menyumbat lubang &amp; beracun bagi cacing tanah</p>
+                  <p className="text-[11px] text-slate-500">Menyumbat lubang &amp; beracun bagi cacing tanah</p>
                 </div>
               </div>
 
@@ -458,10 +455,10 @@ export default function AksiBioporiPage() {
           {/* Key Tips Grid */}
           <div className="mt-6 grid gap-4 sm:grid-cols-3">
             {keyTips.map((tip, idx) => (
-              <div key={idx} className="rounded-2xl border border-stone-200/80 bg-white p-5 shadow-sm">
+              <div key={idx} className="rounded-2xl border border-slate-200/80 bg-white/80 p-5 shadow-sm">
                 <span className="text-xs font-bold text-[#0D7C66]">💡 Tips Kunci {idx + 1}</span>
-                <h4 className="mt-1.5 text-xs font-bold text-stone-900 sm:text-sm">{tip.title}</h4>
-                <p className="mt-1 text-[11px] leading-5 text-stone-600 sm:text-xs">{tip.desc}</p>
+                <h4 className="mt-1.5 text-xs font-bold text-slate-900 sm:text-sm">{tip.title}</h4>
+                <p className="mt-1 text-[11px] leading-5 text-slate-600 sm:text-xs">{tip.desc}</p>
               </div>
             ))}
           </div>
