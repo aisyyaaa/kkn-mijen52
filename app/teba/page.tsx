@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import BookViewer from "@/components/BookViewer";
 
 export const metadata: Metadata = {
-  title: "Edukasi TEBA - KKN-T IDBU 52 UNDIP",
+  title: "Edukasi Teba Modern - KKN-T IDBU 52 UNDIP",
   description:
-    "Edukasi pengelolaan sampah organik rumah tangga mandiri melalui metode TEBA (Tempat Olah Sampah Organik) di Kelurahan Mijen.",
+    "Edukasi pengelolaan sampah organik rumah tangga mandiri melalui metode Teba Modern di Kelurahan Mijen.",
 };
 
 const problems = [
@@ -42,28 +43,43 @@ const problems = [
 const makeSteps = [
   {
     num: "01",
-    title: "Tentukan Lokasi",
-    desc: "Pilih area halaman/kebun belakang yang aman, mudah dijangkau dari dapur, serta tidak mengganggu saluran air."
+    title: "Tentukan Lokasi Lahan",
+    desc: "Tentukan titik lahan pembuatan Teba. Lahan yang digunakan adalah lahan yang datar, memiliki struktur tanah yang kuat, dan mudah diakses oleh warga."
   },
   {
     num: "02",
-    title: "Gali Tanah",
-    desc: "Gali tanah dengan diameter dan kedalaman yang disesuaikan dengan ukuran buis beton yang akan dipasang."
+    title: "Gali Lubang Utama",
+    desc: "Buat lubang sedalam 2 meter dengan diameter 70 cm."
   },
   {
     num: "03",
-    title: "Pasang Buis Beton",
-    desc: "Pasang buis beton (biasanya memiliki lubang kecil di sisinya untuk aerasi) hingga sebagian tertanam di dalam tanah."
+    title: "Perluas Lubang Tengah",
+    desc: "Pada kedalaman 1 meter dari permukaan tanah, perluas diameter lubang menjadi sekitar 80 cm."
   },
   {
     num: "04",
-    title: "Lapisan Dasar",
-    desc: "Tambahkan lapisan penyaring/penyerap di bagian dasar berupa ranting kecil, dedaunan kering, atau sedikit tanah gembur."
+    title: "Pasang Buis Beton Pertama",
+    desc: "Letakkan buis beton dengan diameter dalam 70 cm dan tinggi 1 meter pada lubang."
   },
   {
     num: "05",
-    title: "Pasang Penutup",
-    desc: "Lengkapi bagian atas dengan penutup (bisa berbahan beton, kayu, atau plastik tebal) untuk menjaga keamanan dan mengurangi bau."
+    title: "Pasang Buis Beton Kedua",
+    desc: "Letakkan buis beton kedua sehingga teba memiliki tinggi 1 meter di atas permukaan tanah."
+  },
+  {
+    num: "06",
+    title: "Buat Lubang Sampah",
+    desc: "Lubangi bagian bawah teba pada permukaan tanah sebagai tempat memasukkan sampah organik."
+  },
+  {
+    num: "07",
+    title: "Pasang Penutup Beton",
+    desc: "Tutup teba menggunakan penutup berbahan beton."
+  },
+  {
+    num: "08",
+    title: "Pemanfaatan Area Meja",
+    desc: "Teba dapat dimanfaatkan lebih lanjut menjadi meja untuk taman pada lahan."
   }
 ];
 
@@ -106,7 +122,7 @@ const useSteps = [
   },
   {
     title: "Tutup Rapat Kembali",
-    desc: "Selalu tutup kembali penutup TEBA setelah digunakan agar terhindar dari air hujan berlebih dan hewan pengganggu.",
+    desc: "Selalu tutup kembali penutup Teba Modern setelah digunakan agar terhindar dari air hujan berlebih dan hewan pengganggu.",
     icon: (
       <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
@@ -136,34 +152,30 @@ const forbiddenTrash = [
 ];
 
 const benefits = [
-  { title: "Mengurangi Volume Sampah", desc: "Mengurangi tumpukan sampah basah dari rumah.", color: "text-[#2C5E43] bg-[#2C5E43]/5 border-[#2C5E43]/10" },
-  { title: "Mencegah Polusi TPA", desc: "Mengurangi beban angkutan sampah dan emisi metana.", color: "text-[#8B5A2B] bg-[#8B5A2B]/5 border-[#8B5A2B]/10" },
-  { title: "Pupuk Kompos Alami", desc: "Menghasilkan kompos berkualitas tinggi untuk menyuburkan tanah.", color: "text-[#2C5E43] bg-[#2C5E43]/5 border-[#2C5E43]/10" },
-  { title: "Tanaman Subur", desc: "Memenuhi kebutuhan nutrisi kebun rumah tangga.", color: "text-[#8B5A2B] bg-[#8B5A2B]/5 border-[#8B5A2B]/10" },
-  { title: "Bebas Bau Busuk", desc: "Mengeliminasi bau tidak sedap sampah bercampur plastik.", color: "text-[#2C5E43] bg-[#2C5E43]/5 border-[#2C5E43]/10" },
-  { title: "Hemat Biaya", desc: "Mengurangi pengeluaran pembelian pupuk eksternal.", color: "text-[#8B5A2B] bg-[#8B5A2B]/5 border-[#8B5A2B]/10" },
+  { title: "Kompos Alami & Tanaman Subur", desc: "Menghasilkan pupuk organik berkualitas tinggi secara gratis untuk menyuburkan tanaman hias dan kebun pekarangan rumah.", color: "text-[#2C5E43] bg-[#2C5E43]/5 border-[#2C5E43]/10" },
+  { title: "Lingkungan Rumah Bebas Bau", desc: "Mengeliminasi bau tidak sedap dan lalat di sekitar rumah karena sampah organik dikelola secara bersih dan tertutup.", color: "text-[#8B5A2B] bg-[#8B5A2B]/5 border-[#8B5A2B]/10" },
+  { title: "Hemat Pengeluaran", desc: "Mengurangi biaya pembelian pupuk kimia komersial dan iuran pembuangan sampah rutin.", color: "text-[#2C5E43] bg-[#2C5E43]/5 border-[#2C5E43]/10" },
 ];
 
 const tips = [
   "Pisahkan sampah organik dan anorganik dengan disiplin sejak di dapur.",
   "Hindari memasukkan makanan berminyak atau berkuah berlebihan untuk mencegah becek dan bau asam.",
   "Potong sampah menjadi ukuran sekecil mungkin agar mikroorganisme bekerja lebih cepat.",
-  "Pastikan penutup TEBA terpasang dengan baik setelah digunakan.",
+  "Pastikan penutup Teba Modern terpasang dengan baik setelah digunakan.",
   "Tambahkan daun kering atau serbuk gergaji jika kondisi di dalam lubang terlalu basah atau berlumpur.",
   "Jangan memasukkan sampah plastik, puntung rokok, atau bahan kimia apa pun."
 ];
 
 const envImpacts = [
-  "Mengurangi pencemaran tanah dan sumber air akibat air lindi (cairan sampah).",
-  "Menekan emisi gas rumah kaca dari pembusukan anaerobik di TPA.",
-  "Mendukung penerapan konsep zero-waste dan ekonomi sirkular tingkat rumah tangga.",
-  "Mendorong partisipasi aktif masyarakat dalam mitigasi perubahan iklim di Kelurahan Mijen.",
-  "Mewujudkan lingkungan RW yang lebih bersih, hijau, sejuk, dan berkelanjutan."
+  "Mengurangi penumpukan sampah basah di TPA Mijen secara signifikan.",
+  "Mencegah pencemaran tanah dan air tanah dari rembesan air lindi.",
+  "Menekan emisi gas rumah kaca (metana) dari tumpukan sampah terbuka.",
+  "Mendukung program Kelurahan Mijen yang bersih, hijau, dan mandiri sampah."
 ];
 
 export default function TebaPage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#FAF9F5] text-stone-900">
+    <main className="min-h-screen overflow-x-hidden text-stone-900">
       {/* Background Decor in green/brown earthy colors */}
       <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_12%_8%,rgba(44,94,67,0.10),transparent_34%),radial-gradient(circle_at_88%_10%,rgba(139,90,43,0.10),transparent_30%),linear-gradient(180deg,#FAF9F5_0%,#F3EFE9_48%,#FAF9F5_100%)]" />
 
@@ -178,17 +190,17 @@ export default function TebaPage() {
             </div>
 
             <h1 className="mt-4 text-4xl font-extrabold leading-[1.15] tracking-[-0.03em] text-stone-900 sm:text-5xl lg:text-6xl">
-              TEBA
+              Teba Modern
               <span className="mt-2 block bg-gradient-to-r from-[#2C5E43] via-[#5B8C5A] to-[#8B5A2B] bg-clip-text text-transparent">
-                Tempat Olah Sampah
+                Olah Sampah Organik
               </span>
             </h1>
 
             <p className="mt-5 text-base leading-8 text-stone-700 sm:text-lg">
-              <strong>TEBA (Tempat Olah Sampah Organik)</strong> adalah metode sederhana untuk mengolah sampah organik rumah tangga secara alami dengan memanfaatkan lubang atau buis beton yang ditanam di tanah. Sampah organik akan terurai oleh mikroorganisme menjadi kompos yang bermanfaat bagi tanaman.
+              <strong>Teba Modern</strong> adalah metode sederhana untuk mengolah sampah organik rumah tangga secara alami dengan memanfaatkan lubang atau buis beton yang ditanam di tanah. Sampah organik akan terurai oleh mikroorganisme menjadi kompos yang bermanfaat bagi tanaman.
             </p>
             <p className="mt-4 text-base leading-8 text-stone-700 sm:text-lg">
-              TEBA merupakan salah satu solusi pengelolaan sampah yang mudah diterapkan di rumah, ramah lingkungan, dan mendukung pengurangan sampah yang dibuang ke Tempat Pembuangan Akhir (TPA).
+              Teba Modern merupakan salah satu solusi pengelolaan sampah yang mudah diterapkan di rumah, ramah lingkungan, dan mendukung pengurangan sampah yang dibuang ke Tempat Pembuangan Akhir (TPA).
             </p>
           </div>
 
@@ -211,8 +223,8 @@ export default function TebaPage() {
               {/* No white frame/border container. mix-blend-multiply combines image white background directly with page bg */}
               <div className="animate-float-card relative w-full flex justify-center">
                 <Image
-                  src="/images/teba-hero-v4.png"
-                  alt="Instalasi TEBA Buis Beton"
+                  src="/images/teba-hero-v5.png"
+                  alt="Instalasi Teba Modern Buis Beton"
                   width={800}
                   height={800}
                   className="relative z-10 h-auto w-full max-w-[390px] object-cover"
@@ -223,13 +235,13 @@ export default function TebaPage() {
           </div>
         </section>
 
-        {/* Section: Mengapa Perlu TEBA? */}
+        {/* Section: Mengapa Perlu Teba Modern? */}
         <section className="mt-12">
           <div className="text-center">
             <span className="rounded-full bg-[#2C5E43]/10 px-3 py-1 text-[11px] font-black uppercase tracking-[0.16em] text-[#2C5E43] ring-1 ring-[#2C5E43]/20">
               Latar Belakang & Urgensi
             </span>
-            <h2 className="mt-3 text-3xl font-black tracking-[-0.04em] text-stone-900 sm:text-4xl">Mengapa Kita Perlu TEBA?</h2>
+            <h2 className="mt-3 text-3xl font-black tracking-[-0.04em] text-stone-900 sm:text-4xl">Mengapa Kita Perlu Teba Modern?</h2>
             <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-stone-500">
               Pengelolaan sampah secara mandiri dari sumbernya membantu menyelesaikan masalah penumpukan sampah perkotaan yang semakin kritis.
             </p>
@@ -255,20 +267,20 @@ export default function TebaPage() {
           {/* Solution Highlight banner */}
           <div className="mt-8 rounded-[2rem] border border-[#2C5E43]/10 bg-gradient-to-r from-[#2C5E43]/5 to-[#8B5A2B]/5 p-6 text-center backdrop-blur-sm sm:p-8">
             <p className="text-sm font-semibold leading-relaxed text-[#2C5E43] sm:text-base">
-              💡 <strong>Solusi:</strong> Dengan TEBA, sampah organik dapat diolah langsung dari sumbernya di pekarangan rumah, sehingga tidak perlu seluruhnya dibuang ke TPS maupun TPA. Ini adalah langkah nyata mengurangi pencemaran lingkungan.
+              💡 <strong>Solusi:</strong> Dengan Teba Modern, sampah organik dapat diolah langsung dari sumbernya di pekarangan rumah, sehingga tidak perlu seluruhnya dibuang ke TPS maupun TPA. Ini adalah langkah nyata mengurangi pencemaran lingkungan.
             </p>
           </div>
         </section>
 
-        {/* Section: Cara Pembuatan TEBA */}
+        {/* Section: Cara Pembuatan Teba Modern */}
         <section className="mt-12">
           <div className="text-center">
             <span className="rounded-full bg-[#8B5A2B]/10 px-3 py-1 text-[11px] font-black uppercase tracking-[0.16em] text-[#8B5A2B] ring-1 ring-[#8B5A2B]/20">
               Langkah Pembuatan
             </span>
-            <h2 className="mt-3 text-3xl font-black tracking-[-0.04em] text-stone-900 sm:text-4xl">Cara Pembuatan TEBA</h2>
+            <h2 className="mt-3 text-3xl font-black tracking-[-0.04em] text-stone-900 sm:text-4xl">Cara Pembuatan Teba Modern</h2>
             <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-stone-500">
-              Secara umum, pembuatan wadah TEBA memanfaatkan struktur silinder beton dengan sistem lubang resapan alami.
+              Secara umum, pembuatan wadah Teba Modern memanfaatkan struktur silinder beton dengan sistem lubang resapan alami.
             </p>
           </div>
 
@@ -299,7 +311,7 @@ export default function TebaPage() {
               <div className="flex flex-col justify-center rounded-3xl border border-[#2C5E43]/10 bg-[#2C5E43]/5 p-6 text-stone-900 lg:p-8 lg:translate-y-8">
                 <p className="text-xs font-bold uppercase tracking-widest text-[#2C5E43]">Catatan Poin Penting</p>
                 <p className="mt-3 text-xs leading-6 text-stone-700">
-                  TEBA dapat dibuat menggunakan <strong>satu atau lebih buis beton</strong> bertingkat sesuai dengan ketersediaan lahan dan rata-rata volume produksi sampah organik harian di rumah tangga Anda.
+                  Teba Modern dapat dibuat menggunakan <strong>satu atau lebih buis beton</strong> bertingkat sesuai dengan ketersediaan lahan dan rata-rata volume produksi sampah organik harian di rumah tangga Anda.
                 </p>
               </div>
             </div>
@@ -313,7 +325,7 @@ export default function TebaPage() {
             <span className="rounded-full bg-[#2C5E43]/10 px-3 py-1 text-[11px] font-black uppercase tracking-[0.16em] text-[#2C5E43] ring-1 ring-[#2C5E43]/20">
               Panduan Harian
             </span>
-            <h2 className="mt-4 text-2xl font-black tracking-[-0.03em] text-stone-900 sm:text-3xl">Cara Menggunakan TEBA</h2>
+            <h2 className="mt-4 text-2xl font-black tracking-[-0.03em] text-stone-900 sm:text-3xl">Cara Menggunakan Teba Modern</h2>
             <p className="mt-2 text-xs leading-6 text-stone-500">
               Ikuti tata cara operasional berikut agar sisa organik terfermentasi dan terurai dengan sempurna secara berkala.
             </p>
@@ -340,7 +352,7 @@ export default function TebaPage() {
               <span className="rounded-full bg-[#8B5A2B]/10 px-3 py-1 text-[11px] font-black uppercase tracking-[0.16em] text-[#8B5A2B] ring-1 ring-[#8B5A2B]/20">
                 Penting
               </span>
-              <h2 className="mt-4 text-2xl font-black tracking-[-0.03em] text-stone-900 sm:text-3xl">Tips Agar TEBA Optimal</h2>
+              <h2 className="mt-4 text-2xl font-black tracking-[-0.03em] text-stone-900 sm:text-3xl">Tips Agar Teba Modern Optimal</h2>
               <p className="mt-2 text-xs leading-6 text-[#8B5A2B]/80">
                 Hindari kegagalan proses pembusukan seperti timbulnya belatung berlebih, bau menyengat, atau genangan air berlendir.
               </p>
@@ -369,9 +381,9 @@ export default function TebaPage() {
             <span className="rounded-full bg-[#2C5E43]/10 px-3 py-1 text-[11px] font-black uppercase tracking-[0.16em] text-[#2C5E43] ring-1 ring-[#2C5E43]/20">
               Panduan Pilah
             </span>
-            <h2 className="mt-3 text-3xl font-black tracking-[-0.04em] text-stone-900 sm:text-4xl">Panduan Pilah Sampah TEBA</h2>
+            <h2 className="mt-3 text-3xl font-black tracking-[-0.04em] text-stone-900 sm:text-4xl">Panduan Pilah Sampah Teba Modern</h2>
             <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-stone-500">
-              Pisahkan dengan tepat. Tidak semua bahan organik dan anorganik aman dimasukkan ke dalam lubang beton TEBA.
+              Pisahkan dengan tepat. Tidak semua bahan organik dan anorganik aman dimasukkan ke dalam lubang beton Teba Modern.
             </p>
           </div>
 
@@ -422,77 +434,65 @@ export default function TebaPage() {
           </div>
         </section>
 
-        {/* Section: Manfaat, Hasil, & Dampak */}
-        <section className="mt-12 grid gap-8 lg:grid-cols-[1fr_1.1fr] lg:gap-12">
+        {/* Section: Manfaat & Dampak Lingkungan */}
+        <section className="mt-12 grid gap-8 lg:grid-cols-2 lg:gap-12">
           {/* Manfaat */}
-          <div>
-            <span className="rounded-full bg-[#2C5E43]/10 px-3 py-1 text-[11px] font-black uppercase tracking-[0.16em] text-[#2C5E43] ring-1 ring-[#2C5E43]/20">
-              Dampak Positif
+          <div className="flex flex-col justify-center">
+            <span className="rounded-full bg-[#2C5E43]/10 px-3 py-1 text-[11px] font-black uppercase tracking-[0.16em] text-[#2C5E43] ring-1 ring-[#2C5E43]/20 w-fit">
+              Keuntungan Rumah Tangga
             </span>
-            <h2 className="mt-4 text-3xl font-black tracking-[-0.03em] text-stone-900">Manfaat Utama TEBA</h2>
-            <p className="mt-3 text-xs leading-6 text-stone-500">
-              Keberadaan TEBA memberikan keuntungan berganda baik secara ekologis maupun ekonomis bagi rumah tangga.
+            <h2 className="mt-4 text-3xl font-black tracking-[-0.03em] text-stone-900">Manfaat bagi Rumah Tangga</h2>
+            <p className="mt-3 text-sm leading-6 text-stone-500">
+              Penerapan Teba Modern memberikan keuntungan praktis harian secara mandiri bagi keluarga Anda.
             </p>
 
-            <div className="mt-6 grid gap-4 sm:grid-cols-2">
+            <div className="mt-6 flex flex-col gap-4">
               {benefits.map((benefit, idx) => (
-                <div key={idx} className="rounded-2xl border border-stone-200/50 bg-white/70 p-4 shadow-sm backdrop-blur-sm">
+                <div key={idx} className="rounded-2xl border border-stone-200/50 bg-white/70 p-5 shadow-sm backdrop-blur-sm">
                   <span className={`inline-flex rounded-lg px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider ${benefit.color}`}>
                     Keunggulan
                   </span>
-                  <h4 className="mt-2.5 text-sm font-bold text-stone-900">{benefit.title}</h4>
-                  <p className="mt-1 text-xs leading-5 text-stone-500">{benefit.desc}</p>
+                  <h4 className="mt-2 text-base font-bold text-stone-900">{benefit.title}</h4>
+                  <p className="mt-1 text-xs leading-relaxed text-stone-600">{benefit.desc}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Hasil Kompos & Dampak Lingkungan */}
-          <div className="flex flex-col gap-6">
-            {/* Hasil yang Diperoleh */}
-            <div className="rounded-[2rem] border border-stone-200/50 bg-white/70 p-6 shadow-sm backdrop-blur-md sm:p-8">
-              <div className="flex items-center gap-3">
-                <span className="text-2xl">🌱</span>
-                <div>
-                  <h3 className="text-lg font-black text-stone-900">Hasil yang Diperoleh</h3>
-                  <p className="text-xs text-stone-500">Hasil olah limbah organik berkualitas tinggi.</p>
-                </div>
-              </div>
-              <p className="mt-4 text-xs leading-6 text-stone-600">
-                Dari proses pembusukan alami di dalam wadah silinder TEBA, diperoleh **Kompos Alami** yang kaya akan unsur hara. Kompos ini sangat cocok untuk menyuburkan:
-              </p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {["Tanaman Hias", "Kebun Rumah", "Tanaman Buah", "Penghijauan RW"].map((tag) => (
-                  <span key={tag} className="rounded-lg bg-[#2C5E43]/10 px-3 py-1.5 text-xs font-bold text-[#2C5E43] ring-1 ring-[#2C5E43]/20">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
+          {/* Dampak bagi Lingkungan Kelurahan */}
+          <div className="flex flex-col justify-center">
+            <div className="h-full rounded-[2rem] border border-[#2C5E43]/20 bg-gradient-to-br from-[#2C5E43] to-[#8B5A2B] p-6 text-white shadow-lg sm:p-8 flex flex-col justify-between">
+              <div>
+                <span className="rounded-full bg-white/20 px-3 py-1 text-[9px] font-bold uppercase tracking-widest text-[#FAF9F5] backdrop-blur-sm">
+                  Kelurahan Mijen Sehat
+                </span>
+                <h3 className="mt-4 text-2xl font-black tracking-[-0.02em]">Dampak bagi Lingkungan</h3>
+                <p className="mt-2 text-sm leading-relaxed text-stone-100/90">
+                  Penerapan metode Teba Modern di tingkat rukun tetangga/warga memberikan kontribusi signifikan terhadap kelestarian lingkungan sekitar Kelurahan Mijen:
+                </p>
 
-            {/* Dampak bagi Lingkungan Kelurahan */}
-            <div className="rounded-[2rem] border border-[#2C5E43]/20 bg-gradient-to-br from-[#2C5E43] to-[#8B5A2B] p-6 text-white shadow-lg sm:p-8">
-              <span className="rounded-full bg-white/20 px-3 py-1 text-[9px] font-bold uppercase tracking-widest text-[#FAF9F5] backdrop-blur-sm">
-                Kelurahan Mijen Sehat
-              </span>
-              <h3 className="mt-4 text-xl font-black tracking-[-0.02em]">Dampak Positif bagi Lingkungan</h3>
-              <p className="mt-2 text-xs leading-6 text-stone-100/90">
-                Penerapan metode TEBA di tingkat rukun tetangga/warga memberikan kontribusi signifikan terhadap lingkungan global:
-              </p>
+                <ul className="mt-6 flex flex-col gap-4">
+                  {envImpacts.map((impact, idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/20 text-[10px] font-bold text-white">
+                        ✓
+                      </span>
+                      <span className="text-sm leading-relaxed text-stone-100">{impact}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-              <ul className="mt-6 flex flex-col gap-3">
-                {envImpacts.map((impact, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <span className="mt-1 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-white/20 text-[10px] font-bold text-white">
-                      ✓
-                    </span>
-                    <span className="text-xs leading-5 text-stone-100">{impact}</span>
-                  </li>
-                ))}
-              </ul>
+              <div className="mt-8 rounded-xl bg-white/10 p-4 border border-white/10 backdrop-blur-sm">
+                <p className="text-xs leading-relaxed text-stone-100">
+                  🌱 <strong>Mari Sukseskan Mijen Proklim:</strong> Dengan mengolah sampah dapur kita sendiri, kita telah berkontribusi langsung pada mitigasi iklim global dari Kelurahan Mijen.
+                </p>
+              </div>
             </div>
           </div>
         </section>
+
+        <BookViewer />
 
       </div>
     </main>
