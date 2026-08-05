@@ -57,17 +57,18 @@ const rwData: Record<RWKey, RWData> = {
     label: "RW 06",
     headline: "RW 06 Kelurahan Mijen",
     intro:
-      "Gambaran wilayah cakupan Program Kampung Iklim (ProKlim) di RW 06 Kelurahan Mijen, Kecamatan Mijen, Kota Semarang.",
+      "Gambaran wilayah cakupan Program Kampung Iklim (ProKlim) dan peta multibencana di RW 06 Kelurahan Mijen, Kecamatan Mijen, Kota Semarang.",
     tone: "teal",
     maps: [
       {
-        image: "",
-        alt: "Peta wilayah RW 06 Kelurahan Mijen",
-        title: "Peta Wilayah RW 06 Kelurahan Mijen",
+        image: "/images/peta-multibencana-rw-6.jpg",
+        alt: "Peta Multibencana RW 6 Kelurahan Mijen, Kecamatan Mijen, Kota Semarang",
+        title: "Peta Multibencana RW 6 Kelurahan Mijen",
         description: [
-          "Peta wilayah RW 06 akan menampilkan sebaran fasilitas umum, titik-titik konservasi, dan potensi sumber daya lingkungan yang terdapat di kawasan ini.",
-          "RW 06 merupakan salah satu wilayah strategis dalam Program Kampung Iklim (ProKlim) di Kelurahan Mijen yang mendukung upaya adaptasi dan mitigasi perubahan iklim melalui berbagai program lingkungan berbasis masyarakat.",
-          "Informasi spasial pada peta ini akan membantu identifikasi area prioritas untuk pelaksanaan kegiatan KKN dan program pemberdayaan masyarakat.",
+          "Peta ini merupakan Peta Multibencana RW 6 Kelurahan Mijen yang menyajikan tingkat kerawanan atau kelas bahaya (Rendah, Sedang, dan Tinggi) di seluruh wilayah RW 6, serta sebaran fasilitas mitigasi dan titik penting lingkungan seperti lubang resapan Biopori, Sendang Wadas, dan Titik Kumpul evakuasi.",
+          "Berdasarkan analisis spasial, tingkat bahaya dibagi menjadi tiga kelas: warna hijau menunjukkan zona bahaya Rendah yang mendominasi sebagian besar pemukiman warga di RT 01, RT 02, RT 04, RT 05, dan RT 06; warna kuning menunjukkan zona bahaya Sedang yang melintasi wilayah tengah hingga Kawasan Perhutani; sedangkan warna merah menunjukkan zona bahaya Tinggi di area tepi hutan/perkebunan dan sepanjang perbatasan RT 03 yang membutuhkan pengawasan dan mitigasi ekstra.",
+          "Fasilitas penting yang dipetakan meliputi lokasi titik kumpul evakuasi (simbol ungu) di area pemukiman RT 01, RT 04, dan RT 06; sebaran biopori (simbol kuning) sebagai pengendali limpasan air; serta Sendang Wadas (simbol biru) di dekat wilayah RT 03 yang berperan sebagai salah satu sumber air alami penting di wilayah RW 6 Kelurahan Mijen.",
+          "Peta ini disusun oleh Tim KKN-T IDBU 52 Universitas Diponegoro sebagai instrumen perencanaan mitigasi kebencanaan komunal dan pengelolaan lingkungan terpadu, membantu Kelurahan Mijen dan warga setempat dalam kesiapsiagaan bencana serta adaptasi perubahan iklim."
         ],
       },
     ],
