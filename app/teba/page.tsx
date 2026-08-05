@@ -168,9 +168,72 @@ const tips = [
 
 const envImpacts = [
   "Mengurangi penumpukan sampah basah di TPA Mijen secara signifikan.",
-  "Mencegah pencemaran tanah dan air tanah dari rembesan air lindi.",
+  "Mencegah pencemaran tanah and air tanah dari rembesan air lindi.",
   "Menekan emisi gas rumah kaca (metana) dari tumpukan sampah terbuka.",
   "Mendukung program Kelurahan Mijen yang bersih, hijau, dan mandiri sampah."
+];
+
+const budgetItems = [
+  {
+    no: 1,
+    category: "Struktur Teba Modern",
+    name: "Buis Beton D70/50",
+    desc: "Disusun 3 tingkat — 1 buis ditanam sebagai fondasi di dalam tanah, 2 buis lainnya ditumpuk persis di atasnya",
+    qty: 3,
+    unit: "buah",
+    price: "Rp135.000",
+    total: "Rp405.000"
+  },
+  {
+    no: 2,
+    category: "Struktur Teba Modern",
+    name: "Tutup Beton D80",
+    desc: "Penutup bagian atas Teba agar terhindar air hujan dan hewan pengganggu",
+    qty: 1,
+    unit: "buah",
+    price: "Rp140.000",
+    total: "Rp140.000"
+  },
+  {
+    no: 3,
+    category: "Finishing/Identitas",
+    name: "Cat Hitam",
+    desc: "Digunakan untuk menuliskan label \"KKNT IDBU 52\" pada permukaan Teba sebagai penanda identitas program",
+    qty: 1,
+    unit: "kg",
+    price: "Rp13.000",
+    total: "Rp13.000"
+  },
+  {
+    no: 4,
+    category: "Finishing/Identitas",
+    name: "Kuas",
+    desc: "Alat untuk menuliskan label cat pada permukaan Teba",
+    qty: 1,
+    unit: "buah",
+    price: "Rp5.000",
+    total: "Rp5.000"
+  },
+  {
+    no: 5,
+    category: "Tenaga",
+    name: "Bapak Tukang",
+    desc: "Meminta tolong jasa bapak tukang dalam pelaksanaan Teba",
+    qty: 1,
+    unit: "orang",
+    price: "Rp130.000",
+    total: "Rp130.000"
+  },
+  {
+    no: 6,
+    category: "Pengiriman",
+    name: "Ongkos Kirim",
+    desc: "Pengiriman buis dan tutup beton ke lokasi Teba",
+    qty: 1,
+    unit: "kali",
+    price: "Rp30.000",
+    total: "Rp30.000"
+  }
 ];
 
 export default function TebaPage() {
@@ -489,6 +552,74 @@ export default function TebaPage() {
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Section: Rancangan Anggaran Biaya Teba Modern */}
+        <section className="mt-24 rounded-[2rem] border border-stone-200/60 bg-white/60 p-6 shadow-[0_20px_50px_rgba(15,23,42,0.02)] backdrop-blur-md sm:p-10">
+          <div className="text-center">
+            <span className="rounded-full bg-[#2C5E43]/10 px-3 py-1 text-[11px] font-black uppercase tracking-[0.16em] text-[#2C5E43] ring-1 ring-[#2C5E43]/20">
+              Rencana Anggaran
+            </span>
+            <h2 className="mt-3 text-3xl font-black tracking-[-0.04em] text-stone-900 sm:text-4xl">
+              Rancangan Anggaran Biaya Teba Modern
+            </h2>
+          </div>
+
+          <div className="mt-8 text-sm leading-relaxed text-stone-700 text-justify">
+            <p>
+              Setelah mengenal manfaat dan tahapan pembuatan Teba Modern, hal berikutnya yang perlu diketahui adalah gambaran biaya di balik terwujudnya fasilitas ini. Teba Modern yang dibangun melalui program KKN-T IDBU 52 UNDIP nantinya akan diserahkan kepada Kelurahan Mijen untuk dimanfaatkan bersama oleh seluruh warga kelurahan, bukan hanya satu RW, sehingga pengelolaan sampah organik menjadi fasilitas komunal yang dirawat bersama.
+            </p>
+          </div>
+
+          {/* Table Container */}
+          <div className="mt-8 overflow-x-auto rounded-2xl border border-stone-200 bg-white shadow-sm">
+            <table className="w-full border-collapse text-left text-sm text-stone-600">
+              <thead>
+                <tr className="border-b border-stone-200 bg-stone-50 font-bold text-stone-900 text-xs uppercase tracking-wider">
+                  <th className="px-4 py-3.5 w-12 text-center">No</th>
+                  <th className="px-4 py-3.5">Kategori</th>
+                  <th className="px-4 py-3.5">Nama Barang</th>
+                  <th className="px-6 py-3.5 max-w-xs">Fungsi/Keterangan</th>
+                  <th className="px-4 py-3.5 text-center">Kuantitas</th>
+                  <th className="px-4 py-3.5">Satuan</th>
+                  <th className="px-4 py-3.5 text-right">Harga Satuan</th>
+                  <th className="px-4 py-3.5 text-right">Total</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-stone-100">
+                {budgetItems.map((item, index) => (
+                  <tr key={index} className="hover:bg-stone-50/55 transition-colors">
+                    <td className="px-4 py-3 text-center font-semibold text-stone-500">{item.no}</td>
+                    <td className="px-4 py-3 font-semibold text-[#2C5E43] whitespace-nowrap">{item.category}</td>
+                    <td className="px-4 py-3 font-bold text-stone-900 whitespace-nowrap">{item.name}</td>
+                    <td className="px-6 py-3 text-xs leading-relaxed text-stone-600 min-w-[200px]">{item.desc}</td>
+                    <td className="px-4 py-3 text-center font-bold text-stone-900">{item.qty}</td>
+                    <td className="px-4 py-3 text-stone-500">{item.unit}</td>
+                    <td className="px-4 py-3 text-right font-semibold text-stone-700 whitespace-nowrap">{item.price}</td>
+                    <td className="px-4 py-3 text-right font-black text-[#2C5E43] whitespace-nowrap">{item.total}</td>
+                  </tr>
+                ))}
+                {/* Total Row */}
+                <tr className="bg-stone-50/80 font-bold text-stone-950 border-t-2 border-stone-200">
+                  <td colSpan={7} className="px-4 py-4 text-right text-xs uppercase tracking-widest font-black text-stone-500">
+                    Total Keseluruhan
+                  </td>
+                  <td className="px-4 py-4 text-right text-base font-black text-[#2C5E43] bg-[#2C5E43]/5">
+                    Rp723.000
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div className="mt-8 text-sm leading-relaxed text-stone-700 space-y-4 text-justify">
+            <p>
+              Rincian anggaran ini disusun sebagai bentuk transparansi penggunaan dana sekaligus acuan bagi warga yang ingin mereplikasi Teba secara mandiri. Struktur utamanya terdiri dari tiga buis beton bertingkat — satu ditanam sebagai fondasi, dua lainnya ditumpuk di atasnya — lalu ditutup penutup beton agar terlindung dari air hujan dan hewan pengganggu. Selain itu, anggaran juga mencakup cat hitam dan kuas untuk menuliskan label "KKNT IDBU 52" sebagai penanda identitas program.
+            </p>
+            <p>
+              Dengan total estimasi biaya Rp723.000, anggaran ini tergolong terjangkau namun tetap mempertimbangkan kebutuhan jangka panjang — membuktikan bahwa pengelolaan sampah organik mandiri dan komunal bukan hanya solusi ramah lingkungan, tapi juga cara hemat pengeluaran dibanding iuran pembuangan sampah rutin, sejalan dengan visi Kelurahan Mijen yang bersih, hijau, dan mandiri sampah.
+            </p>
           </div>
         </section>
 
