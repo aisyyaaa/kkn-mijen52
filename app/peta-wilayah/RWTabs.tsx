@@ -61,7 +61,7 @@ const rwData: Record<RWKey, RWData> = {
     tone: "teal",
     maps: [
       {
-        image: "/images/peta-multibencana-rw-6.jpg",
+        image: "/images/peta-multibencana-rw-6.png",
         alt: "Peta Multibencana RW 6 Kelurahan Mijen, Kecamatan Mijen, Kota Semarang",
         title: "Peta Multibencana RW 6 Kelurahan Mijen",
         description: [
