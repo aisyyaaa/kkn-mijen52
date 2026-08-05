@@ -80,13 +80,33 @@ const rwData: Record<RWKey, RWData> = {
     tone: "sky",
     maps: [
       {
-        image: "",
+        image: "/images/Peta%20Indah%20RW%2007.png",
         alt: "Peta wilayah RW 07 Kelurahan Mijen",
         title: "Peta Wilayah RW 07 Kelurahan Mijen",
         description: [
-          "Peta wilayah RW 07 akan menampilkan sebaran fasilitas umum, titik-titik konservasi, dan potensi sumber daya lingkungan yang terdapat di kawasan ini.",
+          "Peta ini menampilkan wilayah RW 07 Kelurahan Mijen beserta sebaran fasilitas umum, titik-titik konservasi, dan potensi sumber daya lingkungan yang terdapat di kawasan ini.",
           "RW 07 merupakan salah satu wilayah strategis dalam Program Kampung Iklim (ProKlim) di Kelurahan Mijen yang mendukung upaya adaptasi dan mitigasi perubahan iklim melalui berbagai program lingkungan berbasis masyarakat.",
-          "Informasi spasial pada peta ini akan membantu identifikasi area prioritas untuk pelaksanaan kegiatan KKN dan program pemberdayaan masyarakat.",
+          "Informasi spasial pada peta ini membantu identifikasi area prioritas untuk pelaksanaan kegiatan KKN dan program pemberdayaan masyarakat.",
+        ],
+      },
+      {
+        image: "/images/Peta%20Indah%20Kebakaran.png",
+        alt: "Peta potensi kebakaran lahan RW 07 Kelurahan Mijen, Kecamatan Mijen, Kota Semarang",
+        title: "Peta Mitigasi Kebakaran Lahan RW 07",
+        description: [
+          "Peta ini disusun sebagai salah satu upaya mitigasi kebakaran lahan di RW 07 Kelurahan Mijen. Pemetaan dilakukan untuk mengidentifikasi tingkat potensi kerawanan kebakaran berdasarkan kondisi vegetasi dan tutupan lahan.",
+          "Peta menampilkan area-area dengan potensi kerawanan kebakaran serta lokasi fasilitas penting di sekitar RW 07 yang dapat dimanfaatkan dalam upaya pencegahan dan penanggulangan kebakaran.",
+          "Hasil pemetaan ini diharapkan dapat menjadi acuan dalam menentukan lokasi prioritas untuk kegiatan edukasi, pemasangan papan imbauan, serta penyusunan langkah-langkah mitigasi kebakaran sehingga masyarakat dapat lebih waspada dan berperan aktif dalam mencegah terjadinya kebakaran lahan.",
+        ],
+      },
+      {
+        image: "/images/Peta%20Ariaji.png",
+        alt: "Peta rute dari Pos Utama ke Sendang Kemantren RW 07 Kelurahan Mijen",
+        title: "Peta Rute Pos Utama ke Sendang Kemantren",
+        description: [
+          "Peta ini menampilkan rute perjalanan dari Pos Utama menuju Sendang Kemantren yang berada di wilayah RW 07 Kelurahan Mijen, Kecamatan Mijen, Kota Semarang.",
+          "Rute ini menjadi panduan bagi masyarakat maupun tim KKN dalam menjangkau lokasi sendang yang merupakan salah satu sumber daya air penting di kawasan tersebut.",
+          "Informasi rute ini diharapkan dapat memudahkan akses menuju Sendang Kemantren serta mendukung kegiatan konservasi air dan pelestarian lingkungan di sekitar wilayah RW 07.",
         ],
       },
     ],
@@ -210,6 +230,7 @@ export default function RWTabs() {
                 width={1600}
                 height={1130}
                 priority={i === 0}
+                unoptimized
                 className="h-auto w-full rounded-xl object-contain"
               />
             ) : (
