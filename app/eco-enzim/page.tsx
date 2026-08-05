@@ -96,9 +96,7 @@ const safetyNotes = [
 
 export default function EcoEnzimPage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#FFFCF4] text-stone-900">
-      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_10%_8%,rgba(217,119,6,0.10),transparent_32%),radial-gradient(circle_at_90%_12%,rgba(77,124,15,0.12),transparent_30%),linear-gradient(180deg,#FFFCF4_0%,#F7F7E9_48%,#FFFDF7_100%)]" />
-
+    <main className="min-h-screen overflow-x-hidden text-stone-900">
       <div className="mx-auto w-full max-w-7xl px-4 pt-12 pb-16 sm:px-6 sm:pt-16 sm:pb-20 md:pt-20 md:pb-24 lg:px-8">
 
         <section className="grid items-center gap-8 overflow-hidden rounded-[2rem] border border-amber-100 bg-white/72 p-6 shadow-[0_24px_70px_rgba(120,53,15,0.06)] backdrop-blur sm:p-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
@@ -133,15 +131,30 @@ export default function EcoEnzimPage() {
           </div>
 
           <div className="relative flex justify-center">
-            <div className="absolute inset-x-8 bottom-2 h-20 rounded-full bg-amber-300/20 blur-3xl" />
-            <Image
-              src="/images/eco-enzyme-hero.png"
-              alt="Bahan pelatihan eco-enzyme berupa wadah fermentasi, sisa buah, gula merah, dan air"
-              width={1254}
-              height={1254}
-              priority
-              className="relative z-10 h-auto w-full max-w-[470px] rounded-[2rem] object-cover mix-blend-multiply"
-            />
+            <div className="relative mx-auto flex w-full max-w-[470px] items-center justify-center py-4">
+              <div className="animate-float-glow absolute bottom-3 left-1/2 h-20 w-2/3 -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(16,185,129,0.28),rgba(132,204,22,0.14)_58%,transparent_75%)] blur-3xl" />
+
+              <span className="animate-float-sparkle absolute right-[3%] top-[5%] h-2.5 w-2.5 rounded-full bg-emerald-500 shadow-[0_0_0_6px_rgba(255,255,255,0.65),0_8px_22px_rgba(16,185,129,0.24)]" />
+              <span
+                className="animate-float-sparkle absolute left-[2%] top-[28%] h-2 w-2 rounded-full bg-lime-500 shadow-[0_0_0_6px_rgba(255,255,255,0.65),0_8px_22px_rgba(132,204,22,0.24)]"
+                style={{ animationDelay: "1.2s" }}
+              />
+              <span
+                className="animate-float-sparkle absolute bottom-[18%] right-[7%] h-2 w-2 rounded-full bg-amber-500 shadow-[0_0_0_6px_rgba(255,255,255,0.65),0_8px_22px_rgba(217,119,6,0.22)]"
+                style={{ animationDelay: "2.1s" }}
+              />
+
+              <div className="animate-float-card relative w-full">
+                <Image
+                  src="/images/eco-enzyme-hero.png"
+                  alt="Bahan pelatihan eco-enzyme berupa wadah fermentasi, sisa buah, gula merah, dan air"
+                  width={1254}
+                  height={1254}
+                  priority
+                  className="relative z-10 h-auto w-full rounded-[2rem] object-cover mix-blend-multiply drop-shadow-[0_28px_34px_rgba(15,118,110,0.16)]"
+                />
+              </div>
+            </div>
           </div>
         </section>
 
