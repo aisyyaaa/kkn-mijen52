@@ -103,7 +103,7 @@ export default function EcoEnzimPage() {
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-amber-200 bg-amber-50/80 px-3 py-1.5">
               <span className="h-2 w-2 rounded-full bg-amber-500 shadow-[0_0_0_5px_rgba(217,119,6,0.12)]" />
-              <span className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-amber-800">Pelatihan Warga RW 7 Kelurahan Mijen</span>
+              <span className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-amber-800">Pelatihan Eco-Enzyme</span>
             </div>
 
             <h1 className="mt-5 text-4xl font-extrabold leading-[1.08] tracking-[-0.04em] text-stone-950 sm:text-5xl lg:text-6xl">

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import BriketBookViewer from "@/components/BriketBookViewer";
 
@@ -115,7 +116,7 @@ export default function BriketPage() {
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-[#2C5E43]/20 bg-white/75 px-3 py-1.5 shadow-sm backdrop-blur">
               <span className="h-2 w-2 rounded-full bg-[#2C5E43] shadow-[0_0_0_5px_rgba(44,94,67,0.12)]" />
-              <span className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#2C5E43]">Edukasi Warga RW 07</span>
+              <span className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#2C5E43]">Edukasi Briket</span>
             </div>
 
             <h1 className="mt-4 text-4xl font-extrabold leading-[1.15] tracking-[-0.03em] text-stone-900 sm:text-5xl lg:text-6xl">
@@ -148,41 +149,15 @@ export default function BriketPage() {
               <span className="animate-float-sparkle absolute right-[5%] top-[8%] h-2.5 w-2.5 rounded-full bg-lime-500 shadow-[0_0_0_6px_rgba(255,255,255,0.7)]" />
               <span className="animate-float-sparkle absolute left-[4%] top-[28%] h-2 w-2 rounded-full bg-amber-600 shadow-[0_0_0_6px_rgba(255,255,255,0.7)]" style={{ animationDelay: "1.2s" }} />
 
-              <div className="animate-float-card relative w-full rounded-[2rem] border border-white/80 bg-gradient-to-br from-[#EDF7D5] via-white to-[#F5E7CF] p-5 shadow-[0_28px_55px_rgba(36,85,47,0.14)]">
-                <svg viewBox="0 0 520 430" role="img" aria-label="Ilustrasi daun kering yang diolah menjadi briket" className="h-auto w-full">
-                  <defs>
-                    <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1">
-                      <stop stopColor="#D89A3A" />
-                      <stop offset="1" stopColor="#8D4625" />
-                    </linearGradient>
-                    <linearGradient id="coal" x1="0" y1="0" x2="0.8" y2="1">
-                      <stop stopColor="#343434" />
-                      <stop offset="1" stopColor="#111" />
-                    </linearGradient>
-                  </defs>
-                  <path d="M82 102c62-78 136-33 128 26-7 51-69 79-139 96 31-40 54-75 86-105-33 19-61 47-86 82-10-37-7-73 11-99Z" fill="url(#leaf)" />
-                  <path d="M72 215c55-8 105-38 139-91" fill="none" stroke="#6F3B22" strokeWidth="8" strokeLinecap="round" />
-                  <path d="M262 84c21-33 67-39 94-10 28 30 15 80-25 93-33 11-69-10-78-42 32-5 56-17 75-37-24 13-46 18-66 19Z" fill="#5E8737" />
-                  <path d="M268 114c32-3 54-15 73-34" fill="none" stroke="#365B2D" strokeWidth="7" strokeLinecap="round" />
-                  <path d="M250 180c26-42 72-50 100-16 20 24 21 62 3 86" fill="none" stroke="#F49B32" strokeWidth="14" strokeLinecap="round" />
-                  <path d="M286 231c23-25 50-40 81-47-9 29-6 50 10 73" fill="#F2B43F" opacity=".95" />
-                  <g transform="translate(78 245)">
-                    {[0, 1, 2, 3, 4].map((item) => {
-                      const x = item * 72 + (item % 2) * 9;
-                      const y = item % 2 === 0 ? 38 : 4;
-                      return (
-                        <g key={item} transform={`translate(${x} ${y})`}>
-                          <ellipse cx="48" cy="83" rx="45" ry="18" fill="#000" opacity=".14" />
-                          <rect x="6" y="16" width="84" height="64" rx="25" fill="url(#coal)" />
-                          <ellipse cx="48" cy="18" rx="42" ry="17" fill="#414141" />
-                          <ellipse cx="48" cy="18" rx="15" ry="7" fill="#161616" />
-                          <ellipse cx="48" cy="79" rx="41" ry="14" fill="#171717" />
-                        </g>
-                      );
-                    })}
-                  </g>
-                  <text x="260" y="400" textAnchor="middle" fill="#24552F" fontSize="22" fontWeight="800">DAUN KERING MENJADI ENERGI</text>
-                </svg>
+              <div className="animate-float-card relative w-full">
+                <Image
+                  src="/images/briket-hero-v2.png"
+                  alt="Briket daun kering beserta bahan dan alat pembuatannya"
+                  width={1254}
+                  height={1254}
+                  priority
+                  className="relative z-10 h-auto w-full object-contain drop-shadow-[0_28px_34px_rgba(36,85,47,0.18)]"
+                />
               </div>
             </div>
           </div>
