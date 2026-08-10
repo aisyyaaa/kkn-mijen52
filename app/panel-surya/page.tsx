@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import PanelBookViewer from "@/components/PanelBookViewer";
 
 export const metadata: Metadata = {
@@ -40,16 +39,7 @@ const specifications = [
   { name: "Push Button & Saklar", spec: "3 Tombol Navigasi + Override", role: "Pengaturan jadwal manual dan kendali darurat" },
 ];
 
-const tools = [
-  "Obeng (+) dan (−)",
-  "Tang Potong",
-  "Tang Kombinasi",
-  "Wire Stripper (Pengupas Kabel)",
-  "Multimeter Digital",
-  "Solder dan Timah",
-  "Isolasi Listrik",
-  "Cable Tie (Pengikat Kabel)",
-];
+
 
 const assembleSteps = [
   {
@@ -220,30 +210,12 @@ export default function PanelSuryaPage() {
       <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-50/50 via-[#FAF9F5] to-emerald-50/30" />
 
       <div className="mx-auto w-full max-w-7xl px-4 pt-12 pb-24 sm:px-6 sm:pb-32 lg:px-8">
-        
-        {/* Breadcrumb Navigation */}
-        <nav aria-label="Breadcrumb" className="mb-6">
-          <ol className="flex items-center gap-2 text-xs font-semibold text-stone-500">
-            <li>
-              <Link href="/" className="transition hover:text-stone-900">
-                Beranda
-              </Link>
-            </li>
-            <li>/</li>
-            <li>
-              <span className="text-stone-400">Program Kerja</span>
-            </li>
-            <li>/</li>
-            <li className="text-[#2C5E43] font-bold">Panel Surya</li>
-          </ol>
-        </nav>
-
         {/* Hero Section */}
         <section className="relative overflow-hidden rounded-[2.5rem] border border-stone-200/80 bg-white/70 p-6 shadow-[0_20px_50px_rgba(15,23,42,0.03)] backdrop-blur-md sm:p-10 lg:p-12">
           <div className="grid items-center gap-8 lg:grid-cols-12 lg:gap-12">
             <div className="lg:col-span-7">
-              <span className="inline-flex items-center gap-2 rounded-full bg-amber-500/10 px-3.5 py-1 text-xs font-black uppercase tracking-[0.16em] text-amber-700 ring-1 ring-amber-600/20">
-                ☀️ Energi Bersih Terbarukan
+              <span className="rounded-full bg-[#2C5E43]/10 px-3.5 py-1 text-xs font-black uppercase tracking-[0.16em] text-[#2C5E43] ring-1 ring-[#2C5E43]/20">
+                Program Kerja KKN-T IDBU 52
               </span>
               <h1 className="mt-4 text-3xl font-black tracking-[-0.04em] text-stone-900 sm:text-5xl sm:leading-[1.15]">
                 Penerangan Jalan Berbasis Panel Surya
@@ -283,14 +255,6 @@ export default function PanelSuryaPage() {
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                     priority
                   />
-                </div>
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent p-4 text-white">
-                  <span className="rounded-full bg-emerald-500/90 px-2.5 py-0.5 text-[10px] font-black uppercase tracking-wider backdrop-blur-sm text-white">
-                    Fasilitas Publik
-                  </span>
-                  <p className="mt-1 text-xs font-bold text-white drop-shadow">
-                    Penerangan Jalan Mandiri Energi Surya Kelurahan Mijen
-                  </p>
                 </div>
               </div>
 
@@ -370,22 +334,6 @@ export default function PanelSuryaPage() {
                   ))}
                 </tbody>
               </table>
-            </div>
-          </div>
-
-          {/* Alat Persiapan Perakitan */}
-          <div className="mt-8 rounded-[2rem] border border-stone-200/70 bg-white/70 p-6 shadow-sm backdrop-blur sm:p-8">
-            <h3 className="text-base font-bold text-stone-900">Alat Kerja yang Diperlukan:</h3>
-            <div className="mt-4 flex flex-wrap gap-2.5">
-              {tools.map((tool, idx) => (
-                <span
-                  key={idx}
-                  className="inline-flex items-center gap-1.5 rounded-xl border border-stone-200 bg-white px-3.5 py-2 text-xs font-semibold text-stone-700 shadow-sm"
-                >
-                  <span className="text-emerald-600">🛠️</span>
-                  {tool}
-                </span>
-              ))}
             </div>
           </div>
         </section>
