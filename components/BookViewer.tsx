@@ -3,11 +3,28 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-export default function BookViewer() {
+interface BookViewerProps {
+  title?: string;
+  description?: string;
+  category?: string;
+  pdfSrc?: string;
+  downloadFileName?: string;
+  pagePathPrefix?: string;
+  totalPages?: number;
+}
+
+export default function BookViewer({
+  title = "Buku Pedoman Pengadaan",
+  description = "Panduan praktis pengadaan barang dan material untuk KKN-T IDBU 52 Universitas Diponegoro di Kelurahan Mijen.",
+  category = "Media Edukasi & Administrasi",
+  pdfSrc = "/pdf/buku-panduan-pengadaan.pdf",
+  downloadFileName = "Buku_Pedoman_Pengadaan_KKN.pdf",
+  pagePathPrefix = "/images/book/page_",
+  totalPages = 10,
+}: BookViewerProps = {}) {
   const [currentPage, setCurrentPage] = useState(1);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const totalPages = 10;
 
   useEffect(() => {
     const checkMobile = () => {
@@ -52,20 +69,20 @@ export default function BookViewer() {
   };
 
   // Generate page images path
-  const getPageSrc = (pageNum: number) => `/images/book/page_${pageNum}.png`;
+  const getPageSrc = (pageNum: number) => `${pagePathPrefix}${pageNum}.png`;
 
   return (
     <div className="mt-16 mx-auto w-full max-w-[760px] rounded-[2rem] border border-stone-200/60 bg-white/60 p-5 sm:p-8 shadow-[0_20px_45px_rgba(15,23,42,0.02)] backdrop-blur-md">
       {/* Header */}
       <div className="text-center mb-6">
         <span className="rounded-full bg-[#2C5E43]/10 px-3 py-1 text-[11px] font-black uppercase tracking-[0.16em] text-[#2C5E43] ring-1 ring-[#2C5E43]/20">
-          Media Edukasi & Administrasi
+          {category}
         </span>
         <h2 className="mt-3 text-2xl font-black tracking-[-0.04em] text-stone-900 sm:text-3xl">
-          Buku Pedoman Pengadaan
+          {title}
         </h2>
         <p className="mx-auto mt-2 text-xs leading-relaxed text-stone-500 max-w-lg">
-          Panduan praktis pengadaan barang dan material untuk KKN-T IDBU 52 Universitas Diponegoro di Kelurahan Mijen.
+          {description}
         </p>
       </div>
 
@@ -193,14 +210,14 @@ export default function BookViewer() {
         <div className="mt-6 pt-5 border-t border-stone-200/80 w-full flex justify-center">
           <div className="flex flex-col gap-2.5 sm:flex-row w-full sm:w-auto justify-center">
             <a
-              href="/pdf/buku-panduan-pengadaan.pdf"
-              download="Buku_Pedoman_Pengadaan_KKN.pdf"
+              href={pdfSrc}
+              download={downloadFileName}
               className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#2C5E43] to-[#5B8C5A] px-5 py-2.5 text-xs font-extrabold text-white shadow-md transition hover:-translate-y-0.5 hover:shadow-lg"
             >
               <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
               </svg>
-              Unduh Buku Pedoman (PDF)
+              Unduh Buku Saku (PDF)
             </a>
             <button
               onClick={() => setIsFullscreen(true)}
