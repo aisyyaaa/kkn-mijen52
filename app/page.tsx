@@ -155,6 +155,22 @@ export default function Home() {
             </div>
             <span className="text-xs font-bold text-slate-700 group-hover:text-emerald-700">Edukasi Teba Modern</span>
           </Link>
+          <Link href="/briket" className="group flex flex-col items-center justify-center gap-3 rounded-3xl border border-white/80 bg-white/70 p-5 shadow-sm backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-emerald-200 hover:bg-emerald-50 hover:shadow-md text-center">
+            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-600 transition-colors group-hover:bg-emerald-500 group-hover:text-white">
+              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8.5h10A2.5 2.5 0 0119.5 11v5A2.5 2.5 0 0117 18.5H7A2.5 2.5 0 014.5 16v-5A2.5 2.5 0 017 8.5z" />
+              </svg>
+            </div>
+            <span className="text-xs font-bold text-slate-700 group-hover:text-emerald-700">Edukasi Briket</span>
+          </Link>
+          <Link href="/panel-surya" className="group flex flex-col items-center justify-center gap-3 rounded-3xl border border-white/80 bg-white/70 p-5 shadow-sm backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-amber-200 hover:bg-amber-50 hover:shadow-md text-center">
+            <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-100 text-amber-600 transition-colors group-hover:bg-amber-500 group-hover:text-white">
+              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+              </svg>
+            </div>
+            <span className="text-xs font-bold text-slate-700 group-hover:text-amber-700">Panel Surya</span>
+          </Link>
           <Link href="/studi-kasus" className="group flex flex-col items-center justify-center gap-3 rounded-3xl border border-white/80 bg-white/70 p-5 shadow-sm backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-sky-200 hover:bg-sky-50 hover:shadow-md text-center">
             <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-sky-100 text-sky-600 transition-colors group-hover:bg-sky-500 group-hover:text-white">
               <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
