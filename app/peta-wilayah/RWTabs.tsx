@@ -51,6 +51,17 @@ const rwData: Record<RWKey, RWData> = {
           "Peta ini diharapkan dapat menjadi acuan dalam menentukan lokasi prioritas untuk kegiatan edukasi, pemasangan papan imbauan, serta penyusunan langkah-langkah mitigasi kebakaran sehingga masyarakat dapat lebih waspada dan berperan aktif dalam mencegah terjadinya kebakaran lahan.",
         ],
       },
+      {
+        image: "/images/peta-dian.jpeg",
+        alt: "Peta persebaran sendang Kelurahan Mijen, Kecamatan Mijen, Kota Semarang",
+        title: "Peta Persebaran Sendang Kelurahan Mijen",
+        description: [
+          "Peta ini disusun sebagai salah satu upaya mitigasi kebakaran lahan di RW 05 Kelurahan Mijen. Pemetaan dilakukan menggunakan citra satelit Sentinel-2A dengan analisis Normalized Burn Ratio (NBR) dan Differenced Normalized Burn Ratio (dNBR) untuk mengidentifikasi tingkat potensi kerawanan kebakaran berdasarkan kondisi vegetasi dan tutupan lahan.Sendang merupakan mata air alami yang muncul di permukaan tanah dan dimanfaatkan masyarakat sebagai sumber air untuk kebutuhan sehari-hari. Dalam konteks geologi, sendang terbentuk ketika air hujan meresap ke dalam tanah, tersimpan di lapisan batuan yang mampu meloloskan air (akuifer), kemudian keluar kembali ke permukaan pada tempat-tempat tertentu akibat pengaruh topografi dan perbedaan sifat batuan. Keberadaan sendang sering menjadi penanda alami adanya sistem aliran air tanah di bawah permukaan.",
+          "Kelurahan Mijen, Kecamatan Mijen, Kota Semarang, memiliki kondisi geologi yang mendukung terbentuknya sendang. Wilayah ini didominasi oleh Formasi Damar berumur Kuarter (Plistosen) yang tersusun atas batupasir tufan, konglomerat, dan breksi vulkanik hasil pengendapan material vulkanik Gunung Ungaran purba. Batupasir tufan dan konglomerat memiliki pori-pori dan rekahan yang memungkinkan air hujan meresap dan tersimpan, sedangkan breksi vulkanik yang lebih padat berperan sebagai lapisan yang menghambat pergerakan air ke bawah. Ketika air tanah yang mengalir di dalam lapisan permeabel bertemu dengan lapisan yang lebih kedap dan posisi lereng memungkinkan, air tersebut akan muncul ke permukaan sebagai mata air yang dikenal masyarakat sebagai sendang.",
+          "Berdasarkan hasil pemetaan lapangan, terdapat tujuh sendang yang tersebar di beberapa RW di Kelurahan Mijen, yaitu Sendang Kemantren (RW 7), Sendang Wetan (RW 6 RT 3), Sendang RW 4 RT 2, Sendang Gondang (RW 4 RT 4), Sendang Gendol (RW 4 RT 8), Sendang Telogo (RW 5 RT 3), dan Sendang Gedhe (RW 5 RT 3). Persebaran titik-titik tersebut tidak terjadi secara acak, tetapi mengikuti kondisi lereng dan jalur aliran air tanah. Tiga sendang di RW 4 berada relatif berdekatan dan menunjukkan adanya zona keluarnya air tanah pada bagian tengah kelurahan. Sendang Telogo dan Sendang Gedhe berada di bagian timur hingga tenggara, sedangkan Sendang Kemantren dan Sendang Wetan terletak lebih terpisah di bagian barat wilayah.",
+          "Keberadaan tujuh sendang tersebut tidak hanya penting sebagai sumber air komunal, tetapi juga mencerminkan sistem hidrogeologi alami Kelurahan Mijen. Oleh karena itu, pelestarian vegetasi, perlindungan daerah resapan, dan pengelolaan lingkungan di sekitar sendang menjadi langkah penting untuk menjaga keberlanjutan sumber air dan keseimbangan lingkungan di wilayah Mijen.",
+        ],
+      },
     ],
   },
   rw06: {
@@ -61,7 +72,7 @@ const rwData: Record<RWKey, RWData> = {
     tone: "teal",
     maps: [
       {
-        image: "/images/peta-multibencana-rw-6.png",
+        image: "/images/peta-multibencana.jpeg",
         alt: "Peta Multibencana RW 6 Kelurahan Mijen, Kecamatan Mijen, Kota Semarang",
         title: "Peta Multibencana RW 6 Kelurahan Mijen",
         description: [
