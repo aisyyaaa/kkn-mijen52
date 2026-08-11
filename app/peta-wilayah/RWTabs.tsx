@@ -123,7 +123,7 @@ const rwData: Record<RWKey, RWData> = {
         ],
       },
       {
-        image: "/images/Peta%20Ariaji.png",
+        image: "/images/peta-ariaji-fix.jpeg",
         alt: "Peta rute dari Pos Utama ke Sendang Kemantren RW 07 Kelurahan Mijen",
         title: "Peta Rute Pos Utama ke Sendang Kemantren",
         description: [
