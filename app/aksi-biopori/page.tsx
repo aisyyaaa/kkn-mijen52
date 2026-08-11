@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import CoffeeBiopori from "./CoffeeBiopori";
+import BioporiBookSection from "./BioporiBookSection";
 
 export const metadata: Metadata = {
   title: "Edukasi Biopori & Perkebunan Kopi - KKN-T IDBU 52 UNDIP",
@@ -464,7 +465,10 @@ export default function AksiBioporiPage() {
           </div>
         </section>
 
-        {/* ─── 6. DAMPAK LINGKUNGAN & HARAPAN PENUTUP ─── */}
+        {/* ─── 6. BUKU SAKU BIOPORI ─── */}
+        <BioporiBookSection />
+
+        {/* ─── 7. DAMPAK LINGKUNGAN & HARAPAN PENUTUP ─── */}
         <section className="mt-12 sm:mt-16 mb-4 overflow-hidden rounded-[2.5rem] border border-[#0D7C66]/20 bg-gradient-to-br from-[#0D7C66] via-[#1B9C85] to-[#1B6B93] p-6 text-center text-white shadow-2xl sm:p-10 lg:p-12">
           <span className="rounded-full bg-white/20 px-4 py-1.5 text-[10px] font-black uppercase tracking-[0.2em] backdrop-blur-sm sm:text-[11px]">
             Dampak &amp; Harapan
