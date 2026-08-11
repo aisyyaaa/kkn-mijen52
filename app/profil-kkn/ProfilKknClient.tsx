@@ -41,15 +41,18 @@ const groups: Group[] = [
     rwLocation: "RW 06 Kelurahan Mijen",
     imageSrc: "/images/kelompok-1.jpg",
     description:
-      "Kelompok 1 bertugas di wilayah RW 06 Kelurahan Mijen, berfokus pada pendampingan masyarakat dalam mitigasi bencana, edukasi bahaya kebakaran sampah, dan pembuatan lubang resapan biopori.",
+      "Kelompok 1 bertugas di wilayah RW 06 Kelurahan Mijen, berfokus pada pendampingan masyarakat dalam mitigasi bencana, edukasi bahaya kebakaran sampah, dan pembuatan Teba Modern.",
     members: [
-      { name: "Ketua Kelompok 1", isKetua: true },
-      { name: "Anggota 1" },
-      { name: "Anggota 2" },
-      { name: "Anggota 3" },
-      { name: "Anggota 4" },
-      { name: "Anggota 5" },
-      { name: "Anggota 6" },
+      { name: "Dio Septa Sanjaya", isKetua: true },
+      { name: "Muhammad Ali Husain" },
+      { name: "Dafa Zaldi Hamdaka" },
+      { name: "Anisa Rafa Puspita" },
+      { name: "Salmaa Hanifah Rahmadia" },
+      { name: "Husnul Aqib Kusuma" },
+      { name: "Erinna Rifda Nabila Triyana" },
+      { name: "Falihah Hanuun Humairo" },
+      { name: "Amelia Diah Febriyana" },
+      { name: "Nazwa Huwaida Savira" },
     ],
   },
   {
@@ -61,13 +64,17 @@ const groups: Group[] = [
     description:
       "Kelompok 2 bertugas di wilayah RW 07 Kelurahan Mijen, berfokus pada pengolahan sampah organik rumah tangga dan perkebunan kopi, pembuatan briket daun kering, biopori, serta eco-enzyme.",
     members: [
-      { name: "Ketua Kelompok 2", isKetua: true },
-      { name: "Anggota 1" },
-      { name: "Anggota 2" },
-      { name: "Anggota 3" },
-      { name: "Anggota 4" },
-      { name: "Anggota 5" },
-      { name: "Anggota 6" },
+      { name: "Indra Purwanto", isKetua: true },
+      { name: "Ariaji Faizal Nugraha" },
+      { name: "Aulia Rifdah Muna Nida’" },
+      { name: "Baihaqi Ramadhani Anantito" },
+      { name: "Ghina Putri Nur Fadhila" },
+      { name: "Jagad Pangestu" },
+      { name: "Kaila Talitha Putri" },
+      { name: "Kamalia Rahila Hardi Lubis" },
+      { name: "Marisa Jala Kusumawati" },
+      { name: "Salima Galih Raihana" },
+      { name: "Siti Azizah Indah Mulyani" },
     ],
   },
   {
@@ -79,13 +86,16 @@ const groups: Group[] = [
     description:
       "Kelompok 3 bertugas di wilayah RW 05 Kelurahan Mijen, berfokus pada penataan kawasan sendang air warga, edukasi pemilahan sampah dari rumah, dan sosialisasi kebersihan lingkungan.",
     members: [
-      { name: "Ketua Kelompok 3", isKetua: true },
-      { name: "Anggota 1" },
-      { name: "Anggota 2" },
-      { name: "Anggota 3" },
-      { name: "Anggota 4" },
-      { name: "Anggota 5" },
-      { name: "Anggota 6" },
+      { name: "Muhamad Haedar Fahmi", isKetua: true },
+      { name: "Dinar Sekar Arum" },
+      { name: "Dian Oktaria R.K.N" },
+      { name: "Mutiara Aisyah S." },
+      { name: "Rafif Naufal Aryasatya" },
+      { name: "Novia Putri Y." },
+      { name: "Rijal Hibrizy N.I" },
+      { name: "Shofi Mahmudah" },
+      { name: "Leilacandra Oktaviawan" },
+      { name: "Firman Dwi K." },
     ],
   },
 ];
@@ -130,7 +140,7 @@ export default function ProfilKknClient() {
 
         {/* Daftar Kelompok */}
         <div className="mt-10 space-y-8">
-          {groups.map((group) => {
+          {groups.map((group, index) => {
             const isImgError = imgErrors[group.id];
 
             return (
@@ -161,6 +171,8 @@ export default function ProfilKknClient() {
                           src={group.imageSrc}
                           alt={`Foto ${group.name}`}
                           fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 600px"
+                          priority={index === 0}
                           className="object-cover"
                           onError={() => handleImageError(group.id)}
                         />
