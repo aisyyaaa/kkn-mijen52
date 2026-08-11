@@ -161,6 +161,29 @@ export default function AksiBioporiPage() {
                 ☕ Cocok Pohon Kopi
               </span>
             </div>
+
+            {/* Quick Action Buttons */}
+            <div className="mt-7 flex flex-wrap items-center gap-3">
+              <a
+                href="#buku-saku"
+                className="inline-flex items-center gap-2.5 rounded-full bg-gradient-to-r from-[#0D7C66] to-[#1B9C85] px-6 py-3.5 text-xs font-extrabold text-white shadow-[0_14px_32px_rgba(13,124,102,0.25)] transition-all hover:-translate-y-0.5 hover:shadow-[0_18px_36px_rgba(13,124,102,0.32)] sm:text-sm"
+              >
+                <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth={2.2} viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                </svg>
+                Baca Buku Saku Digital
+              </a>
+              <a
+                href="/pdf/buku-panduan-biopori.pdf"
+                download="Buku_Panduan_Biopori_KKN_IDBU_52.pdf"
+                className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/90 backdrop-blur px-5 py-3.5 text-xs font-bold text-slate-700 shadow-sm transition-all hover:-translate-y-0.5 hover:border-emerald-300 hover:bg-emerald-50 hover:text-[#0D7C66] sm:text-sm"
+              >
+                <svg className="h-4 w-4 text-emerald-600" fill="none" stroke="currentColor" strokeWidth={2.2} viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                </svg>
+                Unduh PDF
+              </a>
+            </div>
           </div>
 
           <div className="relative mt-8 lg:mt-0 flex justify-center">

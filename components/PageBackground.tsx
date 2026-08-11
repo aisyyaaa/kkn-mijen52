@@ -2,21 +2,21 @@
 
 import { usePathname } from "next/navigation";
 
-const SOLID_BACKGROUNDS: Record<string, string> = {
-  "/aksi-biopori": "#ffffff",
+const PAGE_BACKGROUNDS: Record<string, string> = {
+  "/aksi-biopori": "linear-gradient(180deg, #E2EFE9 0%, #D6E8E0 50%, #DDEEE6 100%)",
   "/teba": "#FAF9F5",
   "/eco-enzim": "#FFFCF4",
 };
 
 export default function PageBackground() {
   const pathname = usePathname();
-  const solidColor = SOLID_BACKGROUNDS[pathname];
+  const bgStyle = PAGE_BACKGROUNDS[pathname];
 
-  if (solidColor) {
+  if (bgStyle) {
     return (
       <div
         className="pointer-events-none fixed inset-0 -z-10"
-        style={{ backgroundColor: solidColor }}
+        style={{ background: bgStyle }}
       />
     );
   }
