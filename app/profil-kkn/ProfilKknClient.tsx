@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Member {
   name: string;
@@ -39,20 +40,17 @@ const groups: Group[] = [
     name: "Kelompok 1",
     rw: "RW 06",
     rwLocation: "RW 06 Kelurahan Mijen",
-    imageSrc: "/images/kelompok 1.jpg",
+    imageSrc: "/images/kelompok-1.jpg",
     description:
-      "Kelompok 1 bertugas di wilayah RW 06 Kelurahan Mijen, berfokus pada pendampingan masyarakat dalam mitigasi bencana, edukasi bahaya kebakaran sampah, dan pembuatan Teba Modern.",
+      "Kelompok 1 bertugas di wilayah RW 06 Kelurahan Mijen, berfokus pada pendampingan masyarakat dalam mitigasi bencana, edukasi bahaya kebakaran sampah, dan pembuatan lubang resapan biopori.",
     members: [
-      { name: "Dio Septa Sanjaya", isKetua: true },
-      { name: "Muhammad Ali Husain" },
-      { name: "Dafa Zaldi Hamdaka" },
-      { name: "Anisa Rafa Puspita" },
-      { name: "Salmaa Hanifah Rahmadia" },
-      { name: "Husnul Aqib Kusuma" },
-      { name: "Erinna Rifda Nabila Triyana" },
-      { name: "Falihah Hanuun Humairo" },
-      { name: "Amelia Diah Febriyana" },
-      { name: "Nazwa Huwaida Savira" },
+      { name: "Ketua Kelompok 1", isKetua: true },
+      { name: "Anggota 1" },
+      { name: "Anggota 2" },
+      { name: "Anggota 3" },
+      { name: "Anggota 4" },
+      { name: "Anggota 5" },
+      { name: "Anggota 6" },
     ],
   },
   {
@@ -60,21 +58,17 @@ const groups: Group[] = [
     name: "Kelompok 2",
     rw: "RW 07",
     rwLocation: "RW 07 Kelurahan Mijen",
-    imageSrc: "/images/kelompok 2.jpg",
+    imageSrc: "/images/kelompok-2.jpg",
     description:
       "Kelompok 2 bertugas di wilayah RW 07 Kelurahan Mijen, berfokus pada pengolahan sampah organik rumah tangga dan perkebunan kopi, pembuatan briket daun kering, biopori, serta eco-enzyme.",
     members: [
-      { name: "Indra Purwanto", isKetua: true },
-      { name: "Ariaji Faizal Nugraha" },
-      { name: "Aulia Rifdah Muna Nida’" },
-      { name: "Baihaqi Ramadhani Anantito" },
-      { name: "Ghina Putri Nur Fadhila" },
-      { name: "Jagad Pangestu" },
-      { name: "Kaila Talitha Putri" },
-      { name: "Kamalia Rahila Hardi Lubis" },
-      { name: "Marisa Jala Kusumawati" },
-      { name: "Salima Galih Raihana" },
-      { name: "Siti Azizah Indah Mulyani" },
+      { name: "Ketua Kelompok 2", isKetua: true },
+      { name: "Anggota 1" },
+      { name: "Anggota 2" },
+      { name: "Anggota 3" },
+      { name: "Anggota 4" },
+      { name: "Anggota 5" },
+      { name: "Anggota 6" },
     ],
   },
   {
@@ -82,20 +76,17 @@ const groups: Group[] = [
     name: "Kelompok 3",
     rw: "RW 05",
     rwLocation: "RW 05 Kelurahan Mijen",
-    imageSrc: "/images/kelompok 3.jpg",
+    imageSrc: "/images/kelompok-3.jpg",
     description:
       "Kelompok 3 bertugas di wilayah RW 05 Kelurahan Mijen, berfokus pada penataan kawasan sendang air warga, edukasi pemilahan sampah dari rumah, dan sosialisasi kebersihan lingkungan.",
     members: [
-      { name: "Muhamad Haedar Fahmi", isKetua: true },
-      { name: "Dinar Sekar Arum" },
-      { name: "Dian Oktaria R.K.N" },
-      { name: "Mutiara Aisyah S." },
-      { name: "Rafif Naufal Aryasatya" },
-      { name: "Novia Putri Y." },
-      { name: "Rijal Hibrizy N.I" },
-      { name: "Shofi Mahmudah" },
-      { name: "Leilacandra Oktaviawan" },
-      { name: "Firman Dwi K." },
+      { name: "Ketua Kelompok 3", isKetua: true },
+      { name: "Anggota 1" },
+      { name: "Anggota 2" },
+      { name: "Anggota 3" },
+      { name: "Anggota 4" },
+      { name: "Anggota 5" },
+      { name: "Anggota 6" },
     ],
   },
 ];
@@ -110,6 +101,15 @@ export default function ProfilKknClient() {
   return (
     <main className="min-h-screen text-slate-800 pb-20">
       <div className="mx-auto w-full max-w-5xl px-4 pt-6 sm:px-6 sm:pt-8 md:pt-10">
+
+        {/* Breadcrumb */}
+        <nav className="flex items-center gap-2 text-xs text-slate-500 mb-6">
+          <Link href="/" className="hover:text-emerald-700 transition-colors">
+            Beranda
+          </Link>
+          <span>/</span>
+          <span className="text-slate-700 font-medium">Profil Tim KKN</span>
+        </nav>
 
         {/* Header Utama */}
         <header className="rounded-3xl border border-slate-200/80 bg-white p-6 sm:p-8 md:p-10 shadow-sm">
@@ -162,7 +162,7 @@ export default function ProfilKknClient() {
                 </div>
 
                 <div className="grid gap-6 md:grid-cols-12 md:items-start">
-                  
+
                   {/* Foto Kelompok */}
                   <div className="md:col-span-7 flex flex-col gap-3">
                     <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-100">
@@ -180,7 +180,7 @@ export default function ProfilKknClient() {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                           </svg>
                           <p className="text-xs font-semibold text-slate-600">Foto {group.name} ({group.rw})</p>
-                          <p className="text-[11px] text-slate-400 mt-1">Upload file foto di <code className="text-slate-600">public{group.imageSrc}</code></p>
+                          <p className="text-[11px] text-slate-400 mt-1">Upload file foto di <code className="text-slate-600">public/images/{group.id}.jpg</code></p>
                         </div>
                       )}
                     </div>

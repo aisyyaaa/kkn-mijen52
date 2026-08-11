@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import PageBackground from "@/components/PageBackground";
+import BackToTop from "@/components/BackToTop";
 
 export const metadata: Metadata = {
   title: "Proklim Mijen - KKN IDBU 52 UNDIP",
@@ -20,6 +21,7 @@ export default function RootLayout({
         <PageBackground />
         <Navbar />
         {children}
+        <BackToTop />
       </body>
     </html>
   );
