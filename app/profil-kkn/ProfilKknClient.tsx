@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 interface Member {
   name: string;
@@ -101,15 +100,6 @@ export default function ProfilKknClient() {
   return (
     <main className="min-h-screen text-slate-800 pb-20">
       <div className="mx-auto w-full max-w-5xl px-4 pt-6 sm:px-6 sm:pt-8 md:pt-10">
-
-        {/* Breadcrumb */}
-        <nav className="flex items-center gap-2 text-xs text-slate-500 mb-6">
-          <Link href="/" className="hover:text-emerald-700 transition-colors">
-            Beranda
-          </Link>
-          <span>/</span>
-          <span className="text-slate-700 font-medium">Profil Tim KKN</span>
-        </nav>
 
         {/* Header Utama */}
         <header className="rounded-3xl border border-slate-200/80 bg-white p-6 sm:p-8 md:p-10 shadow-sm">
