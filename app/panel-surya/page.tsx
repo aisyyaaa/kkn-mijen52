@@ -245,14 +245,14 @@ export default function PanelSuryaPage() {
 
             {/* Hero Image & Feature Badges */}
             <div className="lg:col-span-5 flex flex-col items-center justify-center">
-              <div className="group relative w-full overflow-hidden rounded-3xl border border-stone-200/80 bg-stone-100 shadow-md transition-all duration-300 hover:shadow-xl">
-                <div className="relative aspect-square w-full">
+              <div className="relative w-full max-w-md flex items-center justify-center py-2">
+                <div className="relative aspect-square w-full max-w-[420px] drop-shadow-[0_20px_35px_rgba(0,0,0,0.12)]">
                   <Image
-                    src="/images/panel-surya-hero.jpg"
+                    src="/images/panel-surya-hero.png"
                     alt="Mockup 3D Lampu Jalan Tenaga Surya KKN-T IDBU 52 UNDIP"
                     fill
                     sizes="(max-width: 1024px) 100vw, 500px"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="object-contain transition-transform duration-500 hover:scale-105"
                     priority
                   />
                 </div>

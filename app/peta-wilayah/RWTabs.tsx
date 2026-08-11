@@ -68,7 +68,7 @@ const rwData: Record<RWKey, RWData> = {
     label: "RW 06",
     headline: "RW 06 Kelurahan Mijen",
     intro:
-      "Gambaran wilayah cakupan Program Kampung Iklim (ProKlim) dan peta multibencana di RW 06 Kelurahan Mijen, Kecamatan Mijen, Kota Semarang.",
+      "Gambaran wilayah cakupan Program Kampung Iklim (ProKlim), peta multibencana, serta persebaran sarana prasarana lingkungan di RW 06 Kelurahan Mijen, Kecamatan Mijen, Kota Semarang.",
     tone: "teal",
     maps: [
       {
@@ -79,7 +79,18 @@ const rwData: Record<RWKey, RWData> = {
           "Peta ini merupakan Peta Multibencana RW 6 Kelurahan Mijen yang menyajikan tingkat kerawanan atau kelas bahaya (Rendah, Sedang, dan Tinggi) di seluruh wilayah RW 6, serta sebaran fasilitas mitigasi dan titik penting lingkungan seperti lubang resapan Biopori, Sendang Wadas, dan Titik Kumpul evakuasi.",
           "Berdasarkan analisis spasial, tingkat bahaya dibagi menjadi tiga kelas: warna hijau menunjukkan zona bahaya Rendah yang mendominasi sebagian besar pemukiman warga di RT 01, RT 02, RT 04, RT 05, dan RT 06; warna kuning menunjukkan zona bahaya Sedang yang melintasi wilayah tengah hingga Kawasan Perhutani; sedangkan warna merah menunjukkan zona bahaya Tinggi di area tepi hutan/perkebunan dan sepanjang perbatasan RT 03 yang membutuhkan pengawasan dan mitigasi ekstra.",
           "Fasilitas penting yang dipetakan meliputi lokasi titik kumpul evakuasi (simbol ungu) di area pemukiman RT 01, RT 04, dan RT 06; sebaran biopori (simbol kuning) sebagai pengendali limpasan air; serta Sendang Wadas (simbol biru) di dekat wilayah RT 03 yang berperan sebagai salah satu sumber air alami penting di wilayah RW 6 Kelurahan Mijen.",
-          "Peta ini disusun oleh Tim KKN-T IDBU 52 Universitas Diponegoro sebagai instrumen perencanaan mitigasi kebencanaan komunal dan pengelolaan lingkungan terpadu, membantu Kelurahan Mijen dan warga setempat dalam kesiapsiagaan bencana serta adaptasi perubahan iklim."
+          "Peta ini disusun oleh Tim KKN-T IDBU 52 Universitas Diponegoro sebagai instrumen perencanaan mitigasi kebencanaan komunal dan pengelolaan lingkungan terpadu, membantu Kelurahan Mijen dan warga setempat dalam kesiapsiagaan bencana serta adaptasi perubahan iklim.",
+        ],
+      },
+      {
+        image: "/images/peta tematik rw 6.jpg",
+        alt: "Peta Tematik Lingkungan dan Sarana Prasarana RW 06 Kelurahan Mijen",
+        title: "Peta Tematik Lingkungan dan Sarana Prasarana RW 06 Kelurahan Mijen",
+        description: [
+          "Peta ini merupakan Peta Tematik Lingkungan dan Sarana Prasarana RW 06 Kelurahan Mijen yang menyajikan batas wilayah administrasi dari 9 Rukun Tetangga (RT 01 hingga RT 09), dilengkapi dengan katalog visual dan koordinat sebaran sarana prasarana publik, fasilitas keagamaan, pendidikan, serta titik konservasi hijau.",
+          "Pemetaan fasilitas umum mencakup Balai Pertemuan dan Balai Warga (Balai Kegiatan RW 6, Balai RT 2, Balai Kegiatan RT 3, Balai Kegiatan RT 4, Balai RT 5, dan Balai RT 7), sarana pendidikan Akademi Teknik Pika, tempat peribadatan (Masjid Nurul Falah, Musholla Al Barokah, Musholla An-Nuur, dan Gereja Pantekosta Antiokhia), serta Makam Lemah Mendhak.",
+          "Selain sarana umum, peta ini menonjolkan potensi lingkungan hidup berbasis komunitas berupa persebaran Taman TOGA (Tanaman Obat Keluarga) yang aktif dibudidayakan oleh warga di RT 01, RT 02, RT 03, RT 04, RT 06, RT 07, dan RT 09. Keberadaan kebun TOGA ini menjadi pilar penting pendukung Program Kampung Iklim (ProKlim) dalam pemanfaatan lahan pekarangan dan ketahanan hayati lokal.",
+          "Peta ini disusun oleh Tim KKN-T IDBU 52 Universitas Diponegoro berdasarkan akuisisi data lapangan Agustus 2026 yang diintegrasikan dengan Peta Rupa Bumi Indonesia (BIG) serta Citra Satelit Google Earth & Landsat dalam sistem proyeksi koordinat UTM WGS 1984 Zone 49S.",
         ],
       },
     ],
@@ -195,8 +206,20 @@ function PlaceholderMap({ alt, tone }: { alt: string; tone: "emerald" | "teal" |
 
 export default function RWTabs() {
   const [activeTab, setActiveTab] = useState<RWKey>("rw05");
+  const [selectedImage, setSelectedImage] = useState<{ src: string; title: string; alt: string } | null>(null);
+  const [zoomLevel, setZoomLevel] = useState<number>(1);
   const active = rwData[activeTab];
   const styles = toneStyles[active.tone];
+
+  const handleOpenLightbox = (src: string, title: string, alt: string) => {
+    setSelectedImage({ src, title, alt });
+    setZoomLevel(1);
+  };
+
+  const handleCloseLightbox = () => {
+    setSelectedImage(null);
+    setZoomLevel(1);
+  };
 
   return (
     <>
@@ -209,11 +232,10 @@ export default function RWTabs() {
               key={key}
               type="button"
               onClick={() => setActiveTab(key)}
-              className={`rounded-xl px-4 py-3 text-sm font-semibold transition-all duration-200 ${
-                isActive
+              className={`rounded-xl px-4 py-3 text-sm font-semibold transition-all duration-200 ${isActive
                   ? "bg-emerald-600 text-white shadow-md"
                   : "border border-gray-300 bg-white text-gray-700 shadow-sm hover:border-emerald-400 hover:text-emerald-600"
-              }`}
+                }`}
             >
               {rwData[key].label}
             </button>
@@ -236,15 +258,55 @@ export default function RWTabs() {
         <div key={`${activeTab}-map-${i}`}>
           <div className={`mt-7 overflow-hidden rounded-2xl border bg-white p-3 shadow-sm ${styles.cardBorder}`}>
             {section.image ? (
-              <Image
-                src={section.image}
-                alt={section.alt}
-                width={1600}
-                height={1130}
-                priority={i === 0}
-                unoptimized
-                className="h-auto w-full rounded-xl object-contain"
-              />
+              <div className="relative group">
+                <div
+                  onClick={() => handleOpenLightbox(section.image, section.title, section.alt)}
+                  className="cursor-zoom-in overflow-hidden rounded-xl bg-stone-50 flex items-center justify-center"
+                >
+                  <Image
+                    src={section.image}
+                    alt={section.alt}
+                    width={1600}
+                    height={1200}
+                    priority={i === 0}
+                    unoptimized
+                    className="h-auto w-full rounded-xl object-contain transition-transform duration-300 group-hover:scale-[1.01]"
+                  />
+                </div>
+
+                {/* Hover Quick Action Overlay */}
+                <div className="mt-3 flex flex-wrap items-center justify-between gap-2 border-t border-gray-100 pt-3 text-xs text-gray-600">
+                  <span className="flex items-center gap-1.5 font-medium text-emerald-700">
+                    <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6" />
+                    </svg>
+                    Klik gambar untuk memperbesar resolusi penuh
+                  </span>
+                  <div className="flex items-center gap-2">
+                    <button
+                      type="button"
+                      onClick={() => handleOpenLightbox(section.image, section.title, section.alt)}
+                      className="inline-flex items-center gap-1.5 rounded-lg bg-stone-100 px-3 py-1.5 font-semibold text-stone-700 hover:bg-stone-200 transition"
+                    >
+                      <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
+                      </svg>
+                      Perbesar Peta
+                    </button>
+                    <a
+                      href={section.image}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 rounded-lg border border-gray-200 bg-white px-3 py-1.5 font-semibold text-gray-700 hover:bg-gray-50 transition"
+                    >
+                      <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                      </svg>
+                      Buka Tab Baru
+                    </a>
+                  </div>
+                </div>
+              </div>
             ) : (
               <PlaceholderMap alt={section.alt} tone={active.tone} />
             )}
@@ -262,6 +324,114 @@ export default function RWTabs() {
           </div>
         </div>
       ))}
+
+      {/* Fullscreen Lightbox Modal */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 z-50 flex flex-col bg-black/90 backdrop-blur-sm p-4 sm:p-6"
+          onClick={handleCloseLightbox}
+        >
+          {/* Top Bar */}
+          <div
+            className="flex items-center justify-between gap-4 text-white pb-3 border-b border-white/10"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="truncate">
+              <h4 className="font-bold text-sm sm:text-base truncate">{selectedImage.title}</h4>
+              <p className="text-xs text-stone-400 truncate">Resolusi Penuh • Klik luar atau tombol tutup untuk kembali</p>
+            </div>
+
+            <div className="flex items-center gap-2 shrink-0">
+              {/* Zoom Controls */}
+              <button
+                type="button"
+                onClick={() => setZoomLevel((prev) => Math.max(0.5, prev - 0.25))}
+                className="rounded-lg bg-white/10 p-2 hover:bg-white/20 text-white transition"
+                title="Perkecil"
+              >
+                <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12h-15" />
+                </svg>
+              </button>
+              <span className="text-xs font-mono px-1">{Math.round(zoomLevel * 100)}%</span>
+              <button
+                type="button"
+                onClick={() => setZoomLevel((prev) => Math.min(3, prev + 0.25))}
+                className="rounded-lg bg-white/10 p-2 hover:bg-white/20 text-white transition"
+                title="Perbesar"
+              >
+                <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                </svg>
+              </button>
+              <button
+                type="button"
+                onClick={() => setZoomLevel(1)}
+                className="rounded-lg bg-white/10 px-2.5 py-1.5 text-xs font-semibold hover:bg-white/20 text-white transition hidden sm:block"
+                title="Reset Zoom"
+              >
+                Reset
+              </button>
+
+              <a
+                href={selectedImage.src}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-lg bg-emerald-600 px-3 py-1.5 text-xs font-bold text-white hover:bg-emerald-500 transition flex items-center gap-1"
+              >
+                <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                </svg>
+                Tab Baru
+              </a>
+
+              <a
+                href={selectedImage.src}
+                download
+                className="rounded-lg bg-white/20 px-3 py-1.5 text-xs font-bold text-white hover:bg-white/30 transition flex items-center gap-1"
+              >
+                <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                </svg>
+                Unduh
+              </a>
+
+              <button
+                type="button"
+                onClick={handleCloseLightbox}
+                className="rounded-lg bg-red-600/80 p-2 hover:bg-red-600 text-white transition ml-2"
+                title="Tutup (ESC)"
+              >
+                <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          {/* Image Container with Zoom and Scroll */}
+          <div
+            className="flex-1 overflow-auto flex items-center justify-center p-2 sm:p-4 cursor-grab active:cursor-grabbing"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div
+              style={{
+                transform: `scale(${zoomLevel})`,
+                transformOrigin: "center center",
+                transition: "transform 0.15s ease-out",
+              }}
+              className="max-w-none flex items-center justify-center"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={selectedImage.src}
+                alt={selectedImage.alt}
+                className="max-h-[85vh] max-w-[90vw] object-contain rounded-lg shadow-2xl select-none"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }
