@@ -6,7 +6,7 @@ import BriketBookViewer from "@/components/BriketBookViewer";
 export const metadata: Metadata = {
   title: "Edukasi Briket Daun Kering - KKN-T IDBU 52 UNDIP",
   description:
-    "Panduan pemanfaatan daun kering menjadi briket sebagai bahan bakar alternatif ramah lingkungan dan peluang usaha warga RW 07 Kelurahan Mijen.",
+    "Panduan pemanfaatan daun kering menjadi briket sebagai bahan bakar alternatif ramah lingkungan dan peluang usaha warga Kelurahan Mijen.",
 };
 
 const reasons = [
@@ -90,7 +90,7 @@ const storageTips = [
 ];
 
 const businessPoints = [
-  { title: "Bahan Baku Melimpah", desc: "Daun kering tersedia di pekarangan dan lingkungan RW 07." },
+  { title: "Bahan Baku Melimpah", desc: "Daun kering tersedia di pekarangan dan lingkungan Kelurahan Mijen." },
   { title: "Modal Relatif Kecil", desc: "Alat dan bahan pembuatan sederhana serta mudah diperoleh." },
   { title: "Dibutuhkan UMKM", desc: "Berpotensi digunakan oleh usaha kuliner atau kegiatan yang memerlukan bahan bakar padat." },
   { title: "Mudah Dipasarkan", desc: "Briket kering dapat dikemas rapi, diberi label, lalu dipasarkan secara lokal." },
@@ -130,7 +130,7 @@ export default function BriketPage() {
               <strong>Briket</strong> adalah bahan bakar padat dari bahan organik mudah terbakar yang dikarbonisasi, dihaluskan, lalu dipadatkan dengan bantuan perekat alami.
             </p>
             <p className="mt-4 text-base leading-8 text-stone-700 sm:text-lg">
-              Pemanfaatan daun kering membantu warga RW 07 mengurangi limbah pekarangan sekaligus menghasilkan energi alternatif yang mudah disimpan dan bernilai guna.
+              Pemanfaatan daun kering membantu warga Kelurahan Mijen mengurangi limbah pekarangan sekaligus menghasilkan energi alternatif yang mudah disimpan dan bernilai guna.
             </p>
 
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
@@ -164,7 +164,7 @@ export default function BriketPage() {
         </section>
 
         <section className="mt-12">
-          <SectionHeading eyebrow="Latar Belakang & Tujuan" title="Mengapa Daun Kering Perlu Diolah?" description="RW 07 memiliki lahan luas yang menghasilkan daun kering melimpah, terutama saat musim kemarau." />
+          <SectionHeading eyebrow="Latar Belakang & Tujuan" title="Mengapa Daun Kering Perlu Diolah?" description="Kelurahan Mijen memiliki lahan luas yang menghasilkan daun kering melimpah, terutama saat musim kemarau." />
           <div className="mt-8 grid gap-6 lg:grid-cols-[1fr_1fr_1fr_1.15fr]">
             {reasons.map((reason) => (
               <article key={reason.number} className="group rounded-3xl border border-stone-200 bg-white/65 p-6 shadow-sm transition hover:-translate-y-1 hover:border-[#4F7D32]/30 hover:bg-white hover:shadow-md">
@@ -187,7 +187,7 @@ export default function BriketPage() {
             <p className="mt-4 text-sm leading-7 text-stone-600">Briket daun kering dibuat melalui proses pengarangan, penghalusan, pencampuran dengan perekat alami, pencetakan, dan pengeringan. Bentuk padatnya membuat bahan bakar lebih praktis untuk disimpan dan digunakan.</p>
             <div className="mt-6 rounded-2xl border border-amber-200/70 bg-amber-50/80 p-4">
               <p className="text-xs font-black uppercase tracking-wider text-amber-800">Bahan Utama Lokal</p>
-              <p className="mt-1 text-sm leading-6 text-amber-950">Daun kering yang melimpah di lingkungan RW 07 menjadi bahan baku utama.</p>
+              <p className="mt-1 text-sm leading-6 text-amber-950">Daun kering yang melimpah di lingkungan Kelurahan Mijen menjadi bahan baku utama.</p>
             </div>
           </div>
           <div>
