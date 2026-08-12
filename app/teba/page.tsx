@@ -249,7 +249,7 @@ export default function TebaPage() {
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-[#2C5E43]/20 bg-white/75 px-3 py-1.5 shadow-sm backdrop-blur">
               <span className="h-2 w-2 rounded-full bg-[#2C5E43] shadow-[0_0_0_5px_rgba(44,94,67,0.12)]" />
-              <span className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#2C5E43]">Edukasi Warga RW 6</span>
+              <span className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#2C5E43]">Edukasi Warga</span>
             </div>
 
             <h1 className="mt-4 text-4xl font-extrabold leading-[1.15] tracking-[-0.03em] text-stone-900 sm:text-5xl lg:text-6xl">
