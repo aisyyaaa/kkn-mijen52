@@ -41,6 +41,18 @@ const rwData: Record<RWKey, RWData> = {
         ],
       },
       {
+        image: "/images/peta-haedar.png",
+        alt: "Peta persebaran sendang 05 Kelurahan Mijen",
+        title:
+          "Peta Persebaran Sendang RW 05 Kelurahan Mijen",
+        description: [
+          "Peta Detail RW 05 Kelurahan Mijen, Kecamatan Mijen, Kota Semarang, menyajikan informasi spasial mengenai batas administrasi, jaringan jalan, serta persebaran fasilitas umum dan sarana pendukung masyarakat di wilayah RW 05. Peta ini disusun sebagai media informasi untuk memudahkan masyarakat maupun pihak luar dalam mengenali kondisi kewilayahan, lokasi setiap RT, serta fasilitas penting yang tersedia di lingkungan RW 05.",
+          "Secara administratif, wilayah RW 05 terdiri atas lima Rukun Tetangga (RT 01 sampai RT 05) yang masing-masing ditampilkan dengan batas RT yang jelas pada peta. Selain batas RT, peta juga menunjukkan batas RW sebagai batas administrasi utama wilayah kajian. Informasi ini penting untuk mendukung pendataan wilayah, perencanaan kegiatan masyarakat, serta pelaksanaan program pembangunan dan pengabdian masyarakat.",
+          "Peta dilengkapi dengan lokasi rumah Ketua RT 01, RT 02, RT 03, RT 04, dan RT 05, sehingga memudahkan koordinasi dan pencarian titik pelayanan administratif di tingkat lingkungan. Lokasi rumah Ketua RW 05 juga ditampilkan sebagai pusat koordinasi kegiatan kemasyarakatan di wilayah tersebut.",
+          "Selain informasi administrasi, peta ini memuat berbagai fasilitas umum dan sarana pendukung masyarakat, antara lain Masjid Baitul Muqorobin, TK Among Tresno, Posyandu, Bank Sampah Mekar Sejahtera, komposter, titik kumpul evakuasi, Sendang Gedhe, dan Sendang Telogo. Keberadaan fasilitas-fasilitas tersebut menunjukkan bahwa RW 05 tidak hanya memiliki fungsi permukiman, tetapi juga didukung oleh sarana pendidikan, kesehatan, keagamaan, pengelolaan lingkungan, serta sumber daya air komunal yang penting bagi masyarakat. Peta juga dilengkapi dengan inset lokasi penelitian yang menunjukkan posisi RW 05 di dalam wilayah Kelurahan Mijen, serta QR Code yang dapat dipindai untuk memperoleh informasi lokasi secara digital melalui layanan peta daring.",
+        ],
+      },
+      {
         image: "/images/peta-wilayah.jpeg",
         alt: "Peta potensi kebakaran lahan RW 05 Kelurahan Mijen, Kecamatan Mijen, Kota Semarang",
         title: "Peta Mitigasi Kebakaran Lahan RW 05",
