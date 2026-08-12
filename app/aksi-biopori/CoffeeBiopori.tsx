@@ -114,7 +114,7 @@ export default function CoffeeBiopori() {
           Pemanfaatan Biopori untuk Pohon Kopi
         </h2>
         <p className="mx-auto mt-4 max-w-3xl text-sm leading-relaxed text-slate-600 sm:text-base">
-          Lubang biopori (*rorak biopori*) di sekeliling pohon kopi berfungsi sebagai reservoir air perakaran, pengolah limbah kulit kopi (*pulp*), dan penyedia pupuk organik tanpa biaya tambahan.
+          Lubang biopori (<em>rorak biopori</em>) di sekeliling pohon kopi berfungsi sebagai reservoir air perakaran, pengolah limbah kulit kopi (<em>pulp</em>), dan penyedia pupuk organik tanpa biaya tambahan.
         </p>
       </div>
 
@@ -193,7 +193,7 @@ export default function CoffeeBiopori() {
                 Lokasi Galian Biopori Kopi
               </h3>
               <p className="mt-2 text-xs leading-6 text-slate-600 sm:text-sm">
-                Pemasangan biopori pada pohon kopi dibuat tepat pada lingkaran perakaran aktif (*canopy dripline*):
+                Pemasangan biopori pada pohon kopi dibuat tepat pada lingkaran perakaran aktif (<em>canopy dripline</em>):
               </p>
 
               <div className="mt-6 space-y-3.5">
@@ -256,7 +256,7 @@ export default function CoffeeBiopori() {
             </div>
 
             <div className="mt-6 rounded-2xl bg-white/15 p-4 backdrop-blur-md text-[11px] leading-relaxed text-emerald-50 border border-white/20">
-              💡 <strong>Petunjuk:</strong> Kompos matang tidak wajib dikeruk. Kompos dapat dibiarkan terurai langsung ke akar pohon kopi sebagai pupuk organik pelepasan lambat (*slow release*).
+              💡 <strong>Petunjuk:</strong> Kompos matang tidak wajib dikeruk. Kompos dapat dibiarkan terurai langsung ke akar pohon kopi sebagai pupuk organik pelepasan lambat (<em>slow release</em>).
             </div>
           </div>
         </div>

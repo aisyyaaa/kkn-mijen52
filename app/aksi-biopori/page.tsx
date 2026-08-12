@@ -6,7 +6,7 @@ import BioporiBookSection from "./BioporiBookSection";
 export const metadata: Metadata = {
   title: "Edukasi Biopori & Perkebunan Kopi - KKN-T IDBU 52 UNDIP",
   description:
-    "Edukasi pembuatan lubang biopori sebagai media pengelolaan sampah organik, penerapan khusus pada pohon kopi, serta konservasi air di RW 7 Kelurahan Mijen.",
+    "Edukasi pembuatan lubang biopori sebagai media pengelolaan sampah organik, penerapan khusus pada pohon kopi, serta konservasi air di Kelurahan Mijen.",
 };
 
 /* ── Data ── */
@@ -113,10 +113,10 @@ const keyTips = [
 ];
 
 const envImpacts = [
-  "Mengurangi genangan air hujan di sekitar pemukiman dan lahan perkebunan RW 7 Mijen.",
+  "Mengurangi genangan air hujan di sekitar pemukiman dan lahan perkebunan warga Kelurahan Mijen.",
   "Menjaga kelembaban subsoil dan meningkatkan cadangan air tanah saat musim kemarau.",
   "Mendorong daur ulang limbah organik (sampah dapur & kulit kopi) secara efisien di tempat.",
-  "Mewujudkan lingkungan RW 7 Kelurahan Mijen yang lebih bersih, hijau, dan subur.",
+  "Mewujudkan lingkungan Kelurahan Mijen yang lebih bersih, hijau, dan subur.",
 ];
 
 /* ── Component ── */
@@ -500,7 +500,7 @@ export default function AksiBioporiPage() {
             Langkah Kecil, Manfaat Besar
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-xs leading-6 text-emerald-50 sm:text-base sm:leading-8">
-            Penerapan biopori di pemukiman dan lahan perkebunan warga RW 7 Kelurahan Mijen memberikan dampak nyata bagi kelestarian lingkungan.
+            Penerapan biopori di pemukiman dan lahan perkebunan warga Kelurahan Mijen memberikan dampak nyata bagi kelestarian lingkungan.
           </p>
 
           <div className="mx-auto mt-8 grid max-w-3xl gap-3 text-left sm:grid-cols-2">

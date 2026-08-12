@@ -5,24 +5,24 @@ import { useState } from "react";
 const BIOPORI_POINTS = [
   {
     id: 1,
-    name: "Area Taman RW 7",
-    location: "Depan Balai RW 7, Kelurahan Mijen",
+    name: "Area Taman Kelurahan",
+    location: "Depan Balai Kelurahan Mijen",
     jumlah: 5,
     status: "Aktif",
     keterangan: "Titik biopori utama dekat area taman warga",
   },
   {
     id: 2,
-    name: "Jalan Lingkungan RT 01",
-    location: "Jalan utama RT 01, RW 7",
+    name: "Jalan Lingkungan Pemukiman",
+    location: "Jalan utama Kelurahan Mijen",
     jumlah: 3,
     status: "Aktif",
     keterangan: "Sepanjang jalan lingkungan yang sering tergenang",
   },
   {
     id: 3,
-    name: "Pekarangan Warga RT 02",
-    location: "Rumah Bapak RT 02, RW 7",
+    name: "Pekarangan Warga",
+    location: "Pekarangan Warga Kelurahan Mijen",
     jumlah: 4,
     status: "Aktif",
     keterangan: "Percontohan biopori di pekarangan warga",
@@ -30,7 +30,7 @@ const BIOPORI_POINTS = [
   {
     id: 4,
     name: "Area Masjid",
-    location: "Halaman Masjid RW 7, Kelurahan Mijen",
+    location: "Halaman Masjid Kelurahan Mijen",
     jumlah: 3,
     status: "Aktif",
     keterangan: "Area resapan air di halaman masjid",
@@ -38,7 +38,7 @@ const BIOPORI_POINTS = [
   {
     id: 5,
     name: "Taman Bermain Anak",
-    location: "Gang Melati, RT 03 RW 7",
+    location: "Gang Melati, Kelurahan Mijen",
     jumlah: 2,
     status: "Aktif",
     keterangan: "Biopori di sekitar taman bermain warga",
@@ -56,7 +56,7 @@ export default function BioporiMap() {
             Lokasi Biopori
           </span>
           <h2 className="mt-4 text-2xl font-black tracking-[-0.04em] text-slate-950">
-            Titik Lubang Biopori RW 7
+            Titik Lubang Biopori Kelurahan Mijen
           </h2>
           <p className="mt-2 text-sm leading-7 text-slate-500">
             Peta sebaran titik-titik lubang biopori yang telah dibuat di Kelurahan Mijen.
@@ -119,7 +119,7 @@ export default function BioporiMap() {
           </p>
         </div>
         <div className="rounded-2xl border border-sky-100 bg-sky-50/60 p-4 text-center">
-          <p className="text-2xl font-black text-sky-600">RW 7</p>
+          <p className="text-xl font-black text-sky-600 sm:text-2xl">Mijen</p>
           <p className="mt-1 text-[10px] font-bold uppercase tracking-wide text-slate-500">
             Wilayah
           </p>
