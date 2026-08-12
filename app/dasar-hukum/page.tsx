@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Dasar Hukum - KKN-T IDBU 52 UNDIP",
@@ -151,10 +151,12 @@ export default function DasarHukumPage() {
           </p>
 
           <div className="mt-8 p-1">
-            <img 
+            <Image 
               src="/images/hukum-pembakaran.png" 
               alt="Ilustrasi Hukum Pembakaran Sampah" 
-              className="w-full object-cover"
+              width={1200}
+              height={675}
+              className="w-full h-auto object-cover"
             />
           </div>
         </section>

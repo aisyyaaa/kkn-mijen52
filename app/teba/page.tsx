@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import BookViewer from "@/components/BookViewer";
 
 export const metadata: Metadata = {
@@ -615,7 +614,7 @@ export default function TebaPage() {
 
           <div className="mt-8 text-sm leading-relaxed text-stone-700 space-y-4 text-justify">
             <p>
-              Rincian anggaran ini disusun sebagai bentuk transparansi penggunaan dana sekaligus acuan bagi warga yang ingin mereplikasi Teba secara mandiri. Struktur utamanya terdiri dari tiga buis beton bertingkat — satu ditanam sebagai fondasi, dua lainnya ditumpuk di atasnya — lalu ditutup penutup beton agar terlindung dari air hujan dan hewan pengganggu. Selain itu, anggaran juga mencakup cat hitam dan kuas untuk menuliskan label "KKNT IDBU 52" sebagai penanda identitas program.
+              Rincian anggaran ini disusun sebagai bentuk transparansi penggunaan dana sekaligus acuan bagi warga yang ingin mereplikasi Teba secara mandiri. Struktur utamanya terdiri dari tiga buis beton bertingkat — satu ditanam sebagai fondasi, dua lainnya ditumpuk di atasnya — lalu ditutup penutup beton agar terlindung dari air hujan dan hewan pengganggu. Selain itu, anggaran juga mencakup cat hitam dan kuas untuk menuliskan label &quot;KKNT IDBU 52&quot; sebagai penanda identitas program.
             </p>
             <p>
               Dengan total estimasi biaya Rp723.000, anggaran ini tergolong terjangkau namun tetap mempertimbangkan kebutuhan jangka panjang — membuktikan bahwa pengelolaan sampah organik mandiri dan komunal bukan hanya solusi ramah lingkungan, tapi juga cara hemat pengeluaran dibanding iuran pembuangan sampah rutin, sejalan dengan visi Kelurahan Mijen yang bersih, hijau, dan mandiri sampah.

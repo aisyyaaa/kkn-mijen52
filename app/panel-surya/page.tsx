@@ -273,7 +273,7 @@ export default function PanelSuryaPage() {
                 </div>
                 <div className="rounded-2xl border border-stone-200/70 bg-white/80 p-2.5 text-center shadow-sm">
                   <span className="text-sm font-black text-stone-800">OLED</span>
-                  <p className="text-[10px] font-semibold text-stone-600">Display 0.96"</p>
+                  <p className="text-[10px] font-semibold text-stone-600">Display 0.96&quot;</p>
                 </div>
               </div>
             </div>

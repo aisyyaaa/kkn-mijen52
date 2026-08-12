@@ -28,21 +28,16 @@ export default function BookViewer({
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 640); // 640px is Tailwind's 'sm' breakpoint
+      const mobile = window.innerWidth < 640; // 640px is Tailwind's 'sm' breakpoint
+      setIsMobile(mobile);
+      if (!mobile) {
+        setCurrentPage((p) => (p % 2 === 0 ? Math.max(p - 1, 1) : p));
+      }
     };
     checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
-
-  // Ensure odd-page alignment for double-page spreads on desktop
-  useEffect(() => {
-    if (!isMobile) {
-      if (currentPage % 2 === 0) {
-        setCurrentPage((p) => Math.max(p - 1, 1));
-      }
-    }
-  }, [isMobile, currentPage]);
 
   const nextPage = () => {
     if (isMobile) {
@@ -358,7 +353,7 @@ export default function BookViewer({
 
           {/* Bottom Keyboard Guide */}
           <div className="absolute bottom-4 text-center text-xs text-stone-600 font-medium hidden sm:block">
-            Klik di luar halaman atau tekan tombol 'X' di pojok kanan atas untuk kembali.
+            Klik di luar halaman atau tekan tombol &apos;X&apos; di pojok kanan atas untuk kembali.
           </div>
         </div>
       )}
